@@ -1,0 +1,5 @@
+D:\CODE2021\MINHANH\GD.FM.BLL\obj\Debug\GD.FM.BLL.csprojResolveAssemblyReference.cache
+D:\CODE2021\DLL\GD.FM.BLL.dll
+D:\CODE2021\DLL\GD.FM.BLL.pdb
+D:\CODE2021\MINHANH\GD.FM.BLL\obj\Debug\GD.FM.BLL.dll
+D:\CODE2021\MINHANH\GD.FM.BLL\obj\Debug\GD.FM.BLL.pdb

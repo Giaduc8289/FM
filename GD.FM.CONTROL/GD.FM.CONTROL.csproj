@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1583F050-4119-442F-A62B-65D97298298A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GD.FM.CONTROL</RootNamespace>
+    <AssemblyName>GD.FM.CONTROL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo-App-Ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Janus.Data.v3, Version=3.5.130.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.130.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.130.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BTN_HIENTHI\BTN_HIENTHI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BUTTON\ControlPaint.cs" />
+    <Compile Include="BUTTON\BUTTON.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="COMBO\COMBO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATETIMEPICKER\DATETIMEPICKER.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATETIMEPICKER\DATETIMEPICKER.Designer.cs">
+      <DependentUpon>DATETIMEPICKER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXTCOMBO\EXTCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXTCOMBO\EXTCombo.designer.cs">
+      <DependentUpon>EXTCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXTCOMBO\frmEXTCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXTCOMBO\frmEXTCombo.Designer.cs">
+      <DependentUpon>frmEXTCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXTCOMBO\GridView4Combo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXTCOMBO\GridView4Combo.designer.cs">
+      <DependentUpon>GridView4Combo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXTCOMBO\IEXTCombo.cs" />
+    <Compile Include="EXTCOMBO\MultiSelect4Combo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXTCOMBO\MultiSelect4Combo.designer.cs">
+      <DependentUpon>MultiSelect4Combo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXTCOMBO\TreeView4Combo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXTCOMBO\TreeView4Combo.Designer.cs">
+      <DependentUpon>TreeView4Combo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXTCOMBO\WeekDays4Combo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EXTCOMBO\WeekDays4Combo.designer.cs">
+      <DependentUpon>WeekDays4Combo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JGridEX\JGridEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JGridEX\JGridEX.Designer.cs">
+      <DependentUpon>JGridEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GRID\GRID.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GRID\GRID.Designer.cs">
+      <DependentUpon>GRID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LABEL\LABEL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LABEL\LABEL.Designer.cs">
+      <DependentUpon>LABEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENUITEM\CustomMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MENUITEM\CustomMenuItem.Designer.cs">
+      <DependentUpon>CustomMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENUSTRIP\CustomMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MENUSTRIP\CustomMenuStrip.designer.cs">
+      <DependentUpon>CustomMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENUSTRIP\CustomMenuStripColorTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setup.designer.cs">
+      <DependentUpon>setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPLITBUTTON\SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SPLITBUTTON\SplitButton.designer.cs">
+      <DependentUpon>SplitButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEXTBOXDATE\MonCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TEXTBOXDATE\MonCalendar.designer.cs">
+      <DependentUpon>MonCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEXTBOXDATE\TEXTBOXDATE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TEXTBOXDATE\TEXTBOXDATE.designer.cs">
+      <DependentUpon>TEXTBOXDATE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEXTBOXNUMBER\TEXTBOXNUMBER.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TEXTBOXNUMBER\TEXTBOXNUMBER.designer.cs">
+      <DependentUpon>TEXTBOXNUMBER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEXTBOX\TEXTBOX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TEXTBOX\TEXTBOX.designer.cs">
+      <DependentUpon>TEXTBOX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="toolmenufrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="toolmenufrm.designer.cs">
+      <DependentUpon>toolmenufrm.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BTN_HIENTHI\BTN_HIENTHI.resx">
+      <DependentUpon>BTN_HIENTHI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUTTON\BUTTON.resx">
+      <DependentUpon>BUTTON.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXTCOMBO\frmEXTCombo.resx">
+      <DependentUpon>frmEXTCombo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXTCOMBO\WeekDays4Combo.resx">
+      <DependentUpon>WeekDays4Combo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FORM.resx">
+      <DependentUpon>FORM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="setup.resx">
+      <DependentUpon>setup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEXTBOXDATE\MonCalendar.resx">
+      <DependentUpon>MonCalendar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEXTBOXDATE\TEXTBOXDATE.resx">
+      <DependentUpon>TEXTBOXDATE.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEXTBOXNUMBER\TEXTBOXNUMBER.resx">
+      <DependentUpon>TEXTBOXNUMBER.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEXTBOX\TEXTBOX.resx">
+      <DependentUpon>TEXTBOX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="toolmenufrm.resx">
+      <DependentUpon>toolmenufrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo-App-Ico.ico" />
+    <Content Include="TEXTBOXDATE\siAlo3.ico" />
+    <Content Include="TEXTBOX\siAlo3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

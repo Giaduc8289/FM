@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46D55CE1-8D3A-4257-8992-589E68745003}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GD.FM.APP</RootNamespace>
+    <AssemblyName>GD.FM.APP</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>GiaDuc-Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader">
+      <HintPath>..\DLL\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet">
+      <HintPath>..\DLL\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.XceedZipLib">
+      <HintPath>..\DLL\Interop.XceedZipLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Janus.Data.v3, Version=3.5.130.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.130.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.130.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.DQE.SqlServer.NET20, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SD.LLBLGen.Pro.DQE.SqlServer.NET20.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.LinqSupportClasses.NET35, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SD.LLBLGen.Pro.LinqSupportClasses.NET35.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses.NET20, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAOCAO\FRM_REPORTVIEWER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_REPORTVIEWER.designer.cs">
+      <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMHANGHOA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMHANGHOA.designer.cs">
+      <DependentUpon>FRM_DMHANGHOA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_UNGDUNGSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_UNGDUNGSP.designer.cs">
+      <DependentUpon>FRM_UNGDUNGSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMDONVITINH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMDONVITINH.designer.cs">
+      <DependentUpon>FRM_DMDONVITINH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMKHACH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMKHACH.designer.cs">
+      <DependentUpon>FRM_DMKHACH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMNHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMNHANVIEN.designer.cs">
+      <DependentUpon>FRM_DMNHANVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMPARENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMPARENT.designer.cs">
+      <DependentUpon>FRM_DMPARENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMTYGIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMTYGIA.designer.cs">
+      <DependentUpon>FRM_DMTYGIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMCANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMCANG.designer.cs">
+      <DependentUpon>FRM_DMCANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMFORMCO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMFORMCO.designer.cs">
+      <DependentUpon>FRM_DMFORMCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMNGANHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMNGANHANG.designer.cs">
+      <DependentUpon>FRM_DMNGANHANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMPTTHANHTOAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMPTTHANHTOAN.designer.cs">
+      <DependentUpon>FRM_DMPTTHANHTOAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMPTVANCHUYEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMPTVANCHUYEN.designer.cs">
+      <DependentUpon>FRM_DMPTVANCHUYEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMQUOCGIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\XUATKHAU\FRM_DMQUOCGIA.designer.cs">
+      <DependentUpon>FRM_DMQUOCGIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_CHONNGAYLAMVIEC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_CHONNGAYLAMVIEC.designer.cs">
+      <DependentUpon>FRM_CHONNGAYLAMVIEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_DOIMATKHAU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_DOIMATKHAU.designer.cs">
+      <DependentUpon>FRM_DOIMATKHAU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_LOGIN.designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_MAIN.designer.cs">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_MENU.designer.cs">
+      <DependentUpon>FRM_MENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_ROLES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_ROLES.designer.cs">
+      <DependentUpon>FRM_ROLES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_ROLES_MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_ROLES_MENU.designer.cs">
+      <DependentUpon>FRM_ROLES_MENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_SAOLUU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_SAOLUU.designer.cs">
+      <DependentUpon>FRM_SAOLUU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_THAMSO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_THAMSO.designer.cs">
+      <DependentUpon>FRM_THAMSO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_USERS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_USERS.designer.cs">
+      <DependentUpon>FRM_USERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LIB\ChucdanhEngine.cs" />
+    <Compile Include="LIB\ConvertString.cs" />
+    <Compile Include="LIB\DataFactory.cs" />
+    <Compile Include="LIB\ExportExcel.cs" />
+    <Compile Include="LIB\GlobalFuns.cs" />
+    <Compile Include="LIB\GroupByDataTable.cs" />
+    <Compile Include="LIB\MaHoa.cs" />
+    <Compile Include="LIB\ParameterReport.cs" />
+    <Compile Include="LIB\PATH.cs" />
+    <Compile Include="LIB\Procedures.cs" />
+    <Compile Include="LIB\ReadNumber.cs" />
+    <Compile Include="LIB\RepEngine.cs" />
+    <Compile Include="LIB\SESSION_START.cs" />
+    <Compile Include="LIB\SysInfo.cs" />
+    <Compile Include="LIB\USERS.cs" />
+    <Compile Include="Manager\DanhmuccangManager.cs" />
+    <Compile Include="Manager\DanhmuchanghoaManager.cs" />
+    <Compile Include="Manager\DanhmuckhachManager.cs" />
+    <Compile Include="Manager\DanhmucnganhangManager.cs" />
+    <Compile Include="Manager\DanhmucquocgiaManager.cs" />
+    <Compile Include="Manager\DanhmucungdungManager.cs" />
+    <Compile Include="Manager\DmcapmaManager.cs" />
+    <Compile Include="Manager\DonvitinhManager.cs" />
+    <Compile Include="Manager\FormcoManager.cs" />
+    <Compile Include="Manager\LogbackupManager.cs" />
+    <Compile Include="Manager\MenuManager.cs" />
+    <Compile Include="Manager\MenuroleManager.cs" />
+    <Compile Include="Manager\NhanvienManager.cs" />
+    <Compile Include="Manager\PhuongthucthanhtoanManager.cs" />
+    <Compile Include="Manager\PhuongthucvanchuyenManager.cs" />
+    <Compile Include="Manager\RolesManager.cs" />
+    <Compile Include="Manager\ThamsoManager.cs" />
+    <Compile Include="Manager\ThuchienhopdongbanhangManager.cs" />
+    <Compile Include="Manager\TygiaManager.cs" />
+    <Compile Include="Manager\UsersManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
+      <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMHANGHOA.resx">
+      <DependentUpon>FRM_DMHANGHOA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_UNGDUNGSP.resx">
+      <DependentUpon>FRM_UNGDUNGSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMDONVITINH.resx">
+      <DependentUpon>FRM_DMDONVITINH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMKHACH.resx">
+      <DependentUpon>FRM_DMKHACH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMNHANVIEN.resx">
+      <DependentUpon>FRM_DMNHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMPARENT.resx">
+      <DependentUpon>FRM_DMPARENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMTYGIA.resx">
+      <DependentUpon>FRM_DMTYGIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\XUATKHAU\FRM_DMCANG.resx">
+      <DependentUpon>FRM_DMCANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\XUATKHAU\FRM_DMFORMCO.resx">
+      <DependentUpon>FRM_DMFORMCO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\XUATKHAU\FRM_DMNGANHANG.resx">
+      <DependentUpon>FRM_DMNGANHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\XUATKHAU\FRM_DMPTTHANHTOAN.resx">
+      <DependentUpon>FRM_DMPTTHANHTOAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\XUATKHAU\FRM_DMPTVANCHUYEN.resx">
+      <DependentUpon>FRM_DMPTVANCHUYEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\XUATKHAU\FRM_DMQUOCGIA.resx">
+      <DependentUpon>FRM_DMQUOCGIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_CHONNGAYLAMVIEC.resx">
+      <DependentUpon>FRM_CHONNGAYLAMVIEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_DOIMATKHAU.resx">
+      <DependentUpon>FRM_DOIMATKHAU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_MENU.resx">
+      <DependentUpon>FRM_MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_ROLES.resx">
+      <DependentUpon>FRM_ROLES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_ROLES_MENU.resx">
+      <DependentUpon>FRM_ROLES_MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_SAOLUU.resx">
+      <DependentUpon>FRM_SAOLUU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_THAMSO.resx">
+      <DependentUpon>FRM_THAMSO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_USERS.resx">
+      <DependentUpon>FRM_USERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RDLC\BAOGIA.rdlc" />
+    <EmbeddedResource Include="RDLC\BAOGIATA.rdlc" />
+    <EmbeddedResource Include="RDLC\HOPDONGMUABAN.rdlc" />
+    <EmbeddedResource Include="RDLC\HOPDONGTIENGANH.rdlc" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GiaDuc-Icon.ico" />
+    <Content Include="IMG\BG\Sxbb2020.jpg" />
+    <Content Include="IMG\BG\Sxbb2020.psd" />
+    <Content Include="IMG\Icon\btBoQua.xml" />
+    <Content Include="IMG\Icon\btnchuyendulieu.xml" />
+    <Content Include="IMG\Icon\btnthemcapdinhkhoan.xml" />
+    <Content Include="IMG\Icon\btntimkiem.xml" />
+    <Content Include="IMG\Icon\btnxoadong.xml" />
+    <Content Include="IMG\Icon\btnxoagiaodich.xml" />
+    <Content Include="IMG\Icon\btn_IN.xml" />
+    <Content Include="IMG\Icon\btn_KHOIPHUC.xml" />
+    <Content Include="IMG\Icon\btn_LAMMOI.xml" />
+    <Content Include="IMG\Icon\btn_LUULAI.xml" />
+    <Content Include="IMG\Icon\btn_SUA.xml" />
+    <Content Include="IMG\Icon\btn_THEMMOI.xml" />
+    <Content Include="IMG\Icon\btn_THOAT.xml" />
+    <Content Include="IMG\Icon\btn_TIMKIEM.xml" />
+    <Content Include="IMG\Icon\btn_XOA.xml" />
+    <Content Include="IMG\Icon\btOK.xml" />
+    <Content Include="IMG\Icon\config.xml" />
+    <Content Include="IMG\Icon\Danhmuc.xml" />
+    <Content Include="IMG\Icon\DATABASE.xml" />
+    <Content Include="IMG\Icon\Exit.xml" />
+    <Content Include="IMG\Icon\frmnhacungcap.xml" />
+    <Content Include="IMG\Icon\frmnhomquyen.xml" />
+    <Content Include="IMG\Icon\frmsetdate.xml" />
+    <Content Include="IMG\Icon\frmusers.xml" />
+    <Content Include="IMG\Icon\GiaDuc-Icon.ico" />
+    <Content Include="IMG\Icon\IconApp.xml" />
+    <Content Include="IMG\Icon\Intem.xml" />
+    <Content Include="IMG\Icon\key.jpg" />
+    <Content Include="IMG\Icon\Logo.png" />
+    <Content Include="IMG\Icon\Menu\Admin.ico" />
+    <Content Include="IMG\Icon\Menu\Backup.ico" />
+    <Content Include="IMG\Icon\Menu\Baogia.ico" />
+    <Content Include="IMG\Icon\Menu\Book.ico" />
+    <Content Include="IMG\Icon\Menu\ChangePass.ico" />
+    <Content Include="IMG\Icon\Menu\ConfigUser.ico" />
+    <Content Include="IMG\Icon\Menu\Customer.ico" />
+    <Content Include="IMG\Icon\Menu\Customer2.ico" />
+    <Content Include="IMG\Icon\Menu\Det.ico" />
+    <Content Include="IMG\Icon\Menu\document.ico" />
+    <Content Include="IMG\Icon\Menu\Dondathang.ico" />
+    <Content Include="IMG\Icon\Menu\Donhang.ico" />
+    <Content Include="IMG\Icon\Menu\group.ico" />
+    <Content Include="IMG\Icon\Menu\Hanghoa.ico" />
+    <Content Include="IMG\Icon\Menu\Hethong.ico" />
+    <Content Include="IMG\Icon\Menu\Hoadon.ico" />
+    <Content Include="IMG\Icon\Menu\hoanthien.ico" />
+    <Content Include="IMG\Icon\Menu\Hopdong.ico" />
+    <Content Include="IMG\Icon\Menu\in.ico" />
+    <Content Include="IMG\Icon\Menu\Kiemke.ico" />
+    <Content Include="IMG\Icon\Menu\Lenh.ico" />
+    <Content Include="IMG\Icon\Menu\manager.ico" />
+    <Content Include="IMG\Icon\Menu\Maymoc.ico" />
+    <Content Include="IMG\Icon\Menu\Menu.ico" />
+    <Content Include="IMG\Icon\Menu\Money.ico" />
+    <Content Include="IMG\Icon\Menu\Nguyenlieu.ico" />
+    <Content Include="IMG\Icon\Menu\Nhap.ico" />
+    <Content Include="IMG\Icon\Menu\Noidia.ico" />
+    <Content Include="IMG\Icon\Menu\Parameter.ico" />
+    <Content Include="IMG\Icon\Menu\Phieuxuathang.ico" />
+    <Content Include="IMG\Icon\Menu\Quocgia.ico" />
+    <Content Include="IMG\Icon\Menu\Reload.ico" />
+    <Content Include="IMG\Icon\Menu\Report.ico" />
+    <Content Include="IMG\Icon\Menu\Schedule.ico" />
+    <Content Include="IMG\Icon\Menu\Soi.ico" />
+    <Content Include="IMG\Icon\Menu\Staff.ico" />
+    <Content Include="IMG\Icon\Menu\texteditor_note_notes_pencil_detext_9967.ico" />
+    <Content Include="IMG\Icon\Menu\Thoat.ico" />
+    <Content Include="IMG\Icon\Menu\Thongke.ico" />
+    <Content Include="IMG\Icon\Menu\Thuoctinh.ico" />
+    <Content Include="IMG\Icon\Menu\Tinhgia.ico" />
+    <Content Include="IMG\Icon\Menu\trang.ico" />
+    <Content Include="IMG\Icon\Menu\user.ico" />
+    <Content Include="IMG\Icon\Menu\Window.ico" />
+    <Content Include="IMG\Icon\Menu\Worker.ico" />
+    <Content Include="IMG\Icon\Menu\Xe.ico" />
+    <Content Include="IMG\Icon\Menu\Xuat.ico" />
+    <Content Include="IMG\Icon\Menu\Xuatkhau.ico" />
+    <Content Include="IMG\Icon\Planning.ico" />
+    <Content Include="IMG\Icon\Shoppingcart.xml" />
+    <Content Include="IMG\Icon\Shopping_Full.xml" />
+    <Content Include="IMG\Icon\StartService.ico" />
+    <Content Include="IMG\Icon\storeicon.xml" />
+    <Content Include="IMG\Icon\Uninstall.ico" />
+    <Content Include="IMG\Icon\xDirectoryCopy.xml" />
+    <Content Include="IMG\TeamViewer.exe" />
+    <Content Include="IMG\waiting.xml" />
+    <Content Include="XMLCONFIG\FRM_BAOGIAKHACHND_D.xml" />
+    <Content Include="XMLCONFIG\FRM_BAOGIAKHACHND_D_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_BAOGIAKHACHND_H.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCHUNGLOAI_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_DMLOAIHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCUOCVANCHUYEN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHANGHOA.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAUSAC.xml" />
+    <Content Include="XMLCONFIG\FRM_DMTINHTHANH.xml" />
+    <Content Include="XMLCONFIG\FRM_DONDATHANGKHACHND_D.xml" />
+    <Content Include="XMLCONFIG\FRM_DONDATHANG_D_BAOCAO.xml" />
+    <Content Include="XMLCONFIG\FRM_DONDATHANG_D_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_DONDATHANG_D_PGH.xml" />
+    <Content Include="XMLCONFIG\FRM_DONDATHANGKHACHND_H.xml" />
+    <Content Include="XMLCONFIG\FRM_NANGLUCSANXUAT.xml" />
+    <Content Include="XMLCONFIG\FRM_CHIPHIBANHANGTHEOHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_CHIPHIBANHANGTHEOHANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_CHINHSACHHOTRO.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNANGLUCSANXUAT.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCHINHSACHHOTRO.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCHIPHIBANHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCHIPHICHUNG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONVITINH.xml" />
+    <Content Include="XMLCONFIG\FRM_DMFORMCO.xml" />
+    <Content Include="XMLCONFIG\FRM_DMKHACH.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNGANHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNHACUNGCAP.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNHANVIEN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMPTTHANHTOAN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMPTVANCHUYEN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMQUOCGIA.xml" />
+    <Content Include="XMLCONFIG\FRM_DMTYGIA.xml" />
+    <Content Include="XMLCONFIG\FRM_MENU.xml" />
+    <Content Include="XMLCONFIG\FRM_QCDONGKIEN.xml" />
+    <Content Include="XMLCONFIG\FRM_ROLES.xml" />
+    <Content Include="XMLCONFIG\FRM_THCHIPHICHUNG.xml" />
+    <Content Include="XMLCONFIG\FRM_THCHIPHICHUNGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_UNGDUNGSP.xml" />
+    <Content Include="XMLCONFIG\FRM_USERS.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GD.FM.BLL\GD.FM.BLL.csproj">
+      <Project>{d10f7ca6-3d6e-48b8-8f2f-b72115c9d49d}</Project>
+      <Name>GD.FM.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GD.FM.CONTROL\GD.FM.CONTROL.csproj">
+      <Project>{1583f050-4119-442f-a62b-65d97298298a}</Project>
+      <Name>GD.FM.CONTROL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GD.FM.DAL\GD.FM.DAL.csproj">
+      <Project>{3711abd0-f2ea-45ea-b0b2-37c599b5be7d}</Project>
+      <Name>GD.FM.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GD.FM.LIB\GD.FM.LIB.csproj">
+      <Project>{6fd4582a-9360-4bb6-9024-dab758b599b3}</Project>
+      <Name>GD.FM.LIB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
