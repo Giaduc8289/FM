@@ -133,12 +133,16 @@ namespace GD.FM.APP.DANHMUC
             _DanhmucungdungEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _DanhmucungdungEntity.Ngaytao = DateTime.Now;
+                _DanhmucungdungEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DanhmucungdungManager.InsertV2(_DanhmucungdungEntity, r_Insert, DT_DMUNGDUNG, BS_DMUNGDUNG);
                  GD.FM.BLL.MenuroleManager.set_Enable_controls(_DanhmucungdungManager.Convert(_DanhmucungdungEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMUNGDUNG.ResetCurrentItem();
             }
             else
             {
+                _DanhmucungdungEntity.Ngaysua = DateTime.Now;
+                _DanhmucungdungEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DanhmucungdungManager.Update(_DanhmucungdungEntity);
                 GRID_DMUNGDUNG.CurrentRow.Cells[DanhmucungdungFields.Mahieu.Name].Value = _DanhmucungdungEntity.Mahieu;
                 GRID_DMUNGDUNG.CurrentRow.Cells[DanhmucungdungFields.Tenhieu.Name].Value = _DanhmucungdungEntity.Tenhieu;

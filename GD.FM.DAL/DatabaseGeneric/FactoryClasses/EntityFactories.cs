@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 19 May 2022 14:46:06
+// Code is generated on: 20 May 2022 09:12:01
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -121,6 +121,47 @@ namespace GD.FM.DAL.FactoryClasses
 		public override IEntityCollection2 CreateEntityCollection()
 		{
 			return new EntityCollection<DanhmuccangEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty DanhmucchucvuEntity objects.</summary>
+	[Serializable]
+	public partial class DanhmucchucvuEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DanhmucchucvuEntityFactory() : base("DanhmucchucvuEntity", GD.FM.DAL.EntityType.DanhmucchucvuEntity) { }
+
+		/// <summary>Creates a new, empty DanhmucchucvuEntity object.</summary>
+		/// <returns>A new, empty DanhmucchucvuEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DanhmucchucvuEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDanhmucchucvu
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DanhmucchucvuEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DanhmucchucvuEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDanhmucchucvuUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DanhmucchucvuEntity>(this);
 		}
 		
 
@@ -453,7 +494,6 @@ namespace GD.FM.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewHopdongbanhang
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -465,7 +505,6 @@ namespace GD.FM.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewHopdongbanhangUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -474,6 +513,47 @@ namespace GD.FM.DAL.FactoryClasses
 		public override IEntityCollection2 CreateEntityCollection()
 		{
 			return new EntityCollection<HopdongbanhangEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty HopdongbanhangchitietEntity objects.</summary>
+	[Serializable]
+	public partial class HopdongbanhangchitietEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public HopdongbanhangchitietEntityFactory() : base("HopdongbanhangchitietEntity", GD.FM.DAL.EntityType.HopdongbanhangchitietEntity) { }
+
+		/// <summary>Creates a new, empty HopdongbanhangchitietEntity object.</summary>
+		/// <returns>A new, empty HopdongbanhangchitietEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new HopdongbanhangchitietEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewHopdongbanhangchitiet
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new HopdongbanhangchitietEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new HopdongbanhangchitietEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewHopdongbanhangchitietUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<HopdongbanhangchitietEntity>(this);
 		}
 		
 
@@ -630,6 +710,47 @@ namespace GD.FM.DAL.FactoryClasses
 		public override IEntityCollection2 CreateEntityCollection()
 		{
 			return new EntityCollection<NhanvienEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty PhongbanEntity objects.</summary>
+	[Serializable]
+	public partial class PhongbanEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public PhongbanEntityFactory() : base("PhongbanEntity", GD.FM.DAL.EntityType.PhongbanEntity) { }
+
+		/// <summary>Creates a new, empty PhongbanEntity object.</summary>
+		/// <returns>A new, empty PhongbanEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new PhongbanEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewPhongban
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new PhongbanEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new PhongbanEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewPhongbanUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<PhongbanEntity>(this);
 		}
 		
 
@@ -926,6 +1047,9 @@ namespace GD.FM.DAL.FactoryClasses
 				case GD.FM.DAL.EntityType.DanhmuccangEntity:
 					factoryToUse = new DanhmuccangEntityFactory();
 					break;
+				case GD.FM.DAL.EntityType.DanhmucchucvuEntity:
+					factoryToUse = new DanhmucchucvuEntityFactory();
+					break;
 				case GD.FM.DAL.EntityType.DanhmuchanghoaEntity:
 					factoryToUse = new DanhmuchanghoaEntityFactory();
 					break;
@@ -953,6 +1077,9 @@ namespace GD.FM.DAL.FactoryClasses
 				case GD.FM.DAL.EntityType.HopdongbanhangEntity:
 					factoryToUse = new HopdongbanhangEntityFactory();
 					break;
+				case GD.FM.DAL.EntityType.HopdongbanhangchitietEntity:
+					factoryToUse = new HopdongbanhangchitietEntityFactory();
+					break;
 				case GD.FM.DAL.EntityType.LogbackupEntity:
 					factoryToUse = new LogbackupEntityFactory();
 					break;
@@ -964,6 +1091,9 @@ namespace GD.FM.DAL.FactoryClasses
 					break;
 				case GD.FM.DAL.EntityType.NhanvienEntity:
 					factoryToUse = new NhanvienEntityFactory();
+					break;
+				case GD.FM.DAL.EntityType.PhongbanEntity:
+					factoryToUse = new PhongbanEntityFactory();
 					break;
 				case GD.FM.DAL.EntityType.PhuongthucthanhtoanEntity:
 					factoryToUse = new PhuongthucthanhtoanEntityFactory();

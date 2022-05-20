@@ -131,12 +131,16 @@ namespace GD.FM.APP.DANHMUC
             _DanhmuchanghoaEntity.Mahangphiakhach = txt_TENHIEU.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _DanhmuchanghoaEntity.Ngaytao = DateTime.Now;
+                _DanhmuchanghoaEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DanhmuchanghoaManager.InsertV2(_DanhmuchanghoaEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
                  GD.FM.BLL.MenuroleManager.set_Enable_controls(_DanhmuchanghoaManager.Convert(_DanhmuchanghoaEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMHANGHOA.ResetCurrentItem();
             }
             else
             {
+                _DanhmuchanghoaEntity.Ngaysua = DateTime.Now;
+                _DanhmuchanghoaEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DanhmuchanghoaManager.Update(_DanhmuchanghoaEntity);
                 GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Mahieu.Name].Value = _DanhmuchanghoaEntity.Mahieu;
                 GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Mahangphiakhach.Name].Value = _DanhmuchanghoaEntity.Mahangphiakhach;

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 19 May 2022 14:46:06
+// Code is generated on: 20 May 2022 09:12:01
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -26,7 +26,6 @@ namespace GD.FM.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// Entity class which represents the entity 'Hopdongbanhang'.<br/><br/>
@@ -35,8 +34,7 @@ namespace GD.FM.DAL.EntityClasses
 	[Serializable]
 	public partial class HopdongbanhangEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END
-			
+		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
 
@@ -46,7 +44,6 @@ namespace GD.FM.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Statics
@@ -92,22 +89,22 @@ namespace GD.FM.DAL.EntityClasses
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="id">PK value for Hopdongbanhang which data should be fetched into this Hopdongbanhang object</param>
+		/// <param name="sohopdong">PK value for Hopdongbanhang which data should be fetched into this Hopdongbanhang object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public HopdongbanhangEntity(System.Int64 id):base("HopdongbanhangEntity")
+		public HopdongbanhangEntity(System.String sohopdong):base("HopdongbanhangEntity")
 		{
 			InitClassEmpty(null, CreateFields());
-			this.Id = id;
+			this.Sohopdong = sohopdong;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="id">PK value for Hopdongbanhang which data should be fetched into this Hopdongbanhang object</param>
+		/// <param name="sohopdong">PK value for Hopdongbanhang which data should be fetched into this Hopdongbanhang object</param>
 		/// <param name="validator">The custom validator object for this HopdongbanhangEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public HopdongbanhangEntity(System.Int64 id, IValidator validator):base("HopdongbanhangEntity")
+		public HopdongbanhangEntity(System.String sohopdong, IValidator validator):base("HopdongbanhangEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
-			this.Id = id;
+			this.Sohopdong = sohopdong;
 		}
 
 		/// <summary> Protected CTor for deserialization</summary>
@@ -127,7 +124,6 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 		}
 
 		
@@ -296,7 +292,6 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			base.GetObjectData(info, context);
 		}
 
@@ -425,7 +420,6 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			OnInitClassMembersComplete();
 		}
 
@@ -437,9 +431,6 @@ namespace GD.FM.DAL.EntityClasses
 			_fieldsCustomProperties = new Dictionary<string, Dictionary<string, string>>();
 
 			Dictionary<string, string> fieldHashtable = null;
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Id", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Sohopdong", fieldHashtable);
@@ -454,28 +445,10 @@ namespace GD.FM.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Tenkhach", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Mahangphiakhach", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Codefiller", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Macangden", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tencangden", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Soluong", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Dongiavnd", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tygia", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Dongiausd", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Thanhtienvnd", fieldHashtable);
@@ -513,7 +486,6 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 
 			OnInitialized();
 		}
@@ -560,22 +532,11 @@ namespace GD.FM.DAL.EntityClasses
 			get { return HopdongbanhangEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Id property of the Entity Hopdongbanhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Hopdongbanhang"."Id"<br/>
-		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
-		public virtual System.Int64 Id
-		{
-			get { return (System.Int64)GetValue((int)HopdongbanhangFieldIndex.Id, true); }
-			set	{ SetValue((int)HopdongbanhangFieldIndex.Id, value); }
-		}
-
 		/// <summary> The Sohopdong property of the Entity Hopdongbanhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Hopdongbanhang"."Sohopdong"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
 		public virtual System.String Sohopdong
 		{
 			get { return (System.String)GetValue((int)HopdongbanhangFieldIndex.Sohopdong, true); }
@@ -615,28 +576,6 @@ namespace GD.FM.DAL.EntityClasses
 			set	{ SetValue((int)HopdongbanhangFieldIndex.Tenkhach, value); }
 		}
 
-		/// <summary> The Mahangphiakhach property of the Entity Hopdongbanhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Hopdongbanhang"."Mahangphiakhach"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Mahangphiakhach
-		{
-			get { return (System.String)GetValue((int)HopdongbanhangFieldIndex.Mahangphiakhach, true); }
-			set	{ SetValue((int)HopdongbanhangFieldIndex.Mahangphiakhach, value); }
-		}
-
-		/// <summary> The Codefiller property of the Entity Hopdongbanhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Hopdongbanhang"."Codefiller"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Codefiller
-		{
-			get { return (System.String)GetValue((int)HopdongbanhangFieldIndex.Codefiller, true); }
-			set	{ SetValue((int)HopdongbanhangFieldIndex.Codefiller, value); }
-		}
-
 		/// <summary> The Macangden property of the Entity Hopdongbanhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Hopdongbanhang"."Macangden"<br/>
@@ -657,50 +596,6 @@ namespace GD.FM.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)HopdongbanhangFieldIndex.Tencangden, true); }
 			set	{ SetValue((int)HopdongbanhangFieldIndex.Tencangden, value); }
-		}
-
-		/// <summary> The Soluong property of the Entity Hopdongbanhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Hopdongbanhang"."Soluong"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Soluong
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)HopdongbanhangFieldIndex.Soluong, false); }
-			set	{ SetValue((int)HopdongbanhangFieldIndex.Soluong, value); }
-		}
-
-		/// <summary> The Dongiavnd property of the Entity Hopdongbanhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Hopdongbanhang"."Dongiavnd"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Dongiavnd
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)HopdongbanhangFieldIndex.Dongiavnd, false); }
-			set	{ SetValue((int)HopdongbanhangFieldIndex.Dongiavnd, value); }
-		}
-
-		/// <summary> The Tygia property of the Entity Hopdongbanhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Hopdongbanhang"."Tygia"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Tygia
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)HopdongbanhangFieldIndex.Tygia, false); }
-			set	{ SetValue((int)HopdongbanhangFieldIndex.Tygia, value); }
-		}
-
-		/// <summary> The Dongiausd property of the Entity Hopdongbanhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Hopdongbanhang"."Dongiausd"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 4, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Dongiausd
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)HopdongbanhangFieldIndex.Dongiausd, false); }
-			set	{ SetValue((int)HopdongbanhangFieldIndex.Dongiausd, value); }
 		}
 
 		/// <summary> The Thanhtienvnd property of the Entity Hopdongbanhang<br/><br/>
@@ -799,7 +694,6 @@ namespace GD.FM.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Included code

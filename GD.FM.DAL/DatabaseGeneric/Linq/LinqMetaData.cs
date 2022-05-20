@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 19 May 2022 14:46:06
+// Code is generated on: 20 May 2022 09:12:00
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -64,6 +64,9 @@ namespace GD.FM.DAL.Linq
 				case GD.FM.DAL.EntityType.DanhmuccangEntity:
 					toReturn = this.Danhmuccang;
 					break;
+				case GD.FM.DAL.EntityType.DanhmucchucvuEntity:
+					toReturn = this.Danhmucchucvu;
+					break;
 				case GD.FM.DAL.EntityType.DanhmuchanghoaEntity:
 					toReturn = this.Danhmuchanghoa;
 					break;
@@ -91,6 +94,9 @@ namespace GD.FM.DAL.Linq
 				case GD.FM.DAL.EntityType.HopdongbanhangEntity:
 					toReturn = this.Hopdongbanhang;
 					break;
+				case GD.FM.DAL.EntityType.HopdongbanhangchitietEntity:
+					toReturn = this.Hopdongbanhangchitiet;
+					break;
 				case GD.FM.DAL.EntityType.LogbackupEntity:
 					toReturn = this.Logbackup;
 					break;
@@ -102,6 +108,9 @@ namespace GD.FM.DAL.Linq
 					break;
 				case GD.FM.DAL.EntityType.NhanvienEntity:
 					toReturn = this.Nhanvien;
+					break;
+				case GD.FM.DAL.EntityType.PhongbanEntity:
+					toReturn = this.Phongban;
 					break;
 				case GD.FM.DAL.EntityType.PhuongthucthanhtoanEntity:
 					toReturn = this.Phuongthucthanhtoan;
@@ -135,6 +144,12 @@ namespace GD.FM.DAL.Linq
 		public DataSource2<DanhmuccangEntity> Danhmuccang
 		{
 			get { return new DataSource2<DanhmuccangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting DanhmucchucvuEntity instances in the database.</summary>
+		public DataSource2<DanhmucchucvuEntity> Danhmucchucvu
+		{
+			get { return new DataSource2<DanhmucchucvuEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting DanhmuchanghoaEntity instances in the database.</summary>
@@ -191,6 +206,12 @@ namespace GD.FM.DAL.Linq
 			get { return new DataSource2<HopdongbanhangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
+		/// <summary>returns the datasource to use in a Linq query when targeting HopdongbanhangchitietEntity instances in the database.</summary>
+		public DataSource2<HopdongbanhangchitietEntity> Hopdongbanhangchitiet
+		{
+			get { return new DataSource2<HopdongbanhangchitietEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
 		/// <summary>returns the datasource to use in a Linq query when targeting LogbackupEntity instances in the database.</summary>
 		public DataSource2<LogbackupEntity> Logbackup
 		{
@@ -213,6 +234,12 @@ namespace GD.FM.DAL.Linq
 		public DataSource2<NhanvienEntity> Nhanvien
 		{
 			get { return new DataSource2<NhanvienEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting PhongbanEntity instances in the database.</summary>
+		public DataSource2<PhongbanEntity> Phongban
+		{
+			get { return new DataSource2<PhongbanEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting PhuongthucthanhtoanEntity instances in the database.</summary>

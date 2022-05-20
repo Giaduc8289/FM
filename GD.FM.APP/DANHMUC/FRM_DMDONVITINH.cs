@@ -133,12 +133,16 @@ namespace GD.FM.APP.DANHMUC
             _DonvitinhEntity.Tentienganh = txt_TENTIENGANH.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _DonvitinhEntity.Ngaytao = DateTime.Now;
+                _DonvitinhEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DonvitinhManager.InsertV2(_DonvitinhEntity, r_Insert, DT_DMDONVITINH, BS_DMDONVITINH);
                  GD.FM.BLL.MenuroleManager.set_Enable_controls(_DonvitinhManager.Convert(_DonvitinhEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMDONVITINH.ResetCurrentItem();
             }
             else
             {
+                _DonvitinhEntity.Ngaysua = DateTime.Now;
+                _DonvitinhEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DonvitinhManager.Update(_DonvitinhEntity);
                 GRID_DMDONVITINH.CurrentRow.Cells[DonvitinhFields.Mahieu.Name].Value = _DonvitinhEntity.Mahieu;
                 GRID_DMDONVITINH.CurrentRow.Cells[DonvitinhFields.Tenhieu.Name].Value = _DonvitinhEntity.Tenhieu;

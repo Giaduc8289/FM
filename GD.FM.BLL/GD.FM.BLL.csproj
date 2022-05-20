@@ -102,7 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessAdapterFactory.cs" />
+    <Compile Include="ManagerBase\DanhmucchucvuManagerBase.cs" />
     <Compile Include="ManagerBase\DanhmucungdungManagerBase.cs" />
+    <Compile Include="ManagerBase\HopdongbanhangchitietManagerBase.cs" />
     <Compile Include="ManagerBase\HopdongbanhangManagerBase.cs" />
     <Compile Include="ManagerBase\MenuManagerBase.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
@@ -125,6 +127,7 @@
     <Compile Include="ManagerBase\MenuroleManagerBase.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
+    <Compile Include="ManagerBase\PhongbanManagerBase.cs" />
     <Compile Include="ManagerBase\PhuongthucthanhtoanManagerBase.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>

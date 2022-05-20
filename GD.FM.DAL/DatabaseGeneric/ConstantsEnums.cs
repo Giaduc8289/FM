@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 19 May 2022 14:46:06
+// Code is generated on: 20 May 2022 09:12:00
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -27,6 +27,30 @@ namespace GD.FM.DAL
 		Maquocgia,
 		///<summary>Tenquocgia. </summary>
 		Tenquocgia,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Danhmucchucvu.
+	/// </summary>
+	public enum DanhmucchucvuFieldIndex:int
+	{
+		///<summary>Mahieu. </summary>
+		Mahieu,
+		///<summary>Tenhieu. </summary>
+		Tenhieu,
+		///<summary>Tenrutgon. </summary>
+		Tenrutgon,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -249,6 +273,14 @@ namespace GD.FM.DAL
 		Tenhieu,
 		///<summary>Tentienganh. </summary>
 		Tentienganh,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -283,6 +315,40 @@ namespace GD.FM.DAL
 	/// </summary>
 	public enum HopdongbanhangFieldIndex:int
 	{
+		///<summary>Sohopdong. </summary>
+		Sohopdong,
+		///<summary>Ngayhopdong. </summary>
+		Ngayhopdong,
+		///<summary>Makhach. </summary>
+		Makhach,
+		///<summary>Tenkhach. </summary>
+		Tenkhach,
+		///<summary>Macangden. </summary>
+		Macangden,
+		///<summary>Tencangden. </summary>
+		Tencangden,
+		///<summary>Thanhtienvnd. </summary>
+		Thanhtienvnd,
+		///<summary>Thanhtienusd. </summary>
+		Thanhtienusd,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Hopdongbanhangchitiet.
+	/// </summary>
+	public enum HopdongbanhangchitietFieldIndex:int
+	{
 		///<summary>Id. </summary>
 		Id,
 		///<summary>Sohopdong. </summary>
@@ -293,14 +359,14 @@ namespace GD.FM.DAL
 		Makhach,
 		///<summary>Tenkhach. </summary>
 		Tenkhach,
-		///<summary>Mahangphiakhach. </summary>
-		Mahangphiakhach,
-		///<summary>Codefiller. </summary>
-		Codefiller,
 		///<summary>Macangden. </summary>
 		Macangden,
 		///<summary>Tencangden. </summary>
 		Tencangden,
+		///<summary>Mahangphiakhach. </summary>
+		Mahangphiakhach,
+		///<summary>Codefiller. </summary>
+		Codefiller,
 		///<summary>Soluong. </summary>
 		Soluong,
 		///<summary>Dongiavnd. </summary>
@@ -399,8 +465,14 @@ namespace GD.FM.DAL
 		Manhanvien,
 		///<summary>Hoten. </summary>
 		Hoten,
-		///<summary>Chucvu. </summary>
-		Chucvu,
+		///<summary>Maphongban. </summary>
+		Maphongban,
+		///<summary>Tenphongban. </summary>
+		Tenphongban,
+		///<summary>Machucvu. </summary>
+		Machucvu,
+		///<summary>Tenchucvu. </summary>
+		Tenchucvu,
 		///<summary>Gioitinh. </summary>
 		Gioitinh,
 		///<summary>Ngaysinh. </summary>
@@ -411,6 +483,30 @@ namespace GD.FM.DAL
 		Sodienthoai,
 		///<summary>Email. </summary>
 		Email,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Phongban.
+	/// </summary>
+	public enum PhongbanFieldIndex:int
+	{
+		///<summary>Mahieu. </summary>
+		Mahieu,
+		///<summary>Tenhieu. </summary>
+		Tenhieu,
+		///<summary>Tenrutgon. </summary>
+		Tenrutgon,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -616,6 +712,8 @@ namespace GD.FM.DAL
 	{
 		///<summary>Danhmuccang</summary>
 		DanhmuccangEntity,
+		///<summary>Danhmucchucvu</summary>
+		DanhmucchucvuEntity,
 		///<summary>Danhmuchanghoa</summary>
 		DanhmuchanghoaEntity,
 		///<summary>Danhmuckhach</summary>
@@ -634,6 +732,8 @@ namespace GD.FM.DAL
 		FormcoEntity,
 		///<summary>Hopdongbanhang</summary>
 		HopdongbanhangEntity,
+		///<summary>Hopdongbanhangchitiet</summary>
+		HopdongbanhangchitietEntity,
 		///<summary>Logbackup</summary>
 		LogbackupEntity,
 		///<summary>Menu</summary>
@@ -642,6 +742,8 @@ namespace GD.FM.DAL
 		MenuroleEntity,
 		///<summary>Nhanvien</summary>
 		NhanvienEntity,
+		///<summary>Phongban</summary>
+		PhongbanEntity,
 		///<summary>Phuongthucthanhtoan</summary>
 		PhuongthucthanhtoanEntity,
 		///<summary>Phuongthucvanchuyen</summary>

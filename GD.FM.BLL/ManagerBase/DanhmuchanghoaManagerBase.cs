@@ -3,7 +3,7 @@
 
 /*
 '===============================================================================
-'  GD.FM.DAL.BL.DanhmuchanghoaManagerBase
+'  GD.FM.BL.DanhmuchanghoaManagerBase
 '===============================================================================
 */
 
@@ -11,14 +11,14 @@ using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using GD.FM.DAL.BLL;
-using GD.FM.DAL.DAL;
-using GD.FM.DAL.DAL.EntityClasses;
-using GD.FM.DAL.DAL.FactoryClasses;
-using GD.FM.DAL.DAL.HelperClasses;
+using GD.FM.BLL;
+using GD.FM.DAL;
+using GD.FM.DAL.EntityClasses;
+using GD.FM.DAL.FactoryClasses;
+using GD.FM.DAL.HelperClasses;
 using SD.LLBLGen.Pro.ORMSupportClasses;
 using System.Windows.Forms;
-namespace GD.FM.DAL.BLL
+namespace GD.FM.BLL
 {
 	public class DanhmuchanghoaManagerBase
 	{
@@ -697,7 +697,7 @@ namespace GD.FM.DAL.BLL
 			return _DanhmuchanghoaEntity;
 		}
 
-		public DanhmuchanghoaEntity Insert(System.String Makhach, System.String Tenkhach, System.String Mahangphiakhach, System.String Maungdung, System.Decimal Tocdomay, System.Decimal Caco3kh, System.Decimal Tio2kh, System.String Mikh, System.String Khackh, System.Decimal Caco3fm, System.Decimal Tio2fm, System.String Mifm, System.String Khacfm, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, )//ko co mahieu
+		public DanhmuchanghoaEntity Insert(System.String Makhach, System.String Tenkhach, System.String Mahangphiakhach, System.String Maungdung, System.Decimal Tocdomay, System.Decimal Caco3kh, System.Decimal Tio2kh, System.String Mikh, System.String Khackh, System.Decimal Caco3fm, System.Decimal Tio2fm, System.String Mifm, System.String Khacfm, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			DanhmuchanghoaEntity _DanhmuchanghoaEntity = new DanhmuchanghoaEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

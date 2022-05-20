@@ -26,8 +26,6 @@ namespace GD.FM.BLL
 		#region ColumnNames
 		
 		
-		public const String Field_Id="Id";				
-		
 		public const String Field_Sohopdong="Sohopdong";				
 		
 		public const String Field_Ngayhopdong="Ngayhopdong";				
@@ -36,21 +34,9 @@ namespace GD.FM.BLL
 		
 		public const String Field_Tenkhach="Tenkhach";				
 		
-		public const String Field_Mahangphiakhach="Mahangphiakhach";				
-		
-		public const String Field_Codefiller="Codefiller";				
-		
 		public const String Field_Macangden="Macangden";				
 		
 		public const String Field_Tencangden="Tencangden";				
-		
-		public const String Field_Soluong="Soluong";				
-		
-		public const String Field_Dongiavnd="Dongiavnd";				
-		
-		public const String Field_Tygia="Tygia";				
-		
-		public const String Field_Dongiausd="Dongiausd";				
 		
 		public const String Field_Thanhtienvnd="Thanhtienvnd";				
 		
@@ -79,8 +65,6 @@ namespace GD.FM.BLL
 			DataTable dt = new DataTable();
 			
 			
-			dt.Columns.Add(Field_Id,typeof(System.Int64));
-			
 			dt.Columns.Add(Field_Sohopdong,typeof(System.String));
 			
 			dt.Columns.Add(Field_Ngayhopdong,typeof(System.DateTime));
@@ -89,21 +73,9 @@ namespace GD.FM.BLL
 			
 			dt.Columns.Add(Field_Tenkhach,typeof(System.String));
 			
-			dt.Columns.Add(Field_Mahangphiakhach,typeof(System.String));
-			
-			dt.Columns.Add(Field_Codefiller,typeof(System.String));
-			
 			dt.Columns.Add(Field_Macangden,typeof(System.String));
 			
 			dt.Columns.Add(Field_Tencangden,typeof(System.String));
-			
-			dt.Columns.Add(Field_Soluong,typeof(System.Decimal));
-			
-			dt.Columns.Add(Field_Dongiavnd,typeof(System.Decimal));
-			
-			dt.Columns.Add(Field_Tygia,typeof(System.Decimal));
-			
-			dt.Columns.Add(Field_Dongiausd,typeof(System.Decimal));
 			
 			dt.Columns.Add(Field_Thanhtienvnd,typeof(System.Decimal));
 			
@@ -126,12 +98,6 @@ namespace GD.FM.BLL
 			dt=Clone();
 			DataRow r=dt.NewRow();
 			
-			
-			try
-			{
-				r[Field_Id]=_HopdongbanhangEntity.Id;
-			}
-			catch { }
 			
 			try
 			{
@@ -159,18 +125,6 @@ namespace GD.FM.BLL
 			
 			try
 			{
-				r[Field_Mahangphiakhach]=_HopdongbanhangEntity.Mahangphiakhach;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Codefiller]=_HopdongbanhangEntity.Codefiller;
-			}
-			catch { }
-			
-			try
-			{
 				r[Field_Macangden]=_HopdongbanhangEntity.Macangden;
 			}
 			catch { }
@@ -178,30 +132,6 @@ namespace GD.FM.BLL
 			try
 			{
 				r[Field_Tencangden]=_HopdongbanhangEntity.Tencangden;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Soluong]=_HopdongbanhangEntity.Soluong;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Dongiavnd]=_HopdongbanhangEntity.Dongiavnd;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Tygia]=_HopdongbanhangEntity.Tygia;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Dongiausd]=_HopdongbanhangEntity.Dongiausd;
 			}
 			catch { }
 			
@@ -249,15 +179,9 @@ namespace GD.FM.BLL
 		public HopdongbanhangEntity Convert(DataRow r)
 		{	
 			
-			HopdongbanhangEntity _HopdongbanhangEntity=new HopdongbanhangEntity(System.Int64.Parse(r[Field_Id].ToString()));					
+			HopdongbanhangEntity _HopdongbanhangEntity=new HopdongbanhangEntity(r[Field_Sohopdong].ToString());					
 						
 			
-			
-			try
-			{
-				_HopdongbanhangEntity.Sohopdong= r[Field_Sohopdong].ToString();						
-			}
-			catch { }
 			
 			try
 			{
@@ -279,18 +203,6 @@ namespace GD.FM.BLL
 			
 			try
 			{
-				_HopdongbanhangEntity.Mahangphiakhach= r[Field_Mahangphiakhach].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_HopdongbanhangEntity.Codefiller= r[Field_Codefiller].ToString();						
-			}
-			catch { }
-			
-			try
-			{
 				_HopdongbanhangEntity.Macangden= r[Field_Macangden].ToString();						
 			}
 			catch { }
@@ -298,30 +210,6 @@ namespace GD.FM.BLL
 			try
 			{
 				_HopdongbanhangEntity.Tencangden= r[Field_Tencangden].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_HopdongbanhangEntity.Soluong= System.Decimal.Parse(r[Field_Soluong].ToString());						
-			}
-			catch { }
-			
-			try
-			{
-				_HopdongbanhangEntity.Dongiavnd= System.Decimal.Parse(r[Field_Dongiavnd].ToString());						
-			}
-			catch { }
-			
-			try
-			{
-				_HopdongbanhangEntity.Tygia= System.Decimal.Parse(r[Field_Tygia].ToString());						
-			}
-			catch { }
-			
-			try
-			{
-				_HopdongbanhangEntity.Dongiausd= System.Decimal.Parse(r[Field_Dongiausd].ToString());						
 			}
 			catch { }
 			
@@ -369,8 +257,6 @@ namespace GD.FM.BLL
 		{	
 			
 			
-			_HopdongbanhangEntity.Id= _HopdongbanhangEntity_XML.Id;
-			
 			_HopdongbanhangEntity.Sohopdong= _HopdongbanhangEntity_XML.Sohopdong;
 			
 			_HopdongbanhangEntity.Ngayhopdong= _HopdongbanhangEntity_XML.Ngayhopdong;
@@ -379,21 +265,9 @@ namespace GD.FM.BLL
 			
 			_HopdongbanhangEntity.Tenkhach= _HopdongbanhangEntity_XML.Tenkhach;
 			
-			_HopdongbanhangEntity.Mahangphiakhach= _HopdongbanhangEntity_XML.Mahangphiakhach;
-			
-			_HopdongbanhangEntity.Codefiller= _HopdongbanhangEntity_XML.Codefiller;
-			
 			_HopdongbanhangEntity.Macangden= _HopdongbanhangEntity_XML.Macangden;
 			
 			_HopdongbanhangEntity.Tencangden= _HopdongbanhangEntity_XML.Tencangden;
-			
-			_HopdongbanhangEntity.Soluong= _HopdongbanhangEntity_XML.Soluong;
-			
-			_HopdongbanhangEntity.Dongiavnd= _HopdongbanhangEntity_XML.Dongiavnd;
-			
-			_HopdongbanhangEntity.Tygia= _HopdongbanhangEntity_XML.Tygia;
-			
-			_HopdongbanhangEntity.Dongiausd= _HopdongbanhangEntity_XML.Dongiausd;
 			
 			_HopdongbanhangEntity.Thanhtienvnd= _HopdongbanhangEntity_XML.Thanhtienvnd;
 			
@@ -415,16 +289,7 @@ namespace GD.FM.BLL
 		{
 		
 			
-			String id =(new HopdongbanhangManagerBase()).Insert(_HopdongbanhangEntity).Id.ToString();
-			
-			
-			try
-			{
-				r.SetField(Field_Id,_HopdongbanhangEntity.Id);
-			}
-			catch { }
-			
-			
+			String id =(new HopdongbanhangManagerBase()).Insert(_HopdongbanhangEntity).Sohopdong.ToString();
 			
 			
 			try
@@ -432,6 +297,9 @@ namespace GD.FM.BLL
 				r.SetField(Field_Sohopdong,_HopdongbanhangEntity.Sohopdong);
 			}
 			catch { }
+			
+			
+			
 			
 			try
 			{
@@ -453,18 +321,6 @@ namespace GD.FM.BLL
 			
 			try
 			{
-				r.SetField(Field_Mahangphiakhach,_HopdongbanhangEntity.Mahangphiakhach);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Codefiller,_HopdongbanhangEntity.Codefiller);
-			}
-			catch { }
-			
-			try
-			{
 				r.SetField(Field_Macangden,_HopdongbanhangEntity.Macangden);
 			}
 			catch { }
@@ -472,30 +328,6 @@ namespace GD.FM.BLL
 			try
 			{
 				r.SetField(Field_Tencangden,_HopdongbanhangEntity.Tencangden);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Soluong,_HopdongbanhangEntity.Soluong);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Dongiavnd,_HopdongbanhangEntity.Dongiavnd);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Tygia,_HopdongbanhangEntity.Tygia);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Dongiausd,_HopdongbanhangEntity.Dongiausd);
 			}
 			catch { }
 			
@@ -545,16 +377,10 @@ namespace GD.FM.BLL
 		
 			
 			(new HopdongbanhangManagerBase()).Update(_HopdongbanhangEntity);
-			r.SetField(Field_Id,_HopdongbanhangEntity.Id);
+			r.SetField(Field_Sohopdong,_HopdongbanhangEntity.Sohopdong);
 									
 			
 			
-			
-			try
-			{
-				r.SetField(Field_Sohopdong,_HopdongbanhangEntity.Sohopdong);
-			}
-			catch { }
 			
 			try
 			{
@@ -576,18 +402,6 @@ namespace GD.FM.BLL
 			
 			try
 			{
-				r.SetField(Field_Mahangphiakhach,_HopdongbanhangEntity.Mahangphiakhach);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Codefiller,_HopdongbanhangEntity.Codefiller);
-			}
-			catch { }
-			
-			try
-			{
 				r.SetField(Field_Macangden,_HopdongbanhangEntity.Macangden);
 			}
 			catch { }
@@ -595,30 +409,6 @@ namespace GD.FM.BLL
 			try
 			{
 				r.SetField(Field_Tencangden,_HopdongbanhangEntity.Tencangden);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Soluong,_HopdongbanhangEntity.Soluong);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Dongiavnd,_HopdongbanhangEntity.Dongiavnd);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Tygia,_HopdongbanhangEntity.Tygia);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Dongiausd,_HopdongbanhangEntity.Dongiausd);
 			}
 			catch { }
 			
@@ -679,13 +469,11 @@ namespace GD.FM.BLL
 			return HopdongbanhangEntity;
 		}
 
-		public HopdongbanhangEntity Insert(System.Int64  Id, System.String  Sohopdong, System.DateTime  Ngayhopdong, System.String  Makhach, System.String  Tenkhach, System.String  Mahangphiakhach, System.String  Codefiller, System.String  Macangden, System.String  Tencangden, System.Decimal  Soluong, System.Decimal  Dongiavnd, System.Decimal  Tygia, System.Decimal  Dongiausd, System.Decimal  Thanhtienvnd, System.Decimal  Thanhtienusd, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public HopdongbanhangEntity Insert(System.String  Sohopdong, System.DateTime  Ngayhopdong, System.String  Makhach, System.String  Tenkhach, System.String  Macangden, System.String  Tencangden, System.Decimal  Thanhtienvnd, System.Decimal  Thanhtienusd, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
 		{
 			HopdongbanhangEntity _HopdongbanhangEntity = new HopdongbanhangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				
-				_HopdongbanhangEntity.Id = Id;
 				
 				_HopdongbanhangEntity.Sohopdong = Sohopdong;
 				
@@ -695,21 +483,9 @@ namespace GD.FM.BLL
 				
 				_HopdongbanhangEntity.Tenkhach = Tenkhach;
 				
-				_HopdongbanhangEntity.Mahangphiakhach = Mahangphiakhach;
-				
-				_HopdongbanhangEntity.Codefiller = Codefiller;
-				
 				_HopdongbanhangEntity.Macangden = Macangden;
 				
 				_HopdongbanhangEntity.Tencangden = Tencangden;
-				
-				_HopdongbanhangEntity.Soluong = Soluong;
-				
-				_HopdongbanhangEntity.Dongiavnd = Dongiavnd;
-				
-				_HopdongbanhangEntity.Tygia = Tygia;
-				
-				_HopdongbanhangEntity.Dongiausd = Dongiausd;
 				
 				_HopdongbanhangEntity.Thanhtienvnd = Thanhtienvnd;
 				
@@ -729,14 +505,12 @@ namespace GD.FM.BLL
 			return _HopdongbanhangEntity;
 		}
 
-		public HopdongbanhangEntity Insert(System.String Sohopdong, System.DateTime Ngayhopdong, System.String Makhach, System.String Tenkhach, System.String Mahangphiakhach, System.String Codefiller, System.String Macangden, System.String Tencangden, System.Decimal Soluong, System.Decimal Dongiavnd, System.Decimal Tygia, System.Decimal Dongiausd, System.Decimal Thanhtienvnd, System.Decimal Thanhtienusd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, )//ko co mahieu
+		public HopdongbanhangEntity Insert(System.DateTime Ngayhopdong, System.String Makhach, System.String Tenkhach, System.String Macangden, System.String Tencangden, System.Decimal Thanhtienvnd, System.Decimal Thanhtienusd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			HopdongbanhangEntity _HopdongbanhangEntity = new HopdongbanhangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
 				
-				
-				_HopdongbanhangEntity.Sohopdong = Sohopdong;
 				
 				_HopdongbanhangEntity.Ngayhopdong = Ngayhopdong;
 				
@@ -744,21 +518,9 @@ namespace GD.FM.BLL
 				
 				_HopdongbanhangEntity.Tenkhach = Tenkhach;
 				
-				_HopdongbanhangEntity.Mahangphiakhach = Mahangphiakhach;
-				
-				_HopdongbanhangEntity.Codefiller = Codefiller;
-				
 				_HopdongbanhangEntity.Macangden = Macangden;
 				
 				_HopdongbanhangEntity.Tencangden = Tencangden;
-				
-				_HopdongbanhangEntity.Soluong = Soluong;
-				
-				_HopdongbanhangEntity.Dongiavnd = Dongiavnd;
-				
-				_HopdongbanhangEntity.Tygia = Tygia;
-				
-				_HopdongbanhangEntity.Dongiausd = Dongiausd;
 				
 				_HopdongbanhangEntity.Thanhtienvnd = Thanhtienvnd;
 				
@@ -786,7 +548,7 @@ namespace GD.FM.BLL
 				RelationPredicateBucket filter = new RelationPredicateBucket();
 				IPredicateExpression _PredicateExpression = new PredicateExpression();
 				
-				_PredicateExpression.Add(HopdongbanhangFields.Id == _HopdongbanhangEntity.Id);
+				_PredicateExpression.Add(HopdongbanhangFields.Sohopdong == _HopdongbanhangEntity.Sohopdong);
 				
 					
 				filter.PredicateExpression.Add(_PredicateExpression);
@@ -808,18 +570,16 @@ namespace GD.FM.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.String Sohopdong, System.DateTime Ngayhopdong, System.String Makhach, System.String Tenkhach, System.String Mahangphiakhach, System.String Codefiller, System.String Macangden, System.String Tencangden, System.Decimal Soluong, System.Decimal Dongiavnd, System.Decimal Tygia, System.Decimal Dongiausd, System.Decimal Thanhtienvnd, System.Decimal Thanhtienusd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.String Sohopdong, System.DateTime Ngayhopdong, System.String Makhach, System.String Tenkhach, System.String Macangden, System.String Tencangden, System.Decimal Thanhtienvnd, System.Decimal Thanhtienusd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				HopdongbanhangEntity _HopdongbanhangEntity = new HopdongbanhangEntity(Id);
+				HopdongbanhangEntity _HopdongbanhangEntity = new HopdongbanhangEntity(Sohopdong);
 				if (adapter.FetchEntity(_HopdongbanhangEntity))
 				{
 				
 					
-					
-					_HopdongbanhangEntity.Sohopdong = Sohopdong;
 					
 					_HopdongbanhangEntity.Ngayhopdong = Ngayhopdong;
 					
@@ -827,21 +587,9 @@ namespace GD.FM.BLL
 					
 					_HopdongbanhangEntity.Tenkhach = Tenkhach;
 					
-					_HopdongbanhangEntity.Mahangphiakhach = Mahangphiakhach;
-					
-					_HopdongbanhangEntity.Codefiller = Codefiller;
-					
 					_HopdongbanhangEntity.Macangden = Macangden;
 					
 					_HopdongbanhangEntity.Tencangden = Tencangden;
-					
-					_HopdongbanhangEntity.Soluong = Soluong;
-					
-					_HopdongbanhangEntity.Dongiavnd = Dongiavnd;
-					
-					_HopdongbanhangEntity.Tygia = Tygia;
-					
-					_HopdongbanhangEntity.Dongiausd = Dongiausd;
 					
 					_HopdongbanhangEntity.Thanhtienvnd = Thanhtienvnd;
 					
@@ -863,12 +611,12 @@ namespace GD.FM.BLL
 			return toReturn;
 		}
 
-		public bool Delete(System.Int64 Id)
+		public bool Delete(System.String Sohopdong)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				HopdongbanhangEntity _HopdongbanhangEntity = new HopdongbanhangEntity(Id);
+				HopdongbanhangEntity _HopdongbanhangEntity = new HopdongbanhangEntity(Sohopdong);
 				if (adapter.FetchEntity(_HopdongbanhangEntity))
 				{
 					adapter.DeleteEntity(_HopdongbanhangEntity);
@@ -887,22 +635,6 @@ namespace GD.FM.BLL
 		}
 		
 		
-		
-		public int DeleteById(System.Int64 Id)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Id == Id);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HopdongbanhangEntity", filter);
-			}
-			return toReturn;
-		}		
 		
 		public int DeleteBySohopdong(System.String Sohopdong)
 		{
@@ -968,38 +700,6 @@ namespace GD.FM.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByMahangphiakhach(System.String Mahangphiakhach)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Mahangphiakhach == Mahangphiakhach);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HopdongbanhangEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByCodefiller(System.String Codefiller)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Codefiller == Codefiller);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HopdongbanhangEntity", filter);
-			}
-			return toReturn;
-		}		
-		
 		public int DeleteByMacangden(System.String Macangden)
 		{
 			int toReturn = 0;
@@ -1023,70 +723,6 @@ namespace GD.FM.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(HopdongbanhangFields.Tencangden == Tencangden);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HopdongbanhangEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteBySoluong(System.Decimal Soluong)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Soluong == Soluong);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HopdongbanhangEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByDongiavnd(System.Decimal Dongiavnd)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Dongiavnd == Dongiavnd);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HopdongbanhangEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByTygia(System.Decimal Tygia)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Tygia == Tygia);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HopdongbanhangEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByDongiausd(System.Decimal Dongiausd)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Dongiausd == Dongiausd);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1193,12 +829,12 @@ namespace GD.FM.BLL
 		}		
 			
 		
-		public HopdongbanhangEntity SelectOne(System.Int64 Id)
+		public HopdongbanhangEntity SelectOne(System.String Sohopdong)
 		{
 			HopdongbanhangEntity toReturn = null;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				HopdongbanhangEntity _HopdongbanhangEntity = new HopdongbanhangEntity(Id);
+				HopdongbanhangEntity _HopdongbanhangEntity = new HopdongbanhangEntity(Sohopdong);
 				if (adapter.FetchEntity(_HopdongbanhangEntity))
 				{
 					toReturn = _HopdongbanhangEntity;
@@ -1231,40 +867,6 @@ namespace GD.FM.BLL
 		}
 
 		
-		
-		// Return EntityCollection
-		public EntityCollection SelectById(System.Int64 Id)
-		{
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Id == Id);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HopdongbanhangCollection, filter, 0, null);
-			}
-			return _HopdongbanhangCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByIdRDT(System.Int64 Id)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Id == Id);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HopdongbanhangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
 		
 		// Return EntityCollection
 		public EntityCollection SelectBySohopdong(System.String Sohopdong)
@@ -1403,74 +1005,6 @@ namespace GD.FM.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByMahangphiakhach(System.String Mahangphiakhach)
-		{
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Mahangphiakhach == Mahangphiakhach);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HopdongbanhangCollection, filter, 0, null);
-			}
-			return _HopdongbanhangCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByMahangphiakhachRDT(System.String Mahangphiakhach)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Mahangphiakhach == Mahangphiakhach);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HopdongbanhangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByCodefiller(System.String Codefiller)
-		{
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Codefiller == Codefiller);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HopdongbanhangCollection, filter, 0, null);
-			}
-			return _HopdongbanhangCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByCodefillerRDT(System.String Codefiller)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Codefiller == Codefiller);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HopdongbanhangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
 		public EntityCollection SelectByMacangden(System.String Macangden)
 		{
 			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
@@ -1529,142 +1063,6 @@ namespace GD.FM.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(HopdongbanhangFields.Tencangden == Tencangden);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HopdongbanhangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectBySoluong(System.Decimal Soluong)
-		{
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Soluong == Soluong);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HopdongbanhangCollection, filter, 0, null);
-			}
-			return _HopdongbanhangCollection;
-		}
-		// Return DataTable
-		public DataTable SelectBySoluongRDT(System.Decimal Soluong)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Soluong == Soluong);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HopdongbanhangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByDongiavnd(System.Decimal Dongiavnd)
-		{
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Dongiavnd == Dongiavnd);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HopdongbanhangCollection, filter, 0, null);
-			}
-			return _HopdongbanhangCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByDongiavndRDT(System.Decimal Dongiavnd)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Dongiavnd == Dongiavnd);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HopdongbanhangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByTygia(System.Decimal Tygia)
-		{
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Tygia == Tygia);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HopdongbanhangCollection, filter, 0, null);
-			}
-			return _HopdongbanhangCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByTygiaRDT(System.Decimal Tygia)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Tygia == Tygia);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HopdongbanhangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByDongiausd(System.Decimal Dongiausd)
-		{
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Dongiausd == Dongiausd);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HopdongbanhangCollection, filter, 0, null);
-			}
-			return _HopdongbanhangCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByDongiausdRDT(System.Decimal Dongiausd)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HopdongbanhangCollection = new EntityCollection(new HopdongbanhangEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HopdongbanhangFields.Dongiausd == Dongiausd);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

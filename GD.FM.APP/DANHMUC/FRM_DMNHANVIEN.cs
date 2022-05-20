@@ -121,7 +121,7 @@ namespace GD.FM.APP.DANHMUC
                     txt_TENHIEU.Text = _Rowview.Row[NhanvienFields.Hoten.Name].ToString();
                     txt_DIACHI.Text = _Rowview.Row[NhanvienFields.Diachi.Name].ToString();
                     txt_SODIENTHOAI.Text = _Rowview.Row[NhanvienFields.Sodienthoai.Name].ToString();
-                    txt_CHUCVU.Text = _Rowview.Row[NhanvienFields.Chucvu.Name].ToString();
+                    txt_CHUCVU.Text = _Rowview.Row[NhanvienFields.Tenchucvu.Name].ToString();
                     dtp_NGAYSINH.Text = _Rowview.Row[NhanvienFields.Ngaysinh.Name].ToString();
                     txt_EMAIL.Text = _Rowview.Row[NhanvienFields.Email.Name].ToString();
                     try
@@ -149,7 +149,7 @@ namespace GD.FM.APP.DANHMUC
             _NhanvienEntity.Hoten = txt_TENHIEU.Text.Trim();
             _NhanvienEntity.Diachi = txt_DIACHI.Text.Trim();
             _NhanvienEntity.Sodienthoai = txt_SODIENTHOAI.Text.Trim();
-            _NhanvienEntity.Chucvu = txt_CHUCVU.Text.Trim();
+            _NhanvienEntity.Tenchucvu = txt_CHUCVU.Text.Trim();
             _NhanvienEntity.Ngaysinh = Convert.ToDateTime(dtp_NGAYSINH.Text);
             _NhanvienEntity.Email = txt_EMAIL.Text.Trim();
             if (rd_MALE.Checked)
@@ -169,7 +169,7 @@ namespace GD.FM.APP.DANHMUC
                 GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Hoten.Name].Value = _NhanvienEntity.Hoten;
                 GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Diachi.Name].Value = _NhanvienEntity.Diachi;
                 GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Sodienthoai.Name].Value = _NhanvienEntity.Sodienthoai;
-                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Chucvu.Name].Value = _NhanvienEntity.Chucvu;
+                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Tenchucvu.Name].Value = _NhanvienEntity.Tenchucvu;
                 GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Ngaysinh.Name].Value = _NhanvienEntity.Ngaysinh;
                 GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Email.Name].Value = _NhanvienEntity.Email;
                 GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Gioitinh.Name].Value = _NhanvienEntity.Gioitinh;

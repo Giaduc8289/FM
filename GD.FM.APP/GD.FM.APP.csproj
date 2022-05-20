@@ -264,6 +264,7 @@
     <Compile Include="LIB\SysInfo.cs" />
     <Compile Include="LIB\USERS.cs" />
     <Compile Include="Manager\DanhmuccangManager.cs" />
+    <Compile Include="Manager\DanhmucchucvuManager.cs" />
     <Compile Include="Manager\DanhmuchanghoaManager.cs" />
     <Compile Include="Manager\DanhmuckhachManager.cs" />
     <Compile Include="Manager\DanhmucnganhangManager.cs" />
@@ -272,10 +273,12 @@
     <Compile Include="Manager\DmcapmaManager.cs" />
     <Compile Include="Manager\DonvitinhManager.cs" />
     <Compile Include="Manager\FormcoManager.cs" />
+    <Compile Include="Manager\HopdongbanhangchitietManager.cs" />
     <Compile Include="Manager\LogbackupManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
     <Compile Include="Manager\MenuroleManager.cs" />
     <Compile Include="Manager\NhanvienManager.cs" />
+    <Compile Include="Manager\PhongbanManager.cs" />
     <Compile Include="Manager\PhuongthucthanhtoanManager.cs" />
     <Compile Include="Manager\PhuongthucvanchuyenManager.cs" />
     <Compile Include="Manager\RolesManager.cs" />

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 19 May 2022 14:46:06
+// Code is generated on: 20 May 2022 09:12:01
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -35,6 +35,9 @@ namespace GD.FM.DAL.FactoryClasses
 				case GD.FM.DAL.EntityType.DanhmuccangEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DanhmuccangEntity");
 					break;
+				case GD.FM.DAL.EntityType.DanhmucchucvuEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DanhmucchucvuEntity");
+					break;
 				case GD.FM.DAL.EntityType.DanhmuchanghoaEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DanhmuchanghoaEntity");
 					break;
@@ -62,6 +65,9 @@ namespace GD.FM.DAL.FactoryClasses
 				case GD.FM.DAL.EntityType.HopdongbanhangEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "HopdongbanhangEntity");
 					break;
+				case GD.FM.DAL.EntityType.HopdongbanhangchitietEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "HopdongbanhangchitietEntity");
+					break;
 				case GD.FM.DAL.EntityType.LogbackupEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "LogbackupEntity");
 					break;
@@ -73,6 +79,9 @@ namespace GD.FM.DAL.FactoryClasses
 					break;
 				case GD.FM.DAL.EntityType.NhanvienEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "NhanvienEntity");
+					break;
+				case GD.FM.DAL.EntityType.PhongbanEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "PhongbanEntity");
 					break;
 				case GD.FM.DAL.EntityType.PhuongthucthanhtoanEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "PhuongthucthanhtoanEntity");

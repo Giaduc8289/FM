@@ -73,20 +73,39 @@ CREATE TABLE Donvitinh(
 Mahieu		NVARCHAR(50) NOT NULL,
 Tenhieu			NVARCHAR(50),
 Tentienganh		NVARCHAR(50),
+Ngaytao			DATETIME,
+Nguoitao		NVARCHAR(50),
+Ngaysua			DATETIME,
+Nguoisua		NVARCHAR(50),
 constraint Donvitinh_PK primary key (Mahieu)) ON [PRIMARY]
 
 -----Hợp đồng bán hàng-------------------------------------------------
 -----------------------------------------------------------------------
 CREATE TABLE Hopdongbanhang(
+Sohopdong		Nvarchar(50) Not Null,
+Ngayhopdong		Date,
+Makhach			Nvarchar(50),
+Tenkhach		Nvarchar(250),
+Macangden			Nvarchar(50),
+Tencangden			Nvarchar(250),
+Thanhtienvnd	Decimal(20,2),
+Thanhtienusd	Decimal(20,2),
+Ngaytao			DATETIME,
+Nguoitao		NVARCHAR(50),
+Ngaysua			DATETIME,
+Nguoisua		NVARCHAR(50),
+constraint Hopdongbanhang_PK primary key (Sohopdong)) ON [PRIMARY]
+
+Create Table Hopdongbanhangchitiet(
 Id		Bigint Identity Not null,
 Sohopdong		Nvarchar(50),
 Ngayhopdong		Date,
 Makhach			Nvarchar(50),
 Tenkhach		Nvarchar(250),
-Mahangphiakhach		Nvarchar(50),
-Codefiller			Nvarchar(50),
 Macangden			Nvarchar(50),
 Tencangden			Nvarchar(250),
+Mahangphiakhach		Nvarchar(50),
+Codefiller			Nvarchar(50),
 Soluong			Decimal(20,2),
 Dongiavnd		Decimal(20,2),
 Tygia			Decimal(20,2),
@@ -97,7 +116,8 @@ Ngaytao			DATETIME,
 Nguoitao		NVARCHAR(50),
 Ngaysua			DATETIME,
 Nguoisua		NVARCHAR(50),
-constraint Hopdongbanhang_PK primary key (Id)) ON [PRIMARY]
+constraint Hopdongbanhangchitiet_PK primary key (Id)) ON [PRIMARY]
+
 
 CREATE TABLE Thuchienhopdongbanhang(
 Id		Bigint Identity Not null,
@@ -196,8 +216,6 @@ constraint Phuongthucvanchuyen_PK primary key (Mahieu)) ON [PRIMARY]
 
 
 
-
-
 -----Khác------------------------------------------------------
 ---------------------------------------------------------------
 CREATE TABLE Tygia(
@@ -214,7 +232,10 @@ constraint Tygia_PK primary key (Thang)) ON [PRIMARY]
 CREATE TABLE Nhanvien(
 Manhanvien			NVARCHAR(50) NOT NULL,
 Hoten			NVARCHAR(50),
-Chucvu			NVARCHAR(50),
+Maphongban			NVARCHAR(50),
+Tenphongban			Nvarchar(250),
+Machucvu			NVARCHAR(50),
+Tenchucvu			Nvarchar(250),
 Gioitinh		BIT,
 Ngaysinh		DATE,
 Diachi			NVARCHAR(250),
@@ -222,7 +243,25 @@ Sodienthoai		NVARCHAR(50),
 Email			NVARCHAR(50),
 CONSTRAINT Nhanvien_PK primary key (Manhanvien)) ON [PRIMARY]
 
+Create Table Phongban(
+Mahieu		Nvarchar(50) Not null,
+Tenhieu		Nvarchar(250),
+Tenrutgon	Nvarchar(50),
+Ngaytao			DATETIME,
+Nguoitao		NVARCHAR(50),
+Ngaysua			DATETIME,
+Nguoisua		NVARCHAR(50),
+constraint Phongban_PK primary key (Mahieu)) ON [PRIMARY]
 
+Create Table Danhmucchucvu(
+Mahieu		Nvarchar(50) Not null,
+Tenhieu		Nvarchar(250),
+Tenrutgon	Nvarchar(50),
+Ngaytao			DATETIME,
+Nguoitao		NVARCHAR(50),
+Ngaysua			DATETIME,
+Nguoisua		NVARCHAR(50),
+constraint Danhmucchucvu_PK primary key (Mahieu)) ON [PRIMARY]
 
 
 

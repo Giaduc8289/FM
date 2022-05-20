@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 19 May 2022 14:46:06
+// Code is generated on: 20 May 2022 09:12:01
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -439,7 +439,16 @@ namespace GD.FM.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Hoten", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Chucvu", fieldHashtable);
+			_fieldsCustomProperties.Add("Maphongban", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenphongban", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Machucvu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenchucvu", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Gioitinh", fieldHashtable);
@@ -542,15 +551,48 @@ namespace GD.FM.DAL.EntityClasses
 			set	{ SetValue((int)NhanvienFieldIndex.Hoten, value); }
 		}
 
-		/// <summary> The Chucvu property of the Entity Nhanvien<br/><br/>
+		/// <summary> The Maphongban property of the Entity Nhanvien<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Nhanvien"."Chucvu"<br/>
+		/// <remarks>Mapped on  table field: "Nhanvien"."Maphongban"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Chucvu
+		public virtual System.String Maphongban
 		{
-			get { return (System.String)GetValue((int)NhanvienFieldIndex.Chucvu, true); }
-			set	{ SetValue((int)NhanvienFieldIndex.Chucvu, value); }
+			get { return (System.String)GetValue((int)NhanvienFieldIndex.Maphongban, true); }
+			set	{ SetValue((int)NhanvienFieldIndex.Maphongban, value); }
+		}
+
+		/// <summary> The Tenphongban property of the Entity Nhanvien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Nhanvien"."Tenphongban"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenphongban
+		{
+			get { return (System.String)GetValue((int)NhanvienFieldIndex.Tenphongban, true); }
+			set	{ SetValue((int)NhanvienFieldIndex.Tenphongban, value); }
+		}
+
+		/// <summary> The Machucvu property of the Entity Nhanvien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Nhanvien"."Machucvu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Machucvu
+		{
+			get { return (System.String)GetValue((int)NhanvienFieldIndex.Machucvu, true); }
+			set	{ SetValue((int)NhanvienFieldIndex.Machucvu, value); }
+		}
+
+		/// <summary> The Tenchucvu property of the Entity Nhanvien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Nhanvien"."Tenchucvu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenchucvu
+		{
+			get { return (System.String)GetValue((int)NhanvienFieldIndex.Tenchucvu, true); }
+			set	{ SetValue((int)NhanvienFieldIndex.Tenchucvu, value); }
 		}
 
 		/// <summary> The Gioitinh property of the Entity Nhanvien<br/><br/>
