@@ -20,3 +20,26 @@ E:\Dev\FM\GD.FM.CONTROL\Janus.Data.v3.dll
 E:\Dev\FM\GD.FM.CONTROL\Janus.Windows.Common.v3.dll
 E:\Dev\FM\GD.FM.CONTROL\Janus.Windows.GridEX.v3.dll
 E:\Dev\FM\GD.FM.CONTROL\Janus.Windows.UI.v3.dll
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.csprojResolveAssemblyReference.cache
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.BTN_HIENTHI.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.BUTTON.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\ExtensiveCombo.frmEXTCombo.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\ExtensiveCombo.WeekDays4Combo.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.FORM.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.setup.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.MonCalendar.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.TEXTBOXDATE.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.TEXTBOXNUMBER.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.TEXTBOX.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.toolmenufrm.resources
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.csproj.GenerateResource.Cache
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.dll.licenses
+D:\DB back up\FM\GD.FM.CONTROL\GD.FM.CONTROL.dll.config
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.dll
+D:\DB back up\FM\GD.FM.CONTROL\obj\Debug\GD.FM.CONTROL.pdb
+D:\DB back up\FM\GD.FM.CONTROL\GD.FM.CONTROL.dll
+D:\DB back up\FM\GD.FM.CONTROL\GD.FM.CONTROL.pdb
+D:\DB back up\FM\GD.FM.CONTROL\Janus.Data.v3.dll
+D:\DB back up\FM\GD.FM.CONTROL\Janus.Windows.Common.v3.dll
+D:\DB back up\FM\GD.FM.CONTROL\Janus.Windows.GridEX.v3.dll
+D:\DB back up\FM\GD.FM.CONTROL\Janus.Windows.UI.v3.dll
