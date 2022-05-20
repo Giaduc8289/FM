@@ -2787,7 +2787,7 @@ Tel: +84-4-38617508
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataKDBB</rd:DataSetName>
-        <rd:SchemaPath>D:\CODE2020\KDBB\GD.KDBB.APP\RDLC\DataSXBB.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\CODE2020\KDBB\GD.FM.APP\RDLC\DataSXBB.xsd</rd:SchemaPath>
         <rd:TableName>Baogia</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -3019,7 +3019,7 @@ Tel: +84-4-38617508
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataKDBB</rd:DataSetName>
-        <rd:SchemaPath>D:\CODE2020\KDBB\GD.KDBB.APP\RDLC\DataSXBB.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\CODE2020\KDBB\GD.FM.APP\RDLC\DataSXBB.xsd</rd:SchemaPath>
         <rd:TableName>Thamso</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

@@ -3998,7 +3998,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataKDBB</rd:DataSetName>
-        <rd:SchemaPath>D:\DevZone\KDBB\GD.KDBB.APP\RDLC\DataKDBB.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\DevZone\KDBB\GD.FM.APP\RDLC\DataKDBB.xsd</rd:SchemaPath>
         <rd:TableName>Thamso</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -4186,7 +4186,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataKDBB</rd:DataSetName>
-        <rd:SchemaPath>D:\DevZone\KDBB\GD.KDBB.APP\RDLC\DataKDBB.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\DevZone\KDBB\GD.FM.APP\RDLC\DataKDBB.xsd</rd:SchemaPath>
         <rd:TableName>Hopdong</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

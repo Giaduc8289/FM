@@ -27,10 +27,6 @@ Ngaysua			DATETIME,
 Nguoisua		NVARCHAR(50),
 constraint Danhmuckhach_PK primary key (Mahieu)) ON [PRIMARY]
 
-alter table Danhmuckhach add Manhanvien		Nvarchar(50),
-Tennhanvien		Nvarchar(250),
-Macode			Nvarchar(Max),
-Mafiller		Nvarchar(Max),
 
 Create table Danhmucungdung(
 Mahieu		Nvarchar(50) Not null,

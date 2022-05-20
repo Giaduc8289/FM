@@ -1502,7 +1502,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataKDBB</rd:DataSetName>
-        <rd:SchemaPath>D:\CODE2020\KDBB\GD.KDBB.APP\RDLC\DataKDBB.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\CODE2020\KDBB\GD.FM.APP\RDLC\DataKDBB.xsd</rd:SchemaPath>
         <rd:TableName>Baogia</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -1606,7 +1606,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataKDBB</rd:DataSetName>
-        <rd:SchemaPath>H:\DEV\KDBB\GD.KDBB.APP\RDLC\DataKDBB.xsd</rd:SchemaPath>
+        <rd:SchemaPath>H:\DEV\KDBB\GD.FM.APP\RDLC\DataKDBB.xsd</rd:SchemaPath>
         <rd:TableName>Thamso</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

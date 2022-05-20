@@ -35,7 +35,7 @@ namespace GD.FM.APP.HETHONG
             using (PictureBox _PictureBox = new PictureBox())
             using (BackgroundWorker worker = new BackgroundWorker())
             {
-                Image _image = Image.FromFile(LIB.PATH.KDTM_PATH + @"\IMG\waiting.xml");
+                Image _image = Image.FromFile(LIB.PATH.FM_PATH + @"\IMG\waiting.xml");
                 _PictureBox.Image = _image;
                 _PictureBox.Width = _image.Width;
                 _PictureBox.Height = _image.Height;
@@ -74,8 +74,8 @@ namespace GD.FM.APP.HETHONG
         {
             InitializeComponent();
             txt_username.Text = LIB.SESSION_START.TS_USER_LOGIN;
-            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.KDTM_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
-            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.KDTM_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
+            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
+            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             FORM_PROCESS();
           
         }

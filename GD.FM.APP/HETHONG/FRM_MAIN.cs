@@ -49,7 +49,7 @@ namespace GD.FM.APP.HETHONG
             using (PictureBox _PictureBox = new PictureBox())
             using (BackgroundWorker worker = new BackgroundWorker())
             {
-                Image _image = Image.FromFile(LIB.PATH.KDTM_PATH + @"\IMG\waiting.xml");
+                Image _image = Image.FromFile(LIB.PATH.FM_PATH + @"\IMG\waiting.xml");
                 _PictureBox.Image = _image;
                 _PictureBox.Width = _image.Width;
                 _PictureBox.Height = _image.Height;
@@ -243,8 +243,8 @@ namespace GD.FM.APP.HETHONG
             string filename = "";
             try
             {
-                string tempPath = LIB.PATH.KDTM_PATH;//Path.GetTempPath();
-                UnZip(LIB.PATH.KDTM_PATH + "\\GD.FMLIC.BIN", tempPath);
+                string tempPath = LIB.PATH.FM_PATH;//Path.GetTempPath();
+                UnZip(LIB.PATH.FM_PATH + "\\GD.FMLIC.BIN", tempPath);
                 string str = "", str1 = "", str2 = "", str11 = "", str21 = "", ngay = "";
                 filename = tempPath + "\\VOS.LIC";
                 if (!System.IO.File.Exists(filename)) return;
@@ -309,8 +309,8 @@ namespace GD.FM.APP.HETHONG
             string filename = "";
             try
             {
-                string tempPath = LIB.PATH.KDTM_PATH;// Path.GetTempPath();
-                UnZip(LIB.PATH.KDTM_PATH + "\\UpdateDB.dat", tempPath, "CTHH­ngTrÇnV¨nNgäcNamX·2016");
+                string tempPath = LIB.PATH.FM_PATH;// Path.GetTempPath();
+                UnZip(LIB.PATH.FM_PATH + "\\UpdateDB.dat", tempPath, "CTHH­ngTrÇnV¨nNgäcNamX·2016");
                 string str = "";
                 filename = tempPath + "\\UpdateDB.sql";
                 if (!System.IO.File.Exists(filename))
@@ -405,7 +405,7 @@ namespace GD.FM.APP.HETHONG
 
             try
             {
-                mmru.Image = Image.FromFile(LIB.PATH.KDTM_PATH + @"\IMG\Icon\Menu\" + r[MenuFields.Icon.Name].ToString());
+                mmru.Image = Image.FromFile(LIB.PATH.FM_PATH + @"\IMG\Icon\Menu\" + r[MenuFields.Icon.Name].ToString());
             }
             catch { }
             //tao menu cha
@@ -442,7 +442,7 @@ namespace GD.FM.APP.HETHONG
                 }
                 try
                 {
-                    mmru.Image = Image.FromFile(LIB.PATH.KDTM_PATH + @"\IMG\Icon\Menu\" + r[MenuFields.Icon.Name].ToString());//icon menu cap 2
+                    mmru.Image = Image.FromFile(LIB.PATH.FM_PATH + @"\IMG\Icon\Menu\" + r[MenuFields.Icon.Name].ToString());//icon menu cap 2
                 }
                 catch { }
                 switch (r[MenuFields.LoaiMenu.Name].ToString())
@@ -499,7 +499,7 @@ namespace GD.FM.APP.HETHONG
                 }
                 try
                 {
-                    mmru.Image = Image.FromFile(LIB.PATH.KDTM_PATH + @"\IMG\Icon\Menu\" + r[MenuFields.Icon.Name].ToString());
+                    mmru.Image = Image.FromFile(LIB.PATH.FM_PATH + @"\IMG\Icon\Menu\" + r[MenuFields.Icon.Name].ToString());
                 }
                 catch { }
                 switch (r[MenuFields.LoaiMenu.Name].ToString())
@@ -733,6 +733,16 @@ namespace GD.FM.APP.HETHONG
                         if (frm.Name == "FRM_DMTYGIA") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
                     }
                     ShowAsMDIChildMax((new GD.FM.APP.DANHMUC.FRM_DMTYGIA()), mmru.Text);
+                    break;
+                #endregion
+
+                #region Bán hàng
+                case "FRM_HOPDONGBAN":
+                    foreach (GD.FM.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_HOPDONGBAN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.FM.APP.BANHANG.FRM_HOPDONGBAN()), mmru.Text);
                     break;
                 #endregion
 

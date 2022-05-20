@@ -46,7 +46,7 @@ namespace GD.FM.APP.HETHONG
             using (PictureBox _PictureBox = new PictureBox())
             using (BackgroundWorker worker = new BackgroundWorker())
             {
-                Image _image = Image.FromFile(LIB.PATH.KDTM_PATH + @"\IMG\waiting.xml");
+                Image _image = Image.FromFile(LIB.PATH.FM_PATH + @"\IMG\waiting.xml");
                 _PictureBox.Image = _image;
                 _PictureBox.Width = _image.Width;
                 _PictureBox.Height = _image.Height;
@@ -91,11 +91,11 @@ namespace GD.FM.APP.HETHONG
             InitializeComponent();
             MenuroleManager _MenuroleManager = new MenuroleManager();
             DataTable dt111 = _MenuroleManager.Clone();
-            //GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.KDTM_PATH + @"\XMLCONFIG\FRM_ROLES.xml");
+            //GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_ROLES.xml");
             // GD.FM.LIB.COMBO_COMM.SOURCE(false, cbb_NHOMQUYEN, txt_TENNHOMQUYEN, DT_ROLES, RolesFields.Rolesid.Name, RolesFields.Rolesname.Name);
             GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
-            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.KDTM_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
-            GD.FM.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.KDTM_PATH + @"\XMLCONFIG\FRM_ROLES.xml", GRID_ROLES, uiPanel0Container);
+            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
+            GD.FM.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_ROLES.xml", GRID_ROLES, uiPanel0Container);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_ROLES);
             BS_ROLES = new BindingSource();

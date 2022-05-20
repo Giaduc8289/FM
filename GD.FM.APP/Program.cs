@@ -19,7 +19,7 @@ namespace GD.FM.APP
         {
             if (args != null && args.Length > 0 && args[0] == "Install")
             {
-                string path = LIB.PATH.KDTM_PATH;
+                string path = LIB.PATH.FM_PATH;
                 SetPermissions(path);
 
                 //try

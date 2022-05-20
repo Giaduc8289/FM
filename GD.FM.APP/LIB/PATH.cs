@@ -9,7 +9,7 @@ namespace GD.FM.APP.LIB
 {
     class PATH
     {
-        public static string KDTM_PATH
+        public static string FM_PATH
         {
 
             get

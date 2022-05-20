@@ -54,3 +54,4 @@ E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.exe
 E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.pdb
 E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.DANHMUC.FRM_UNGDUNGSP.resources
 E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.DANHMUC.FRM_DMHANGHOA.resources
+E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.BANHANG.FRM_HOPDONGBAN.resources

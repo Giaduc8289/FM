@@ -43,7 +43,7 @@ namespace GD.FM.APP.DANHMUC
             using (PictureBox _PictureBox = new PictureBox())
             using (BackgroundWorker worker = new BackgroundWorker())
             {
-                Image _image = Image.FromFile(LIB.PATH.KDTM_PATH + @"\IMG\waiting.xml");
+                Image _image = Image.FromFile(LIB.PATH.FM_PATH + @"\IMG\waiting.xml");
                 _PictureBox.Image = _image;
                 _PictureBox.Width = _image.Width;
                 _PictureBox.Height = _image.Height;
@@ -91,15 +91,15 @@ namespace GD.FM.APP.DANHMUC
             InitializeComponent();
             DanhmuccangManager _DanhmuccangManager = new DanhmuccangManager();
             DataTable dt111 = _DanhmuccangManager.Clone();
-           // GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.KDTM_PATH + @"\XMLCONFIG\FRM_DMCANG.xml");
+           // GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_DMCANG.xml");
             GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
-            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.KDTM_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
-            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.KDTM_PATH, btn_SUA, btn_SUA.Name + ".xml");
-            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.KDTM_PATH, btn_THEMMOI, btn_THEMMOI.Name + ".xml");
-            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.KDTM_PATH, btn_XOA, btn_XOA.Name + ".xml");
-            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.KDTM_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
-            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.KDTM_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
-            GD.FM.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.KDTM_PATH + @"\XMLCONFIG\FRM_DMCANG.xml", GRID_DMCANG, uiPanel0Container);
+            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
+            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_SUA, btn_SUA.Name + ".xml");
+            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_THEMMOI, btn_THEMMOI.Name + ".xml");
+            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_XOA, btn_XOA.Name + ".xml");
+            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
+            GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
+            GD.FM.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_DMCANG.xml", GRID_DMCANG, uiPanel0Container);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_DMCANG);
             BS_DMCANG = new BindingSource();
@@ -274,7 +274,7 @@ namespace GD.FM.APP.DANHMUC
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.KDTM_PATH + @"\XMLCONFIG\FRM_DMQUOCGIA.xml",
+                    new ListviewJanus(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_DMQUOCGIA.xml",
                         DT_DMQUOCGIA, DanhmucquocgiaFields.Mahieu.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
