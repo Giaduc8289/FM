@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 09:12:01
+// Code is generated on: 20 May 2022 16:33:50
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -26,7 +26,6 @@ namespace GD.FM.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// Entity class which represents the entity 'Hopdongbanhangchitiet'.<br/><br/>
@@ -35,8 +34,7 @@ namespace GD.FM.DAL.EntityClasses
 	[Serializable]
 	public partial class HopdongbanhangchitietEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END
-			
+		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
 
@@ -46,7 +44,6 @@ namespace GD.FM.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Statics
@@ -127,7 +124,6 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 		}
 
 		
@@ -296,7 +292,6 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			base.GetObjectData(info, context);
 		}
 
@@ -425,7 +420,6 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			OnInitClassMembersComplete();
 		}
 
@@ -494,6 +488,9 @@ namespace GD.FM.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaygiao", fieldHashtable);
 		}
 		#endregion
 
@@ -513,7 +510,6 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 
 			OnInitialized();
 		}
@@ -769,6 +765,17 @@ namespace GD.FM.DAL.EntityClasses
 			set	{ SetValue((int)HopdongbanhangchitietFieldIndex.Nguoisua, value); }
 		}
 
+		/// <summary> The Ngaygiao property of the Entity Hopdongbanhangchitiet<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Hopdongbanhangchitiet"."Ngaygiao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaygiao
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)HopdongbanhangchitietFieldIndex.Ngaygiao, false); }
+			set	{ SetValue((int)HopdongbanhangchitietFieldIndex.Ngaygiao, value); }
+		}
+
 
 
 
@@ -799,7 +806,6 @@ namespace GD.FM.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Included code

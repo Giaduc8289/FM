@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 09:12:01
+// Code is generated on: 20 May 2022 16:33:50
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -141,7 +141,6 @@ namespace GD.FM.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDanhmucchucvu
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -153,7 +152,6 @@ namespace GD.FM.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDanhmucchucvuUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -533,7 +531,6 @@ namespace GD.FM.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewHopdongbanhangchitiet
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -545,7 +542,6 @@ namespace GD.FM.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewHopdongbanhangchitietUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -730,7 +726,6 @@ namespace GD.FM.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewPhongban
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -742,7 +737,6 @@ namespace GD.FM.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewPhongbanUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 09:12:02
+// Code is generated on: 20 May 2022 16:33:51
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -253,7 +253,7 @@ namespace GD.FM.DAL.DatabaseSpecific
 		/// <summary>Inits HopdongbanhangchitietEntity's mappings</summary>
 		private void InitHopdongbanhangchitietEntityMappings()
 		{
-			base.AddElementMapping( "HopdongbanhangchitietEntity", "FM", @"dbo", "Hopdongbanhangchitiet", 19 );
+			base.AddElementMapping( "HopdongbanhangchitietEntity", "FM", @"dbo", "Hopdongbanhangchitiet", 20 );
 			base.AddElementFieldMapping( "HopdongbanhangchitietEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "HopdongbanhangchitietEntity", "Sohopdong", "Sohopdong", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "HopdongbanhangchitietEntity", "Ngayhopdong", "Ngayhopdong", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 2 );
@@ -273,6 +273,7 @@ namespace GD.FM.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "HopdongbanhangchitietEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 16 );
 			base.AddElementFieldMapping( "HopdongbanhangchitietEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 17 );
 			base.AddElementFieldMapping( "HopdongbanhangchitietEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 18 );
+			base.AddElementFieldMapping( "HopdongbanhangchitietEntity", "Ngaygiao", "Ngaygiao", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 19 );
 		}
 		/// <summary>Inits LogbackupEntity's mappings</summary>
 		private void InitLogbackupEntityMappings()

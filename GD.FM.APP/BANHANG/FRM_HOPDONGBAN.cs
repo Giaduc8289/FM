@@ -103,9 +103,9 @@ namespace GD.FM.APP.BANHANG
             InitializeComponent();
             HopdongbanhangManager _HopdongbanhangManager = new HopdongbanhangManager();
             DataTable dt111 = _HopdongbanhangManager.Clone();
-            GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_HOPDONGBAN_H.xml");
-            dt111 = _HopdongbanhangchitietManager.Clone();
-            GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_HOPDONGBAN_D.xml");
+            //GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_HOPDONGBAN_H.xml");
+            //dt111 = _HopdongbanhangchitietManager.Clone();
+            //GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_HOPDONGBAN_D.xml");
             GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -224,6 +224,8 @@ namespace GD.FM.APP.BANHANG
                     txt_NGAYHOPDONG.Text = _Rowview.Row[HopdongbanhangFields.Ngayhopdong.Name].ToString();
                     txt_MAKHACH.Text = _Rowview.Row[HopdongbanhangFields.Makhach.Name].ToString();
                     txt_MACANGDEN.Text = _Rowview.Row[HopdongbanhangFields.Macangden.Name].ToString();
+                    txt_THANHTIENVND.Text = _Rowview.Row[HopdongbanhangFields.Thanhtienvnd.Name].ToString();
+                    txt_THANHTIENUSD.Text = _Rowview.Row[HopdongbanhangFields.Thanhtienusd.Name].ToString();
 
                     txt_MAKHACH_Validating(new object(), new CancelEventArgs());
                     txt_MACANGDEN_Validating(new object(), new CancelEventArgs());
@@ -400,8 +402,10 @@ namespace GD.FM.APP.BANHANG
             _HopdongbanhangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
             _HopdongbanhangEntity.Macangden = txt_MACANGDEN.Text.Trim();
             _HopdongbanhangEntity.Tencangden = txt_TENCANGDEN.Text.Trim();
-            //try { _HopdongbanhangEntity.Thanhtienvnd = Convert.ToDateTime(txt_NGAYBAOGIA.Text.Trim()); }
-            //catch { }
+            try { _HopdongbanhangEntity.Thanhtienvnd = Convert.ToDecimal(txt_THANHTIENVND.Text.Trim()); }
+            catch { }
+            try { _HopdongbanhangEntity.Thanhtienusd = Convert.ToDecimal(txt_THANHTIENUSD.Text.Trim()); }
+            catch { }
 
             EntityCollection _HopdongbanhangchitietEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_HOPDONGBAN_D.GetDataRows();
@@ -413,32 +417,25 @@ namespace GD.FM.APP.BANHANG
                 _HopdongbanhangchitietEntity.Sohopdong = _HopdongbanhangEntity.Sohopdong;
                 _HopdongbanhangchitietEntity.Ngayhopdong = _HopdongbanhangEntity.Ngayhopdong;
                 _HopdongbanhangchitietEntity.Makhach = _HopdongbanhangEntity.Makhach;
-                //try { _HopdongbanhangchitietEntity.Loaihang = Convert.ToInt32(_view[HopdongbanhangchitietFields.Loaihang.Name].ToString()); }
-                //catch { }
-                //_HopdongbanhangchitietEntity.Mahang = _view[HopdongbanhangchitietFields.Mahangphiakhach.Name].ToString();
-                ////_HopdongbanhangchitietEntity.Tenhang = _view[HopdongbanhangchitietFields.Tenhang.Name].ToString();
-                //_HopdongbanhangchitietEntity.Chungloai = _view[HopdongbanhangchitietFields.Chungloai.Name].ToString();
-                //_HopdongbanhangchitietEntity.Mauin = _view[HopdongbanhangchitietFields.Mauin.Name].ToString();
-                //_HopdongbanhangchitietEntity.Loai = _view[HopdongbanhangchitietFields.Loai.Name].ToString();
-                _HopdongbanhangchitietEntity.Macangden = _view[HopdongbanhangchitietFields.Macangden.Name].ToString();
+                _HopdongbanhangchitietEntity.Tenkhach = _HopdongbanhangEntity.Tenkhach;
+                _HopdongbanhangchitietEntity.Macangden = _HopdongbanhangEntity.Macangden;
+                _HopdongbanhangchitietEntity.Tencangden = _HopdongbanhangEntity.Tencangden;
+                _HopdongbanhangchitietEntity.Mahangphiakhach = _view[HopdongbanhangchitietFields.Mahangphiakhach.Name].ToString();
+                _HopdongbanhangchitietEntity.Codefiller = _view[HopdongbanhangchitietFields.Codefiller.Name].ToString();
                 try { _HopdongbanhangchitietEntity.Soluong = Convert.ToInt32(_view[HopdongbanhangchitietFields.Soluong.Name].ToString()); }
                 catch { }
-                //try { _HopdongbanhangchitietEntity.Dongia = Convert.ToDecimal(_view[HopdongbanhangchitietFields.Dongia.Name].ToString()); }
-                //catch { }
-                //try { _HopdongbanhangchitietEntity.Ngaygiao = Convert.ToDateTime(_view[HopdongbanhangchitietFields.Ngaygiao.Name].ToString()); }
-                //catch { }
-
-                //try { _HopdongbanhangchitietEntity.Iddieuchinhtruoc = Convert.ToInt64(_view[HopdongbanhangchitietFields.Iddieuchinhtruoc.Name].ToString()); }
-                //catch { }
-                //try { _HopdongbanhangchitietEntity.Ngaydieuchinh = Convert.ToDateTime(_view[HopdongbanhangchitietFields.Ngaydieuchinh.Name].ToString()); }
-                //catch { }
-                //_HopdongbanhangchitietEntity.Macangden = _view[HopdongbanhangchitietFields.Macangden.Name].ToString();
-                //try { _HopdongbanhangchitietEntity.Soluongdieuchinh = Convert.ToInt32(_view[HopdongbanhangchitietFields.Soluongdieuchinh.Name].ToString()); }
-                //catch { }
-                //try { _HopdongbanhangchitietEntity.Dongiadieuchinh = Convert.ToDecimal(_view[HopdongbanhangchitietFields.Dongiadieuchinh.Name].ToString()); }
-                //catch { }
-                //try { _HopdongbanhangchitietEntity.Ngaygiaodieuchinh = Convert.ToDateTime(_view[HopdongbanhangchitietFields.Ngaygiaodieuchinh.Name].ToString()); }
-                //catch { }
+                try { _HopdongbanhangchitietEntity.Dongiavnd = Convert.ToDecimal(_view[HopdongbanhangchitietFields.Dongiavnd.Name].ToString()); }
+                catch { }
+                try { _HopdongbanhangchitietEntity.Tygia = Convert.ToDecimal(_view[HopdongbanhangchitietFields.Tygia.Name].ToString()); }
+                catch { }
+                try { _HopdongbanhangchitietEntity.Dongiausd = Convert.ToDecimal(_view[HopdongbanhangchitietFields.Dongiausd.Name].ToString()); }
+                catch { }
+                try { _HopdongbanhangchitietEntity.Thanhtienvnd = Convert.ToDecimal(_view[HopdongbanhangchitietFields.Thanhtienvnd.Name].ToString()); }
+                catch { }
+                try { _HopdongbanhangchitietEntity.Thanhtienusd = Convert.ToDecimal(_view[HopdongbanhangchitietFields.Thanhtienusd.Name].ToString()); }
+                catch { }
+                try { _HopdongbanhangchitietEntity.Ngaygiao = Convert.ToDateTime(_view[HopdongbanhangchitietFields.Ngaygiao.Name].ToString()); }
+                catch { }
 
 
                 try { _HopdongbanhangchitietEntity.Id = Convert.ToInt64(_view[HopdongbanhangchitietFields.Id.Name].ToString()); }

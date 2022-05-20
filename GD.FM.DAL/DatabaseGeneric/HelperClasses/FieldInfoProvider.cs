@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 09:12:00
+// Code is generated on: 20 May 2022 16:33:50
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -262,6 +262,7 @@ namespace GD.FM.DAL.HelperClasses
 			base.AddElementFieldInfo("HopdongbanhangchitietEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)HopdongbanhangchitietFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("HopdongbanhangchitietEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)HopdongbanhangchitietFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("HopdongbanhangchitietEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)HopdongbanhangchitietFieldIndex.Nguoisua, 50, 0, 0);
+			base.AddElementFieldInfo("HopdongbanhangchitietEntity", "Ngaygiao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)HopdongbanhangchitietFieldIndex.Ngaygiao, 0, 0, 0);
 		}
 		/// <summary>Inits LogbackupEntity's FieldInfo objects</summary>
 		private void InitLogbackupEntityInfos()

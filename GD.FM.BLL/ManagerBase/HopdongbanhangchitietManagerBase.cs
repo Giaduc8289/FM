@@ -64,6 +64,8 @@ namespace GD.FM.BLL
 		
 		public const String Field_Nguoisua="Nguoisua";				
 		
+		public const String Field_Ngaygiao="Ngaygiao";				
+		
 				
 		#endregion	
 
@@ -116,6 +118,8 @@ namespace GD.FM.BLL
 			dt.Columns.Add(Field_Ngaysua,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
+			
+			dt.Columns.Add(Field_Ngaygiao,typeof(System.DateTime));
 									
 		            
 			return dt;			
@@ -240,6 +244,12 @@ namespace GD.FM.BLL
 				r[Field_Nguoisua]=_HopdongbanhangchitietEntity.Nguoisua;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Ngaygiao]=_HopdongbanhangchitietEntity.Ngaygiao;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -360,6 +370,12 @@ namespace GD.FM.BLL
 				_HopdongbanhangchitietEntity.Nguoisua= r[Field_Nguoisua].ToString();						
 			}
 			catch { }
+			
+			try
+			{
+				_HopdongbanhangchitietEntity.Ngaygiao= System.DateTime.Parse(r[Field_Ngaygiao].ToString());						
+			}
+			catch { }
 									
 									
 			return _HopdongbanhangchitietEntity;
@@ -406,6 +422,8 @@ namespace GD.FM.BLL
 			_HopdongbanhangchitietEntity.Ngaysua= _HopdongbanhangchitietEntity_XML.Ngaysua;
 			
 			_HopdongbanhangchitietEntity.Nguoisua= _HopdongbanhangchitietEntity_XML.Nguoisua;
+			
+			_HopdongbanhangchitietEntity.Ngaygiao= _HopdongbanhangchitietEntity_XML.Ngaygiao;
 									
 				
 			return _HopdongbanhangchitietEntity;
@@ -534,6 +552,12 @@ namespace GD.FM.BLL
 				r.SetField(Field_Nguoisua,_HopdongbanhangchitietEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Ngaygiao,_HopdongbanhangchitietEntity.Ngaygiao);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -657,6 +681,12 @@ namespace GD.FM.BLL
 				r.SetField(Field_Nguoisua,_HopdongbanhangchitietEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Ngaygiao,_HopdongbanhangchitietEntity.Ngaygiao);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -679,7 +709,7 @@ namespace GD.FM.BLL
 			return HopdongbanhangchitietEntity;
 		}
 
-		public HopdongbanhangchitietEntity Insert(System.Int64  Id, System.String  Sohopdong, System.DateTime  Ngayhopdong, System.String  Makhach, System.String  Tenkhach, System.String  Macangden, System.String  Tencangden, System.String  Mahangphiakhach, System.String  Codefiller, System.Decimal  Soluong, System.Decimal  Dongiavnd, System.Decimal  Tygia, System.Decimal  Dongiausd, System.Decimal  Thanhtienvnd, System.Decimal  Thanhtienusd, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public HopdongbanhangchitietEntity Insert(System.Int64  Id, System.String  Sohopdong, System.DateTime  Ngayhopdong, System.String  Makhach, System.String  Tenkhach, System.String  Macangden, System.String  Tencangden, System.String  Mahangphiakhach, System.String  Codefiller, System.Decimal  Soluong, System.Decimal  Dongiavnd, System.Decimal  Tygia, System.Decimal  Dongiausd, System.Decimal  Thanhtienvnd, System.Decimal  Thanhtienusd, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.DateTime  Ngaygiao)
 		{
 			HopdongbanhangchitietEntity _HopdongbanhangchitietEntity = new HopdongbanhangchitietEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -722,6 +752,8 @@ namespace GD.FM.BLL
 				_HopdongbanhangchitietEntity.Ngaysua = Ngaysua;
 				
 				_HopdongbanhangchitietEntity.Nguoisua = Nguoisua;
+				
+				_HopdongbanhangchitietEntity.Ngaygiao = Ngaygiao;
 					
 					
 				adapter.SaveEntity(_HopdongbanhangchitietEntity, true);
@@ -729,7 +761,7 @@ namespace GD.FM.BLL
 			return _HopdongbanhangchitietEntity;
 		}
 
-		public HopdongbanhangchitietEntity Insert(System.String Sohopdong, System.DateTime Ngayhopdong, System.String Makhach, System.String Tenkhach, System.String Macangden, System.String Tencangden, System.String Mahangphiakhach, System.String Codefiller, System.Decimal Soluong, System.Decimal Dongiavnd, System.Decimal Tygia, System.Decimal Dongiausd, System.Decimal Thanhtienvnd, System.Decimal Thanhtienusd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public HopdongbanhangchitietEntity Insert(System.String Sohopdong, System.DateTime Ngayhopdong, System.String Makhach, System.String Tenkhach, System.String Macangden, System.String Tencangden, System.String Mahangphiakhach, System.String Codefiller, System.Decimal Soluong, System.Decimal Dongiavnd, System.Decimal Tygia, System.Decimal Dongiausd, System.Decimal Thanhtienvnd, System.Decimal Thanhtienusd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.DateTime Ngaygiao)//ko co mahieu
 		{
 			HopdongbanhangchitietEntity _HopdongbanhangchitietEntity = new HopdongbanhangchitietEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -771,6 +803,8 @@ namespace GD.FM.BLL
 				_HopdongbanhangchitietEntity.Ngaysua = Ngaysua;
 				
 				_HopdongbanhangchitietEntity.Nguoisua = Nguoisua;
+				
+				_HopdongbanhangchitietEntity.Ngaygiao = Ngaygiao;
 					
 
 				adapter.SaveEntity(_HopdongbanhangchitietEntity, true);
@@ -808,7 +842,7 @@ namespace GD.FM.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.String Sohopdong, System.DateTime Ngayhopdong, System.String Makhach, System.String Tenkhach, System.String Macangden, System.String Tencangden, System.String Mahangphiakhach, System.String Codefiller, System.Decimal Soluong, System.Decimal Dongiavnd, System.Decimal Tygia, System.Decimal Dongiausd, System.Decimal Thanhtienvnd, System.Decimal Thanhtienusd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.Int64 Id, System.String Sohopdong, System.DateTime Ngayhopdong, System.String Makhach, System.String Tenkhach, System.String Macangden, System.String Tencangden, System.String Mahangphiakhach, System.String Codefiller, System.Decimal Soluong, System.Decimal Dongiavnd, System.Decimal Tygia, System.Decimal Dongiausd, System.Decimal Thanhtienvnd, System.Decimal Thanhtienusd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.DateTime Ngaygiao)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -854,6 +888,8 @@ namespace GD.FM.BLL
 					_HopdongbanhangchitietEntity.Ngaysua = Ngaysua;
 					
 					_HopdongbanhangchitietEntity.Nguoisua = Nguoisua;
+					
+					_HopdongbanhangchitietEntity.Ngaygiao = Ngaygiao;
 						
 
 					adapter.SaveEntity(_HopdongbanhangchitietEntity, true);
@@ -1183,6 +1219,22 @@ namespace GD.FM.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(HopdongbanhangchitietFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("HopdongbanhangchitietEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByNgaygiao(System.DateTime Ngaygiao)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(HopdongbanhangchitietFields.Ngaygiao == Ngaygiao);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1869,6 +1921,40 @@ namespace GD.FM.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(HopdongbanhangchitietFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_HopdongbanhangchitietCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByNgaygiao(System.DateTime Ngaygiao)
+		{
+			EntityCollection _HopdongbanhangchitietCollection = new EntityCollection(new HopdongbanhangchitietEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(HopdongbanhangchitietFields.Ngaygiao == Ngaygiao);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_HopdongbanhangchitietCollection, filter, 0, null);
+			}
+			return _HopdongbanhangchitietCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByNgaygiaoRDT(System.DateTime Ngaygiao)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _HopdongbanhangchitietCollection = new EntityCollection(new HopdongbanhangchitietEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(HopdongbanhangchitietFields.Ngaygiao == Ngaygiao);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
