@@ -277,6 +277,32 @@ namespace GD.FM.APP.LIB
         }
         #endregion
 
+        #region DMCHUCVU
+        private static DataTable _DT_DMCHUCVU = null;
+        public static DataTable DT_DMCHUCVU
+        {
+            get
+            {
+                _DT_DMUNGDUNG = new DanhmucchucvuManager().SelectAllRDT();
+                return _DT_DMCHUCVU;
+            }
+            set { _DT_DMCHUCVU = value; }
+        }
+        #endregion
+
+        #region DMPHONGBAN
+        private static DataTable _DT_DMPHONGBAN = null;
+        public static DataTable DT_DMPHONGBAN
+        {
+            get
+            {
+                _DT_DMUNGDUNG = new DanhmucchucvuManager().SelectAllRDT();
+                return _DT_DMPHONGBAN;
+            }
+            set { _DT_DMPHONGBAN = value; }
+        }
+        #endregion
+
         #region DMUNGDUNG
         private static DataTable _DT_DMUNGDUNG = null;
         public static DataTable DT_DMUNGDUNG

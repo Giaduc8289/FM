@@ -19,15 +19,15 @@ using Janus.Windows.Common;
 
 namespace GD.FM.APP.DANHMUC
 {
-    public partial class FRM_DMNHANVIEN : FRM_DMPARENT
+    public partial class FRM_DMPHONGBAN : FRM_DMPARENT
     {
-        private NhanvienManager _NhanvienManager = new NhanvienManager();
-        private NhanvienEntity _NhanvienEntity = new NhanvienEntity();
+        private PhongbanManager _PhongbanManager = new PhongbanManager();
+        private PhongbanEntity _PhongbanEntity = new PhongbanEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_NHANVIEN = new DataTable();
-        private BindingSource BS_DMNHANVIEN = new BindingSource();
+        private DataTable DT_DMPHONGBAN = new DataTable();
+        private BindingSource BS_DMPHONGBAN = new BindingSource();
         private DataRow r_Insert = null;
-        private GD.FM.CONTROL.JGridEX GRID_DMNHANVIEN = new GD.FM.CONTROL.JGridEX();
+        private GD.FM.CONTROL.JGridEX GRID_DMPHONGBAN = new GD.FM.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
         private void TEXTBOX_Only_Control(bool _isbool, GD.FM.CONTROL.TEXTBOX _Textbox)
         {
@@ -48,8 +48,8 @@ namespace GD.FM.APP.DANHMUC
                 {
                     if (FUNCTION == "LOAD")
                     {
-                        _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMNHANVIEN");
-                        DT_NHANVIEN = LIB.SESSION_START.DT_NHANVIEN;
+                        _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMPHONGBAN");
+                        DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -81,12 +81,12 @@ namespace GD.FM.APP.DANHMUC
             //  ErrorTrapper.ErrorHandler.HandleError(e.Exception);
         }
 
-        public FRM_DMNHANVIEN()
+        public FRM_DMPHONGBAN()
         {
             InitializeComponent();
-            NhanvienManager _NhanvienManager = new NhanvienManager();
-            DataTable dt111 = _NhanvienManager.Clone();
-            //GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_DMNHANVIEN.xml");
+            PhongbanManager _PhongbanManager = new PhongbanManager();
+            DataTable dt111 = _PhongbanManager.Clone();
+            //GD.FM.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_DMPHONGBAN.xml");
             GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -94,87 +94,60 @@ namespace GD.FM.APP.DANHMUC
             GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_XOA, btn_XOA.Name + ".xml");
             GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
             GD.FM.CONTROL.BUTTON.Loadimage(LIB.PATH.FM_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
-            GD.FM.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_DMNHANVIEN.xml", GRID_DMNHANVIEN, uiPanel0Container);
+            GD.FM.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_DMPHONGBAN.xml", GRID_DMPHONGBAN, uiPanel0Container);
             FORM_PROCESS();
-            DataView Source_View = new DataView(DT_NHANVIEN);
-            BS_DMNHANVIEN = new BindingSource();
-            BS_DMNHANVIEN.DataSource = Source_View;
-            GRID_DMNHANVIEN.DataSource = BS_DMNHANVIEN;
-            BS_DMNHANVIEN.CurrentChanged += new EventHandler(BS_DMNHANVIEN_CurrentChanged);
-            BS_DMNHANVIEN_CurrentChanged((new object()), (new EventArgs()));
+            DataView Source_View = new DataView(DT_DMPHONGBAN);
+            BS_DMPHONGBAN = new BindingSource();
+            BS_DMPHONGBAN.DataSource = Source_View;
+            GRID_DMPHONGBAN.DataSource = BS_DMPHONGBAN;
+            BS_DMPHONGBAN.CurrentChanged += new EventHandler(BS_DMPHONGBAN_CurrentChanged);
+            BS_DMPHONGBAN_CurrentChanged((new object()), (new EventArgs()));
             GD.FM.BLL.MenuroleManager.set_Enable_controls(GD.FM.LIB.BUTTONACTION.BUTTONACTION_LOAD, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             btn_THEMMOI.Focus();
         }
 
-        void BS_DMNHANVIEN_CurrentChanged(object sender, EventArgs e)
+        void BS_DMPHONGBAN_CurrentChanged(object sender, EventArgs e)
         {
             try
             {
                 GD.FM.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.FM.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-                if (BS_DMNHANVIEN.Current != null)
+                if (BS_DMPHONGBAN.Current != null)
                 {
-                    DataRowView _Rowview = (DataRowView)this.BS_DMNHANVIEN.Current;
+                    DataRowView _Rowview = (DataRowView)this.BS_DMPHONGBAN.Current;
                     if (_Rowview != null)
-                        MAHIEU_PK = _Rowview.Row[NhanvienFields.Manhanvien.Name].ToString();
-                    txt_MAHIEU.Text = _Rowview.Row[NhanvienFields.Manhanvien.Name].ToString();
-                    txt_TENHIEU.Text = _Rowview.Row[NhanvienFields.Hoten.Name].ToString();
-                    txt_DIACHI.Text = _Rowview.Row[NhanvienFields.Diachi.Name].ToString();
-                    txt_SODIENTHOAI.Text = _Rowview.Row[NhanvienFields.Sodienthoai.Name].ToString();
-                    txt_CHUCVU.Text = _Rowview.Row[NhanvienFields.Tenchucvu.Name].ToString();
-                    dtp_NGAYSINH.Text = _Rowview.Row[NhanvienFields.Ngaysinh.Name].ToString();
-                    txt_EMAIL.Text = _Rowview.Row[NhanvienFields.Email.Name].ToString();
-                    try
-                    {
-                        rd_MALE.Checked = Convert.ToBoolean(_Rowview.Row[NhanvienFields.Gioitinh.Name].ToString());
-                    }
-                    catch { }
-                    try
-                    {
-                        if (Convert.ToBoolean(_Rowview.Row[NhanvienFields.Gioitinh.Name]) == false)
-                        {
-                            rd_FEMALE.Checked = true;
-                        }
-                    }
-                    catch { }
+                        MAHIEU_PK = _Rowview.Row[PhongbanFields.Mahieu.Name].ToString();
+                    txt_MAHIEU.Text = _Rowview.Row[PhongbanFields.Mahieu.Name].ToString();
+                    txt_TENHIEU.Text = _Rowview.Row[PhongbanFields.Tenhieu.Name].ToString();
+                    txt_TENRUTGON.Text = _Rowview.Row[PhongbanFields.Tenrutgon.Name].ToString();
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMNHANVIEN_CurrentChanged"); }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMPHONGBAN_CurrentChanged"); }
         }
 
         private string Save_Data(string _str_DMCHUONG_PK)
         {
-            NhanvienEntity _NhanvienEntity = new NhanvienEntity();
-            _NhanvienEntity.Manhanvien = txt_MAHIEU.Text.Trim();
-            _NhanvienEntity.Hoten = txt_TENHIEU.Text.Trim();
-            _NhanvienEntity.Diachi = txt_DIACHI.Text.Trim();
-            _NhanvienEntity.Sodienthoai = txt_SODIENTHOAI.Text.Trim();
-            _NhanvienEntity.Tenchucvu = txt_CHUCVU.Text.Trim();
-            _NhanvienEntity.Ngaysinh = Convert.ToDateTime(dtp_NGAYSINH.Text);
-            _NhanvienEntity.Email = txt_EMAIL.Text.Trim();
-            if (rd_MALE.Checked)
-                _NhanvienEntity.Gioitinh = true;
-            if (rd_FEMALE.Checked)
-                _NhanvienEntity.Gioitinh = false;
+            PhongbanEntity _PhongbanEntity = new PhongbanEntity();
+            _PhongbanEntity.Mahieu = txt_MAHIEU.Text.Trim();
+            _PhongbanEntity.Tenhieu = txt_TENHIEU.Text.Trim();
+            _PhongbanEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
-            { 
-                _str_DMCHUONG_PK = _NhanvienManager.InsertV2(_NhanvienEntity, r_Insert, DT_NHANVIEN, BS_DMNHANVIEN);
-                 GD.FM.BLL.MenuroleManager.set_Enable_controls(_NhanvienManager.Convert(_NhanvienEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                BS_DMNHANVIEN.ResetCurrentItem();
+            {
+                _PhongbanEntity.Ngaytao = DateTime.Now;
+                _PhongbanEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                _str_DMCHUONG_PK = _PhongbanManager.InsertV2(_PhongbanEntity, r_Insert, DT_DMPHONGBAN, BS_DMPHONGBAN);
+                 GD.FM.BLL.MenuroleManager.set_Enable_controls(_PhongbanManager.Convert(_PhongbanEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                BS_DMPHONGBAN.ResetCurrentItem();
             }
             else
             {
-                _NhanvienManager.Update(_NhanvienEntity);
-                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Manhanvien.Name].Value = _NhanvienEntity.Manhanvien;
-                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Hoten.Name].Value = _NhanvienEntity.Hoten;
-                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Diachi.Name].Value = _NhanvienEntity.Diachi;
-                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Sodienthoai.Name].Value = _NhanvienEntity.Sodienthoai;
-                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Tenchucvu.Name].Value = _NhanvienEntity.Tenchucvu;
-                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Ngaysinh.Name].Value = _NhanvienEntity.Ngaysinh;
-                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Email.Name].Value = _NhanvienEntity.Email;
-                GRID_DMNHANVIEN.CurrentRow.Cells[NhanvienFields.Gioitinh.Name].Value = _NhanvienEntity.Gioitinh;
-
-                GD.FM.BLL.MenuroleManager.set_Enable_controls(_NhanvienManager.Convert(_NhanvienEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                _PhongbanEntity.Ngaysua = DateTime.Now;
+                _PhongbanEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                _PhongbanManager.Update(_PhongbanEntity);
+                GRID_DMPHONGBAN.CurrentRow.Cells[PhongbanFields.Mahieu.Name].Value = _PhongbanEntity.Mahieu;
+                GRID_DMPHONGBAN.CurrentRow.Cells[PhongbanFields.Tenhieu.Name].Value = _PhongbanEntity.Tenhieu;
+                GRID_DMPHONGBAN.CurrentRow.Cells[PhongbanFields.Tenrutgon.Name].Value = _PhongbanEntity.Tenrutgon;
+                GD.FM.BLL.MenuroleManager.set_Enable_controls(_PhongbanManager.Convert(_PhongbanEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;
         }
@@ -183,17 +156,17 @@ namespace GD.FM.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            NhanvienManager _NhanvienManager = new NhanvienManager();
-            NhanvienEntity _NhanvienEntity = new NhanvienEntity();
-            r_Insert = DT_NHANVIEN.NewRow();
-            DT_NHANVIEN.Rows.Add(r_Insert);
-            BS_DMNHANVIEN.Position = DT_NHANVIEN.Rows.Count;
+            PhongbanManager _PhongbanManager = new PhongbanManager();
+            PhongbanEntity _PhongbanEntity = new PhongbanEntity();
+            r_Insert = DT_DMPHONGBAN.NewRow();
+            DT_DMPHONGBAN.Rows.Add(r_Insert);
+            BS_DMPHONGBAN.Position = DT_DMPHONGBAN.Rows.Count;
             MAHIEU_PK = "";
             txt_MAHIEU.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.FM.BLL.MenuroleManager.set_Enable_controls(GD.FM.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            GRID_DMNHANVIEN.Enabled = false;
+            GRID_DMPHONGBAN.Enabled = false;
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
@@ -204,61 +177,61 @@ namespace GD.FM.APP.DANHMUC
                 GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MAHIEU }));
                 txt_TENHIEU.Focus();
             }
-            GRID_DMNHANVIEN.Enabled = false;
+            GRID_DMPHONGBAN.Enabled = false;
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(MAHIEU_PK) && r_Insert != null)
             {
-                DT_NHANVIEN.Rows.Remove(r_Insert);
+                DT_DMPHONGBAN.Rows.Remove(r_Insert);
             }
-            BS_DMNHANVIEN_CurrentChanged(new object(), new EventArgs());
+            BS_DMPHONGBAN_CurrentChanged(new object(), new EventArgs());
             GD.FM.BLL.MenuroleManager.set_Enable_controls(GD.FM.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
-            GRID_DMNHANVIEN.Enabled = true;
+            GRID_DMPHONGBAN.Enabled = true;
         }
         private void btn_XOA_Click(object sender, EventArgs e)
         {
             GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
-            NhanvienManager _NhanvienManager = new NhanvienManager();
-            NhanvienEntity _NhanvienEntity = new NhanvienEntity();
-            _NhanvienEntity = _NhanvienManager.SelectOne(MAHIEU_PK);
-            if (_NhanvienEntity != null && MessageBox.Show("Xóa Nhân viên: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            PhongbanManager _PhongbanManager = new PhongbanManager();
+            PhongbanEntity _PhongbanEntity = new PhongbanEntity();
+            _PhongbanEntity = _PhongbanManager.SelectOne(MAHIEU_PK);
+            if (_PhongbanEntity != null && MessageBox.Show("Xóa đơn vị tính: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
                 {
-                    _NhanvienManager.Delete(MAHIEU_PK);
-                    GRID_DMNHANVIEN.CurrentRow.Delete();
-                    BS_DMNHANVIEN_CurrentChanged(new object(), new EventArgs());
+                    _PhongbanManager.Delete(MAHIEU_PK);
+                    GRID_DMPHONGBAN.CurrentRow.Delete();
+                    BS_DMPHONGBAN_CurrentChanged(new object(), new EventArgs());
                     GD.FM.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
-                    GD.FM.BLL.MenuroleManager.set_Enable_controls(_NhanvienManager.Convert(_NhanvienEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    GD.FM.BLL.MenuroleManager.set_Enable_controls(_PhongbanManager.Convert(_PhongbanEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa Nhân viên " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa đơn vị tính " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            GRID_DMNHANVIEN.Enabled = true;
+            GRID_DMPHONGBAN.Enabled = true;
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(MAHIEU_PK) && _NhanvienManager.SelectOne(txt_MAHIEU.Text.Trim()) != null)
+            if (string.IsNullOrEmpty(MAHIEU_PK) && _PhongbanManager.SelectOne(txt_MAHIEU.Text.Trim()) != null)
             {
-                MessageBox.Show("Mã Nhân viên bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã đơn vị tính bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHIEU.Focus();
                 return;
             }
             else if (txt_MAHIEU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập mã Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập mã đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHIEU.Focus();
                 return;
             }
             else if (txt_TENHIEU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập tên đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_TENHIEU.Focus();
                 return;
             }
@@ -267,7 +240,7 @@ namespace GD.FM.APP.DANHMUC
                 GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
                 MAHIEU_PK = Save_Data(MAHIEU_PK);
                 GD.FM.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
-                GRID_DMNHANVIEN.Enabled = true;
+                GRID_DMPHONGBAN.Enabled = true;
                 btn_THEMMOI.Focus();
             }
         }
@@ -280,17 +253,12 @@ namespace GD.FM.APP.DANHMUC
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)
-                GRID_DMNHANVIEN.ColumnAutoResize = true;
+                GRID_DMPHONGBAN.ColumnAutoResize = true;
             else
-                GRID_DMNHANVIEN.ColumnAutoResize = false;
+                GRID_DMPHONGBAN.ColumnAutoResize = false;
         }
 
-        private void FRM_DMNHANVIEN_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FRM_DMKHACH_FormClosing(object sender, FormClosingEventArgs e)
+        private void FRM_DMPHONGBAN_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (btn_LUULAI.Enabled)
             {

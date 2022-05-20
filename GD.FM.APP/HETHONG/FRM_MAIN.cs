@@ -650,6 +650,22 @@ namespace GD.FM.APP.HETHONG
                 #endregion
 
                 #region Danh mục
+
+                case "FRM_DMPHONGBAN":
+                    foreach (GD.FM.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMPHONGBAN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.FM.APP.DANHMUC.FRM_DMPHONGBAN()), mmru.Text);
+                    break;
+
+                case "FRM_DMCHUCVU":
+                    foreach (GD.FM.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMCHUCVU") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.FM.APP.DANHMUC.FRM_DMCHUCVU()), mmru.Text);
+                    break;
                 case "FRM_DMHANGHOA":
                     foreach (GD.FM.CONTROL.FORM frm in this.MdiChildren)
                     {
