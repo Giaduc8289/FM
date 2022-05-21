@@ -260,6 +260,11 @@ namespace GD.FM.APP.DANHMUC
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void FRM_DMHANGHOA_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (btn_LUULAI.Enabled)

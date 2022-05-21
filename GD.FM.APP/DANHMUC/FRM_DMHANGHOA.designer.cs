@@ -44,6 +44,8 @@
             this.label21 = new GD.FM.CONTROL.LABEL();
             this.txt_MAHIEU = new GD.FM.CONTROL.TEXTBOX();
             this.label22 = new GD.FM.CONTROL.LABEL();
+            this.label1 = new GD.FM.CONTROL.LABEL();
+            this.txt_Makhach = new GD.FM.CONTROL.TEXTBOX();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -101,6 +103,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_Makhach);
+            this.uiPanel1Container.Controls.Add(this.label1);
             this.uiPanel1Container.Controls.Add(this.btn_Thoat);
             this.uiPanel1Container.Controls.Add(this.btn_KHOIPHUC);
             this.uiPanel1Container.Controls.Add(this.btn_LUULAI);
@@ -240,6 +244,30 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã Filler";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 121;
+            this.label1.Text = "Mã khách";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txt_Makhach
+            // 
+            this.txt_Makhach.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Makhach.BannerText = null;
+            this.txt_Makhach.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Makhach.FormNametoShow = "";
+            this.txt_Makhach.Is_DateTime = false;
+            this.txt_Makhach.IsShowForm = false;
+            this.txt_Makhach.Location = new System.Drawing.Point(96, 61);
+            this.txt_Makhach.Name = "txt_Makhach";
+            this.txt_Makhach.Regular_Expression = null;
+            this.txt_Makhach.Size = new System.Drawing.Size(138, 20);
+            this.txt_Makhach.TabIndex = 122;
+            // 
             // FRM_DMHANGHOA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,5 +308,7 @@
         private GD.FM.CONTROL.BUTTON btn_THEMMOI;
         private GD.FM.CONTROL.BUTTON btn_SUA;
         private GD.FM.CONTROL.BUTTON btn_Thoat;
+        private CONTROL.LABEL label1;
+        private CONTROL.TEXTBOX txt_Makhach;
     }
 }
