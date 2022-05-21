@@ -12,3 +12,17 @@ E:\Dev\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.TrayPopupBase.resources
 E:\Dev\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.csproj.GenerateResource.Cache
 E:\Dev\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.dll
 E:\Dev\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.pdb
+D:\FM\DLL_ORA\GD.FM.LIB.dll.config
+D:\FM\DLL_ORA\GD.FM.LIB.dll
+D:\FM\DLL_ORA\GD.FM.LIB.pdb
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.csprojResolveAssemblyReference.cache
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.ListviewJanusC.resources
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.ListviewJanus.resources
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.ListviewNEW.resources
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.MessageForm.resources
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.Properties.Resources.resources
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.RegExTextBox.resources
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.TrayPopupBase.resources
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.csproj.GenerateResource.Cache
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.dll
+D:\FM\GD.FM.LIB\obj\Debug\GD.FM.LIB.pdb
