@@ -11,7 +11,9 @@
 *.userprefs
 
 # Build results
-[Dd]ebug/
+[Dd]ebug/ 
+*GD.FM.APP.exe
+*GD.FM.APP.pdb
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
