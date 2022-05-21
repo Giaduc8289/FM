@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 16:33:50
+// Code is generated on: 21 May 2022 09:22:27
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -485,6 +485,12 @@ namespace GD.FM.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Thanhtoanvnd", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Thanhtoanusd", fieldHashtable);
 		}
 		#endregion
 
@@ -746,6 +752,28 @@ namespace GD.FM.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)ThuchienhopdongbanhangFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)ThuchienhopdongbanhangFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Thanhtoanvnd property of the Entity Thuchienhopdongbanhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Thuchienhopdongbanhang"."Thanhtoanvnd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Thanhtoanvnd
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)ThuchienhopdongbanhangFieldIndex.Thanhtoanvnd, false); }
+			set	{ SetValue((int)ThuchienhopdongbanhangFieldIndex.Thanhtoanvnd, value); }
+		}
+
+		/// <summary> The Thanhtoanusd property of the Entity Thuchienhopdongbanhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Thuchienhopdongbanhang"."Thanhtoanusd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Thanhtoanusd
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)ThuchienhopdongbanhangFieldIndex.Thanhtoanusd, false); }
+			set	{ SetValue((int)ThuchienhopdongbanhangFieldIndex.Thanhtoanusd, value); }
 		}
 
 

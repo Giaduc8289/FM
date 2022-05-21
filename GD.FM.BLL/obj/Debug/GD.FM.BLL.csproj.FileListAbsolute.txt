@@ -1,0 +1,5 @@
+E:\Dev\DLL\GD.FM.BLL.dll
+E:\Dev\DLL\GD.FM.BLL.pdb
+E:\Dev\FM\GD.FM.BLL\obj\Debug\GD.FM.BLL.csprojResolveAssemblyReference.cache
+E:\Dev\FM\GD.FM.BLL\obj\Debug\GD.FM.BLL.dll
+E:\Dev\FM\GD.FM.BLL\obj\Debug\GD.FM.BLL.pdb

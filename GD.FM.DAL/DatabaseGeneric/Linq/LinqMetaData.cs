@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 16:33:50
+// Code is generated on: 21 May 2022 09:22:27
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -61,6 +61,9 @@ namespace GD.FM.DAL.Linq
 			IDataSource toReturn = null;
 			switch((GD.FM.DAL.EntityType)typeOfEntity)
 			{
+				case GD.FM.DAL.EntityType.CacbuoclogisticEntity:
+					toReturn = this.Cacbuoclogistic;
+					break;
 				case GD.FM.DAL.EntityType.DanhmuccangEntity:
 					toReturn = this.Danhmuccang;
 					break;
@@ -127,6 +130,9 @@ namespace GD.FM.DAL.Linq
 				case GD.FM.DAL.EntityType.ThuchienhopdongbanhangEntity:
 					toReturn = this.Thuchienhopdongbanhang;
 					break;
+				case GD.FM.DAL.EntityType.ThuchienlogisticEntity:
+					toReturn = this.Thuchienlogistic;
+					break;
 				case GD.FM.DAL.EntityType.TygiaEntity:
 					toReturn = this.Tygia;
 					break;
@@ -140,6 +146,12 @@ namespace GD.FM.DAL.Linq
 			return toReturn;
 		}
 
+		/// <summary>returns the datasource to use in a Linq query when targeting CacbuoclogisticEntity instances in the database.</summary>
+		public DataSource2<CacbuoclogisticEntity> Cacbuoclogistic
+		{
+			get { return new DataSource2<CacbuoclogisticEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
 		/// <summary>returns the datasource to use in a Linq query when targeting DanhmuccangEntity instances in the database.</summary>
 		public DataSource2<DanhmuccangEntity> Danhmuccang
 		{
@@ -270,6 +282,12 @@ namespace GD.FM.DAL.Linq
 		public DataSource2<ThuchienhopdongbanhangEntity> Thuchienhopdongbanhang
 		{
 			get { return new DataSource2<ThuchienhopdongbanhangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting ThuchienlogisticEntity instances in the database.</summary>
+		public DataSource2<ThuchienlogisticEntity> Thuchienlogistic
+		{
+			get { return new DataSource2<ThuchienlogisticEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting TygiaEntity instances in the database.</summary>

@@ -131,11 +131,14 @@ Tygia			Decimal(20,2),
 Dongiausd		Decimal(20,4),
 Thanhtienvnd	Decimal(20,2),
 Thanhtienusd	Decimal(20,2),
+Thanhtoanvnd	Decimal(20,2),
+Thanhtoanusd	Decimal(20,2),
 Ngaytao			DATETIME,
 Nguoitao		NVARCHAR(50),
 Ngaysua			DATETIME,
 Nguoisua		NVARCHAR(50),
 constraint Thuchienhopdongbanhang_PK primary key (Id)) ON [PRIMARY]
+
 
 
 -----Xuất khẩu---------------------------------------------------------
@@ -207,6 +210,35 @@ Ngaysua			DATETIME,
 Nguoisua		NVARCHAR(50),
 constraint Phuongthucvanchuyen_PK primary key (Mahieu)) ON [PRIMARY]
 
+Create Table Cacbuoclogistic(
+Mahieu		Nvarchar(50) Not null,
+Tenhieu		Nvarchar(250),
+Tenrutgon	Nvarchar(50),
+Ngaytao			DATETIME,
+Nguoitao		NVARCHAR(50),
+Ngaysua			DATETIME,
+Nguoisua		NVARCHAR(50),
+constraint Cacbuoclogistic_PK primary key (Mahieu)) ON [PRIMARY]
+
+CREATE TABLE Thuchienlogistic(
+Id		Bigint Identity Not null,
+Sohopdong		Nvarchar(50),
+Ngayhopdong		Date,
+Makhach			Nvarchar(50),
+Tenkhach		Nvarchar(250),
+Mahangphiakhach		Nvarchar(50),
+Codefiller			Nvarchar(50),
+Soluonggiao		Decimal(20,2),
+Ngaygiao		Date,
+Buoclogistic		Nvarchar(50),
+Tenbuoclogistic		Nvarchar(250),
+Ngaythuchien		Date,
+Ngaytao			DATETIME,
+Nguoitao		NVARCHAR(50),
+Ngaysua			DATETIME,
+Nguoisua		NVARCHAR(50),
+constraint Thuchienlogistic_PK primary key (Id)) ON [PRIMARY]
+
 
 
 
@@ -259,6 +291,12 @@ Nguoitao		NVARCHAR(50),
 Ngaysua			DATETIME,
 Nguoisua		NVARCHAR(50),
 constraint Danhmucchucvu_PK primary key (Mahieu)) ON [PRIMARY]
+
+
+
+
+
+
 
 
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 16:33:50
+// Code is generated on: 21 May 2022 09:22:26
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -56,7 +56,8 @@ namespace GD.FM.DAL.HelperClasses
 		/// <summary>Method which initializes the internal datastores.</summary>
 		private void Init()
 		{
-			base.InitClass( (24 + 0));
+			base.InitClass( (26 + 0));
+			InitCacbuoclogisticEntityInfos();
 			InitDanhmuccangEntityInfos();
 			InitDanhmucchucvuEntityInfos();
 			InitDanhmuchanghoaEntityInfos();
@@ -79,12 +80,24 @@ namespace GD.FM.DAL.HelperClasses
 			InitRolesEntityInfos();
 			InitThamsoEntityInfos();
 			InitThuchienhopdongbanhangEntityInfos();
+			InitThuchienlogisticEntityInfos();
 			InitTygiaEntityInfos();
 			InitUsersEntityInfos();
 
 			base.ConstructElementFieldStructures(InheritanceInfoProviderSingleton.GetInstance());
 		}
 
+		/// <summary>Inits CacbuoclogisticEntity's FieldInfo objects</summary>
+		private void InitCacbuoclogisticEntityInfos()
+		{
+			base.AddElementFieldInfo("CacbuoclogisticEntity", "Mahieu", typeof(System.String), true, false, false, false,  (int)CacbuoclogisticFieldIndex.Mahieu, 50, 0, 0);
+			base.AddElementFieldInfo("CacbuoclogisticEntity", "Tenhieu", typeof(System.String), false, false, false, true,  (int)CacbuoclogisticFieldIndex.Tenhieu, 250, 0, 0);
+			base.AddElementFieldInfo("CacbuoclogisticEntity", "Tenrutgon", typeof(System.String), false, false, false, true,  (int)CacbuoclogisticFieldIndex.Tenrutgon, 50, 0, 0);
+			base.AddElementFieldInfo("CacbuoclogisticEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)CacbuoclogisticFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("CacbuoclogisticEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)CacbuoclogisticFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("CacbuoclogisticEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)CacbuoclogisticFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("CacbuoclogisticEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)CacbuoclogisticFieldIndex.Nguoisua, 50, 0, 0);
+		}
 		/// <summary>Inits DanhmuccangEntity's FieldInfo objects</summary>
 		private void InitDanhmuccangEntityInfos()
 		{
@@ -384,6 +397,28 @@ namespace GD.FM.DAL.HelperClasses
 			base.AddElementFieldInfo("ThuchienhopdongbanhangEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)ThuchienhopdongbanhangFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("ThuchienhopdongbanhangEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)ThuchienhopdongbanhangFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("ThuchienhopdongbanhangEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)ThuchienhopdongbanhangFieldIndex.Nguoisua, 50, 0, 0);
+			base.AddElementFieldInfo("ThuchienhopdongbanhangEntity", "Thanhtoanvnd", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)ThuchienhopdongbanhangFieldIndex.Thanhtoanvnd, 0, 2, 20);
+			base.AddElementFieldInfo("ThuchienhopdongbanhangEntity", "Thanhtoanusd", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)ThuchienhopdongbanhangFieldIndex.Thanhtoanusd, 0, 2, 20);
+		}
+		/// <summary>Inits ThuchienlogisticEntity's FieldInfo objects</summary>
+		private void InitThuchienlogisticEntityInfos()
+		{
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)ThuchienlogisticFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Sohopdong", typeof(System.String), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Sohopdong, 50, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Ngayhopdong", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Ngayhopdong, 0, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Makhach", typeof(System.String), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Makhach, 50, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Tenkhach", typeof(System.String), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Tenkhach, 250, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Mahangphiakhach", typeof(System.String), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Mahangphiakhach, 50, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Codefiller", typeof(System.String), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Codefiller, 50, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Soluonggiao", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Soluonggiao, 0, 2, 20);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Ngaygiao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Ngaygiao, 0, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Buoclogistic", typeof(System.String), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Buoclogistic, 50, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Tenbuoclogistic", typeof(System.String), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Tenbuoclogistic, 250, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Ngaythuchien", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Ngaythuchien, 0, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("ThuchienlogisticEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)ThuchienlogisticFieldIndex.Nguoisua, 50, 0, 0);
 		}
 		/// <summary>Inits TygiaEntity's FieldInfo objects</summary>
 		private void InitTygiaEntityInfos()

@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessAdapterFactory.cs" />
+    <Compile Include="ManagerBase\CacbuoclogisticManagerBase.cs" />
     <Compile Include="ManagerBase\DanhmucchucvuManagerBase.cs" />
     <Compile Include="ManagerBase\DanhmucungdungManagerBase.cs" />
     <Compile Include="ManagerBase\HopdongbanhangchitietManagerBase.cs" />
@@ -135,6 +136,7 @@
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
     <Compile Include="ManagerBase\ThuchienhopdongbanhangManagerBase.cs" />
+    <Compile Include="ManagerBase\ThuchienlogisticManagerBase.cs" />
     <Compile Include="ManagerBase\TygiaManagerBase.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
