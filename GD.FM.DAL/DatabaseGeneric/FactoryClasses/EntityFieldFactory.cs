@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 16:33:50
+// Code is generated on: 21 May 2022 09:22:27
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -24,6 +24,14 @@ namespace GD.FM.DAL.FactoryClasses
 		/// <summary> Private CTor, no instantiation possible.</summary>
 		private EntityFieldFactory()
 		{
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the CacbuoclogisticEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(CacbuoclogisticFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("CacbuoclogisticEntity", (int)fieldIndex));
 		}
 
 		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the DanhmuccangEntity. Which EntityField is created is specified by fieldIndex</summary>
@@ -200,6 +208,14 @@ namespace GD.FM.DAL.FactoryClasses
 		public static IEntityField2 Create(ThuchienhopdongbanhangFieldIndex fieldIndex)
 		{
 			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("ThuchienhopdongbanhangEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the ThuchienlogisticEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(ThuchienlogisticFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("ThuchienlogisticEntity", (int)fieldIndex));
 		}
 
 		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the TygiaEntity. Which EntityField is created is specified by fieldIndex</summary>

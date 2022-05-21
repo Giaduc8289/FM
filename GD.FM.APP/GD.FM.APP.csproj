@@ -269,6 +269,7 @@
     <Compile Include="LIB\SESSION_START.cs" />
     <Compile Include="LIB\SysInfo.cs" />
     <Compile Include="LIB\USERS.cs" />
+    <Compile Include="Manager\CacbuoclogisticManager.cs" />
     <Compile Include="Manager\DanhmuccangManager.cs" />
     <Compile Include="Manager\DanhmucchucvuManager.cs" />
     <Compile Include="Manager\DanhmuchanghoaManager.cs" />
@@ -291,6 +292,7 @@
     <Compile Include="Manager\RolesManager.cs" />
     <Compile Include="Manager\ThamsoManager.cs" />
     <Compile Include="Manager\ThuchienhopdongbanhangManager.cs" />
+    <Compile Include="Manager\ThuchienlogisticManager.cs" />
     <Compile Include="Manager\TygiaManager.cs" />
     <Compile Include="Manager\UsersManager.cs" />
     <Compile Include="Program.cs" />

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 16:33:50
+// Code is generated on: 21 May 2022 09:22:26
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -11,6 +11,30 @@ using System;
 
 namespace GD.FM.DAL
 {
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Cacbuoclogistic.
+	/// </summary>
+	public enum CacbuoclogisticFieldIndex:int
+	{
+		///<summary>Mahieu. </summary>
+		Mahieu,
+		///<summary>Tenhieu. </summary>
+		Tenhieu,
+		///<summary>Tenrutgon. </summary>
+		Tenrutgon,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
 
 	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Danhmuccang.
@@ -651,6 +675,52 @@ namespace GD.FM.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Thanhtoanvnd. </summary>
+		Thanhtoanvnd,
+		///<summary>Thanhtoanusd. </summary>
+		Thanhtoanusd,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Thuchienlogistic.
+	/// </summary>
+	public enum ThuchienlogisticFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Sohopdong. </summary>
+		Sohopdong,
+		///<summary>Ngayhopdong. </summary>
+		Ngayhopdong,
+		///<summary>Makhach. </summary>
+		Makhach,
+		///<summary>Tenkhach. </summary>
+		Tenkhach,
+		///<summary>Mahangphiakhach. </summary>
+		Mahangphiakhach,
+		///<summary>Codefiller. </summary>
+		Codefiller,
+		///<summary>Soluonggiao. </summary>
+		Soluonggiao,
+		///<summary>Ngaygiao. </summary>
+		Ngaygiao,
+		///<summary>Buoclogistic. </summary>
+		Buoclogistic,
+		///<summary>Tenbuoclogistic. </summary>
+		Tenbuoclogistic,
+		///<summary>Ngaythuchien. </summary>
+		Ngaythuchien,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -712,6 +782,8 @@ namespace GD.FM.DAL
 	/// </summary>
 	public enum EntityType:int
 	{
+		///<summary>Cacbuoclogistic</summary>
+		CacbuoclogisticEntity,
 		///<summary>Danhmuccang</summary>
 		DanhmuccangEntity,
 		///<summary>Danhmucchucvu</summary>
@@ -756,6 +828,8 @@ namespace GD.FM.DAL
 		ThamsoEntity,
 		///<summary>Thuchienhopdongbanhang</summary>
 		ThuchienhopdongbanhangEntity,
+		///<summary>Thuchienlogistic</summary>
+		ThuchienlogisticEntity,
 		///<summary>Tygia</summary>
 		TygiaEntity,
 		///<summary>Users</summary>

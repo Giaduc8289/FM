@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 20 May 2022 16:33:50
+// Code is generated on: 21 May 2022 09:22:27
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,6 +32,9 @@ namespace GD.FM.DAL.FactoryClasses
 			IFieldInfoProvider fieldProvider = FieldInfoProviderSingleton.GetInstance();
 			switch(relatedEntityType)
 			{
+				case GD.FM.DAL.EntityType.CacbuoclogisticEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "CacbuoclogisticEntity");
+					break;
 				case GD.FM.DAL.EntityType.DanhmuccangEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DanhmuccangEntity");
 					break;
@@ -97,6 +100,9 @@ namespace GD.FM.DAL.FactoryClasses
 					break;
 				case GD.FM.DAL.EntityType.ThuchienhopdongbanhangEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThuchienhopdongbanhangEntity");
+					break;
+				case GD.FM.DAL.EntityType.ThuchienlogisticEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThuchienlogisticEntity");
 					break;
 				case GD.FM.DAL.EntityType.TygiaEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "TygiaEntity");

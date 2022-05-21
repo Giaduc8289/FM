@@ -1,8 +1,0 @@
-D:\CODE2020\KDBB\GD.KDBB.DAL\DatabaseGeneric\bin\Debug\GD.KDBB.DAL.dll
-D:\CODE2020\KDBB\GD.KDBB.DAL\DatabaseGeneric\bin\Debug\GD.KDBB.DAL.pdb
-D:\CODE2020\KDBB\GD.KDBB.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.DQE.SqlServer.NET20.dll
-D:\CODE2020\KDBB\GD.KDBB.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.LinqSupportClasses.NET35.dll
-D:\CODE2020\KDBB\GD.KDBB.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll
-D:\CODE2020\KDBB\GD.KDBB.DAL\obj\Debug\GD.KDBB.DAL.dll
-D:\CODE2020\KDBB\GD.KDBB.DAL\obj\Debug\GD.KDBB.DAL.pdb
-D:\CODE2020\KDBB\GD.KDBB.DAL\obj\Debug\GD.KDBB.DAL.csprojResolveAssemblyReference.cache

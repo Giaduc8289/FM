@@ -114,12 +114,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseGeneric\EntityClasses\CacbuoclogisticEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DanhmucchucvuEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DanhmucungdungEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\HopdongbanhangchitietEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\HopdongbanhangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\PhongbanEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\ThuchienhopdongbanhangEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\ThuchienlogisticEntity.cs" />
     <Compile Include="DatabaseGeneric\HelperClasses\EntityCollection.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
@@ -141,6 +143,7 @@
     <Compile Include="DatabaseGeneric\Linq\LinqMetaData.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
+    <Compile Include="DatabaseGeneric\RelationClasses\CacbuoclogisticRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DanhmucchucvuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DanhmucungdungRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\HopdongbanhangchitietRelations.cs" />
@@ -174,6 +177,7 @@
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
     <Compile Include="DatabaseGeneric\RelationClasses\ThuchienhopdongbanhangRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\ThuchienlogisticRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\TygiaRelations.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
