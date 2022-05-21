@@ -1,0 +1,2 @@
+E:\Dev\FM\GD.FM.APP\bin\Debug\GD.FM.APP.exe.config
+E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.csproj.ResolveComReference.cache
