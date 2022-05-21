@@ -1,2 +1,11 @@
-/bin
-/obj
+bin/Debug/
+*.exe
+*.dll
+*.pdb
+
+/obj/Debug/
+*.cache
+*.Cache
+*.pdb
+*.resource
+*.exe
