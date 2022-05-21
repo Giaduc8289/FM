@@ -12,8 +12,8 @@
 
 # Build results
 [Dd]ebug/ 
-*GD.FM.APP.exe
-*GD.FM.APP.pdb
+*.exe
+*.pdb
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
