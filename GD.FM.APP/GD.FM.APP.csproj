@@ -116,23 +116,11 @@
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.designer.cs">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
     </Compile>
-    <Compile Include="DANHMUC\FRM_DMCHUCVU.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DANHMUC\FRM_DMCHUCVU.designer.cs">
-      <DependentUpon>FRM_DMCHUCVU.cs</DependentUpon>
-    </Compile>
     <Compile Include="DANHMUC\FRM_DMHANGHOA.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DANHMUC\FRM_DMHANGHOA.designer.cs">
       <DependentUpon>FRM_DMHANGHOA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DANHMUC\FRM_DMPHONGBAN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DANHMUC\FRM_DMPHONGBAN.designer.cs">
-      <DependentUpon>FRM_DMPHONGBAN.cs</DependentUpon>
     </Compile>
     <Compile Include="DANHMUC\FRM_UNGDUNGSP.cs">
       <SubType>Form</SubType>
@@ -313,14 +301,8 @@
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DANHMUC\FRM_DMCHUCVU.resx">
-      <DependentUpon>FRM_DMCHUCVU.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMHANGHOA.resx">
       <DependentUpon>FRM_DMHANGHOA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DANHMUC\FRM_DMPHONGBAN.resx">
-      <DependentUpon>FRM_DMPHONGBAN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_UNGDUNGSP.resx">
       <DependentUpon>FRM_UNGDUNGSP.cs</DependentUpon>
@@ -534,11 +516,9 @@
     <Content Include="IMG\Icon\xDirectoryCopy.xml" />
     <Content Include="IMG\TeamViewer.exe" />
     <Content Include="IMG\waiting.xml" />
-    <Content Include="XMLCONFIG\FRM_DMCHUCVU.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMCUOCVANCHUYEN.xml" />
     <Content Include="XMLCONFIG\FRM_DMHANGHOA.xml" />
-    <Content Include="XMLCONFIG\FRM_DMPHONGBAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMTINHTHANH.xml" />
     <Content Include="XMLCONFIG\FRM_CHINHSACHHOTRO.xml" />
     <Content Include="XMLCONFIG\FRM_DMCANG.xml" />
