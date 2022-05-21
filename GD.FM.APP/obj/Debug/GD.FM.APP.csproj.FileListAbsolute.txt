@@ -116,3 +116,7 @@ D:\DB back up\FM\GD.FM.APP\obj\Debug\GD.FM.APP.HETHONG.FRM_USERS.resources
 D:\DB back up\FM\GD.FM.APP\obj\Debug\GD.FM.APP.Properties.Resources.resources
 D:\DB back up\FM\GD.FM.APP\obj\Debug\GD.FM.APP.csproj.GenerateResource.Cache
 D:\DB back up\FM\GD.FM.APP\obj\Debug\GD.FM.APP.exe.licenses
+D:\FM\GD.FM.APP\bin\Debug\GD.FM.APP.exe.config
+D:\FM\GD.FM.APP\obj\Debug\GD.FM.APP.csproj.ResolveComReference.cache
+D:\FM\GD.FM.APP\obj\Debug\GD.FM.APP.exe
+D:\FM\GD.FM.APP\obj\Debug\GD.FM.APP.pdb
