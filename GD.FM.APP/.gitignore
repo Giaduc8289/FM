@@ -1,9 +1,9 @@
-bin/Debug/
+/[Bb]in/[Dd]ebug/
 *.exe
 *.dll
 *.pdb
 
-/obj/Debug/
+/[Oo]bj/[Dd]ebug/
 *.cache
 *.Cache
 *.pdb
