@@ -57,3 +57,7 @@ E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.csproj.GenerateResource.Cache
 E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.exe.licenses
 E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.exe
 E:\Dev\FM\GD.FM.APP\obj\Debug\GD.FM.APP.pdb
+D:\DB back up\FM\GD.FM.APP\bin\Debug\GD.FM.APP.exe.config
+D:\DB back up\FM\GD.FM.APP\obj\Debug\GD.FM.APP.csproj.ResolveComReference.cache
+D:\DB back up\FM\GD.FM.APP\obj\Debug\GD.FM.APP.exe
+D:\DB back up\FM\GD.FM.APP\obj\Debug\GD.FM.APP.pdb
