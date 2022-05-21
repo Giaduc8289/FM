@@ -28,7 +28,7 @@
     <headerText>Code Filler</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>40</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -37,16 +37,16 @@
     <headerText>Mã khách</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Tenkhach</name>
-    <headerText>Khách hàng</headerText>
+    <headerText>Tên khách hàng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>70</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -55,7 +55,7 @@
     <headerText>Code Customer</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>40</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -82,7 +82,7 @@
     <headerText>Caco3 KH</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -91,7 +91,7 @@
     <headerText>Tio2 KH</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -100,7 +100,7 @@
     <headerText>Mi KH</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -118,7 +118,7 @@
     <headerText>Caco3 Filler</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -127,7 +127,7 @@
     <headerText>Tio2 Filler</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -136,7 +136,7 @@
     <headerText>Mi Filler</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>

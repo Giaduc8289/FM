@@ -202,16 +202,16 @@
             this.txt_TENHIEU.FormNametoShow = "";
             this.txt_TENHIEU.Is_DateTime = false;
             this.txt_TENHIEU.IsShowForm = false;
-            this.txt_TENHIEU.Location = new System.Drawing.Point(96, 35);
+            this.txt_TENHIEU.Location = new System.Drawing.Point(330, 5);
             this.txt_TENHIEU.Name = "txt_TENHIEU";
             this.txt_TENHIEU.Regular_Expression = null;
-            this.txt_TENHIEU.Size = new System.Drawing.Size(318, 20);
+            this.txt_TENHIEU.Size = new System.Drawing.Size(166, 20);
             this.txt_TENHIEU.TabIndex = 1;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(11, 38);
+            this.label21.Location = new System.Drawing.Point(255, 8);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(69, 13);
             this.label21.TabIndex = 120;
@@ -251,6 +251,7 @@
             this.Name = "FRM_DMHANGHOA";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMHANGHOA_FormClosing);
+            this.Load += new System.EventHandler(this.FRM_DMHANGHOA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).EndInit();
             this.uiPanel0.ResumeLayout(false);

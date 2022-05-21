@@ -255,6 +255,11 @@ namespace GD.FM.APP.DANHMUC
                 GRID_DMHANGHOA.ColumnAutoResize = false;
         }
 
+        private void FRM_DMHANGHOA_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void FRM_DMHANGHOA_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (btn_LUULAI.Enabled)
