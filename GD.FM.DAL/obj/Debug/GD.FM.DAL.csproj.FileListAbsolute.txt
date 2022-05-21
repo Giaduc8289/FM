@@ -5,3 +5,11 @@ E:\Dev\FM\GD.FM.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.LinqSupportClasses.
 E:\Dev\FM\GD.FM.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll
 E:\Dev\FM\GD.FM.DAL\obj\Debug\GD.FM.DAL.dll
 E:\Dev\FM\GD.FM.DAL\obj\Debug\GD.FM.DAL.pdb
+D:\FM\GD.FM.DAL\DatabaseGeneric\bin\Debug\GD.FM.DAL.dll
+D:\FM\GD.FM.DAL\DatabaseGeneric\bin\Debug\GD.FM.DAL.pdb
+D:\FM\GD.FM.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.DQE.SqlServer.NET20.dll
+D:\FM\GD.FM.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.LinqSupportClasses.NET35.dll
+D:\FM\GD.FM.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll
+D:\FM\GD.FM.DAL\obj\Debug\GD.FM.DAL.csprojResolveAssemblyReference.cache
+D:\FM\GD.FM.DAL\obj\Debug\GD.FM.DAL.dll
+D:\FM\GD.FM.DAL\obj\Debug\GD.FM.DAL.pdb

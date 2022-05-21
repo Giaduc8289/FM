@@ -3,3 +3,8 @@ E:\Dev\DLL\GD.FM.BLL.pdb
 E:\Dev\FM\GD.FM.BLL\obj\Debug\GD.FM.BLL.csprojResolveAssemblyReference.cache
 E:\Dev\FM\GD.FM.BLL\obj\Debug\GD.FM.BLL.dll
 E:\Dev\FM\GD.FM.BLL\obj\Debug\GD.FM.BLL.pdb
+D:\DLL\GD.FM.BLL.dll
+D:\DLL\GD.FM.BLL.pdb
+D:\FM\GD.FM.BLL\obj\Debug\GD.FM.BLL.csprojResolveAssemblyReference.cache
+D:\FM\GD.FM.BLL\obj\Debug\GD.FM.BLL.dll
+D:\FM\GD.FM.BLL\obj\Debug\GD.FM.BLL.pdb
