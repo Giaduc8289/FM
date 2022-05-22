@@ -689,12 +689,12 @@ namespace GD.FM.APP.BANHANG
                 txt_MAKHACH.Text = _RowViewSelect[DanhmuckhachFields.Mahieu.Name].ToString();
                 txt_TENKHACH.Text = _RowViewSelect[DanhmuckhachFields.Tenhieu.Name].ToString();
 
-                DT_DMHANG = new DanhmuchanghoaManager().SelectByMakhachRDT(txt_MAKHACH.Text);
+                //DT_DMHANG = new DanhmuchanghoaManager().SelectByMakhachRDT(txt_MAKHACH.Text);
             }
             else
             {
                 txt_TENKHACH.Text = _RowViewSelect[DanhmuckhachFields.Tenhieu.Name].ToString();
-                DT_DMHANG = new DanhmuchanghoaManager().SelectByMakhachRDT(txt_MAKHACH.Text);
+                //DT_DMHANG = new DanhmuchanghoaManager().SelectByMakhachRDT(txt_MAKHACH.Text);
             }
         }
         private DataRow checkmaKhach(string masieuthi, DataTable dt)

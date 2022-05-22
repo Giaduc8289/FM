@@ -28,7 +28,7 @@
     <headerText>Số HĐ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -37,7 +37,7 @@
     <headerText>Ngày HĐ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>75</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -55,7 +55,7 @@
     <headerText>Khách hàng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>125</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -68,12 +68,12 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tencangden</name>
     <headerText>Cảng đến</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -82,7 +82,7 @@
     <headerText>Thành tiền(VNĐ)</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>95</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -91,7 +91,7 @@
     <headerText>Thành tiền(USD)</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>95</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
