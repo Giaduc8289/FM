@@ -117,7 +117,7 @@ constraint Hopdongbanhangchitiet_PK primary key (Id)) ON [PRIMARY]
 
 
 CREATE TABLE Thuchienhopdongbanhang(
-Id		Bigint Identity Not null,
+Id			Bigint Identity Not null,
 Sohopdong		Nvarchar(50),
 Ngayhopdong		Date,
 Makhach			Nvarchar(50),

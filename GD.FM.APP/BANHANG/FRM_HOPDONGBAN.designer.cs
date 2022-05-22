@@ -496,7 +496,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_HOPDONGBAN";
             this.Text = "DANH MỤC CHƯƠNG";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_BAOGIA_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_HOPDONGBAN_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FRM_HOPDONGBAN_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).EndInit();

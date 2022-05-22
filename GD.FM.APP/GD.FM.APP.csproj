@@ -536,6 +536,7 @@
     <Content Include="IMG\Icon\xDirectoryCopy.xml" />
     <Content Include="IMG\TeamViewer.exe" />
     <Content Include="IMG\waiting.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHANGHOA_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMCUOCVANCHUYEN.xml" />
     <Content Include="XMLCONFIG\FRM_DMHANGHOA.xml" />
