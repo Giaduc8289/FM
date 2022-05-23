@@ -547,11 +547,8 @@
     <Content Include="IMG\Icon\xDirectoryCopy.xml" />
     <Content Include="IMG\TeamViewer.exe" />
     <Content Include="IMG\waiting.xml" />
-<<<<<<< HEAD
     <Content Include="XMLCONFIG\FRM_DMHANGHOA_CHON.xml" />
-=======
     <Content Include="XMLCONFIG\FRM_DMCACBUOCLOGISTIC.xml" />
->>>>>>> cuongmq_dev
     <Content Include="XMLCONFIG\FRM_DMLOAIHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMCUOCVANCHUYEN.xml" />
     <Content Include="XMLCONFIG\FRM_DMHANGHOA.xml" />

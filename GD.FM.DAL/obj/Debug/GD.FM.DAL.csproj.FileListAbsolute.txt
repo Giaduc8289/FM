@@ -13,3 +13,4 @@ D:\FM\GD.FM.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.ORMSupportClasses.NET20
 D:\FM\GD.FM.DAL\obj\Debug\GD.FM.DAL.csprojResolveAssemblyReference.cache
 D:\FM\GD.FM.DAL\obj\Debug\GD.FM.DAL.dll
 D:\FM\GD.FM.DAL\obj\Debug\GD.FM.DAL.pdb
+E:\Dev\FM\GD.FM.DAL\obj\Debug\GD.FM.DAL.csprojResolveAssemblyReference.cache
