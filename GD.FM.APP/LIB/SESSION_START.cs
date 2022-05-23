@@ -309,7 +309,7 @@ namespace GD.FM.APP.LIB
         {
             get
             {
-                _DT_DMUNGDUNG = new DanhmucchucvuManager().SelectAllRDT();
+                _DT_DMPHONGBAN = new PhongbanManager().SelectAllRDT();
                 return _DT_DMPHONGBAN;
             }
             set { _DT_DMPHONGBAN = value; }

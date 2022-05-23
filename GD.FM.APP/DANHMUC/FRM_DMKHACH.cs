@@ -26,9 +26,12 @@ namespace GD.FM.APP.DANHMUC
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
         private DataTable DT_DMKHACH = new DataTable();
         private BindingSource BS_DMKHACH = new BindingSource();
-        private DataRow r_Insert = null;
+        private DataRow r_Insert = null, _RowViewSelect = null, _RowDanhmuckhach = null;
+        //private DataRow r_Insert = null;
         private GD.FM.CONTROL.JGridEX GRID_DMKHACH = new GD.FM.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
+        DataTable DT_DMNHANVIEN = new DataTable();
+
         private void TEXTBOX_Only_Control(bool _isbool, GD.FM.CONTROL.TEXTBOX _Textbox)
         {
             GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -50,6 +53,8 @@ namespace GD.FM.APP.DANHMUC
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMKHACH");
                         DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+
+                        DT_DMNHANVIEN = LIB.SESSION_START.DT_NHANVIEN;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -127,6 +132,8 @@ namespace GD.FM.APP.DANHMUC
                     txt_TKNGANHANG.Text = _Rowview.Row[DanhmuckhachFields.Taikhoannganhang.Name].ToString();
                     txt_TENNGANHANG.Text = _Rowview.Row[DanhmuckhachFields.Tennganhang.Name].ToString();
                     txt_EMAIL.Text = _Rowview.Row[DanhmuckhachFields.Email.Name].ToString();
+                    txt_MANHANVIEN.Text = _Rowview.Row[DanhmuckhachFields.Manhanvien.Name].ToString();
+                    //txt_TENNHANVIEN.Text = _Rowview.Row[DanhmuckhachFields.Tennhanvien.Name].ToString();
                     try
                     {
                         chk_NOIDIA.Checked = Convert.ToBoolean(_Rowview.Row[DanhmuckhachFields.Noidia.Name].ToString());
@@ -141,7 +148,36 @@ namespace GD.FM.APP.DANHMUC
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMKHACH_CurrentChanged"); }
         }
-
+        private DataRow checkmaNhanvien(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(NhanvienFields.Manhanvien.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
+        private void txt_MANHANVIEN_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MANHANVIEN.Text.Trim()) || DT_DMNHANVIEN == null || DT_DMNHANVIEN.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MANHANVIEN.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaNhanvien(Str_MASIEUTHI, DT_DMNHANVIEN);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_DMKHACH.xml",
+                        DT_DMNHANVIEN, NhanvienFields.Manhanvien.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MANHANVIEN.Text = _RowViewSelect[NhanvienFields.Manhanvien.Name].ToString();
+                txt_TENNHANVIEN.Text = _RowViewSelect[NhanvienFields.Hoten.Name].ToString();
+            }
+            else
+            {
+                txt_TENNHANVIEN.Text = _RowViewSelect[NhanvienFields.Hoten.Name].ToString();
+            }
+        }
         private string Save_Data(string _str_DMCHUONG_PK)
         {
             DanhmuckhachEntity _DanhmuckhachEntity = new DanhmuckhachEntity();
@@ -155,6 +191,8 @@ namespace GD.FM.APP.DANHMUC
             _DanhmuckhachEntity.Taikhoannganhang = txt_TKNGANHANG.Text.Trim();
             _DanhmuckhachEntity.Tennganhang = txt_TENNGANHANG.Text.Trim();
             _DanhmuckhachEntity.Email = txt_EMAIL.Text.Trim();
+            _DanhmuckhachEntity.Manhanvien = txt_MANHANVIEN.Text.Trim();
+            _DanhmuckhachEntity.Tennhanvien = txt_TENNHANVIEN.Text.Trim();
             if (chk_NOIDIA.Checked)
                 _DanhmuckhachEntity.Noidia = true;
             else
@@ -194,6 +232,9 @@ namespace GD.FM.APP.DANHMUC
                 GRID_DMKHACH.CurrentRow.Cells[DanhmuckhachFields.Noidia.Name].Value = _DanhmuckhachEntity.Noidia;
                 GRID_DMKHACH.CurrentRow.Cells[DanhmuckhachFields.Truyenthong.Name].Value = _DanhmuckhachEntity.Truyenthong;
                 GRID_DMKHACH.CurrentRow.Cells[DanhmuckhachFields.Nguoilienhehoten.Name].Value = _DanhmuckhachEntity.Nguoilienhehoten;
+                GRID_DMKHACH.CurrentRow.Cells[DanhmuckhachFields.Manhanvien.Name].Value = _DanhmuckhachEntity.Manhanvien;
+                GRID_DMKHACH.CurrentRow.Cells[DanhmuckhachFields.Tennhanvien.Name].Value = _DanhmuckhachEntity.Tennhanvien;
+
                 GRID_DMKHACH.CurrentRow.Cells[DanhmuckhachFields.Nguoilienhechucvu.Name].Value = _DanhmuckhachEntity.Nguoilienhechucvu;
                 GRID_DMKHACH.CurrentRow.Cells[DanhmuckhachFields.Nguoilienhesodienthoai.Name].Value = _DanhmuckhachEntity.Nguoilienhesodienthoai;
 
@@ -321,6 +362,21 @@ namespace GD.FM.APP.DANHMUC
                 GRID_DMKHACH.ColumnAutoResize = true;
             else
                 GRID_DMKHACH.ColumnAutoResize = false;
+        }
+
+        private void FRM_DMKHACH_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_NLHHOTEN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void FRM_DMKHACH_FormClosing(object sender, FormClosingEventArgs e)
