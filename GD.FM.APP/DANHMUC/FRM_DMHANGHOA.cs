@@ -118,7 +118,15 @@ namespace GD.FM.APP.DANHMUC
                     if (_Rowview != null)
                         MAHIEU_PK = _Rowview.Row[DanhmuchanghoaFields.Mahieu.Name].ToString();
                     txt_MAHIEU.Text = _Rowview.Row[DanhmuchanghoaFields.Mahieu.Name].ToString();
-                    txt_TENHIEU.Text = _Rowview.Row[DanhmuchanghoaFields.Mahangphiakhach.Name].ToString();
+                    txt_MAKHACH.Text = _Rowview.Row[DanhmuchanghoaFields.Makhach.Name].ToString();
+                    txt_TENKHACH.Text = _Rowview.Row[DanhmuchanghoaFields.Tenkhach.Name].ToString();
+                    txt_CACO3KH.Text = _Rowview.Row[DanhmuchanghoaFields.Caco3kh.Name].ToString();
+                    TXT_TIO2KH.Text = _Rowview.Row[DanhmuchanghoaFields.Tio2kh.Name].ToString();
+                    txt_MIKH.Text = _Rowview.Row[DanhmuchanghoaFields.Mikh.Name].ToString();
+                    txt_CACO3FM.Text = _Rowview.Row[DanhmuchanghoaFields.Caco3fm.Name].ToString();
+                    txt_TIO2FM.Text = _Rowview.Row[DanhmuchanghoaFields.Tio2fm.Name].ToString();
+                    txt_MIFM.Text = _Rowview.Row[DanhmuchanghoaFields.Mifm.Name].ToString();
+
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMHANGHOA_CurrentChanged"); }
@@ -128,7 +136,19 @@ namespace GD.FM.APP.DANHMUC
         {
             DanhmuchanghoaEntity _DanhmuchanghoaEntity = new DanhmuchanghoaEntity();
             _DanhmuchanghoaEntity.Mahieu = txt_MAHIEU.Text.Trim();
-            _DanhmuchanghoaEntity.Mahangphiakhach = txt_TENHIEU.Text.Trim();
+            _DanhmuchanghoaEntity.Makhach = txt_MAKHACH.Text.Trim();
+            _DanhmuchanghoaEntity.Tenkhach = txt_TENKHACH.Text.Trim();
+            try { _DanhmuchanghoaEntity.Caco3kh = Convert.ToDecimal(txt_CACO3KH.Text.Trim()); }
+            catch { }
+            try { _DanhmuchanghoaEntity.Tio2kh = Convert.ToDecimal(TXT_TIO2KH.Text.Trim()); }
+            catch { }
+            _DanhmuchanghoaEntity.Mikh = txt_MIKH.Text.Trim();
+            try { _DanhmuchanghoaEntity.Caco3fm = Convert.ToDecimal(txt_CACO3FM.Text.Trim()); }
+            catch { }
+            try { _DanhmuchanghoaEntity.Tio2fm = Convert.ToDecimal(txt_TIO2FM.Text.Trim()); }
+            catch { }
+            _DanhmuchanghoaEntity.Mifm = txt_MIFM.Text.Trim();
+
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _DanhmuchanghoaEntity.Ngaytao = DateTime.Now;
@@ -143,7 +163,14 @@ namespace GD.FM.APP.DANHMUC
                 _DanhmuchanghoaEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DanhmuchanghoaManager.Update(_DanhmuchanghoaEntity);
                 GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Mahieu.Name].Value = _DanhmuchanghoaEntity.Mahieu;
-                GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Mahangphiakhach.Name].Value = _DanhmuchanghoaEntity.Mahangphiakhach;
+                GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Makhach.Name].Value = _DanhmuchanghoaEntity.Makhach;
+                GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Tenkhach.Name].Value = _DanhmuchanghoaEntity.Tenkhach;
+                GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Caco3kh.Name].Value = _DanhmuchanghoaEntity.Caco3kh;
+                GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Tio2kh.Name].Value = _DanhmuchanghoaEntity.Tio2kh;
+                GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Mikh.Name].Value = _DanhmuchanghoaEntity.Mikh;
+                GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Caco3fm.Name].Value = _DanhmuchanghoaEntity.Caco3fm;
+                GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Tio2fm.Name].Value = _DanhmuchanghoaEntity.Tio2fm;
+                GRID_DMHANGHOA.CurrentRow.Cells[DanhmuchanghoaFields.Mifm.Name].Value = _DanhmuchanghoaEntity.Mifm;
                 GD.FM.BLL.MenuroleManager.set_Enable_controls(_DanhmuchanghoaManager.Convert(_DanhmuchanghoaEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;
@@ -172,7 +199,7 @@ namespace GD.FM.APP.DANHMUC
             {
                 GD.FM.BLL.MenuroleManager.set_Enable_controls(GD.FM.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MAHIEU }));
-                txt_TENHIEU.Focus();
+                txt_MAKHACH.Focus();
             }
             GRID_DMHANGHOA.Enabled = false;
         }
@@ -194,7 +221,7 @@ namespace GD.FM.APP.DANHMUC
             DanhmuchanghoaManager _DanhmuchanghoaManager = new DanhmuchanghoaManager();
             DanhmuchanghoaEntity _DanhmuchanghoaEntity = new DanhmuchanghoaEntity();
             _DanhmuchanghoaEntity = _DanhmuchanghoaManager.SelectOne(MAHIEU_PK);
-            if (_DanhmuchanghoaEntity != null && MessageBox.Show("Xóa đơn vị tính: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_DanhmuchanghoaEntity != null && MessageBox.Show("Xóa đơn vị tính: " + MAHIEU_PK + " - " + txt_MAKHACH.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -226,10 +253,10 @@ namespace GD.FM.APP.DANHMUC
                 txt_MAHIEU.Focus();
                 return;
             }
-            else if (txt_TENHIEU.Text == "")
+            else if (txt_MAKHACH.Text == "")
             {
                 MessageBox.Show("Yêu cầu nhập tên đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_TENHIEU.Focus();
+                txt_MAKHACH.Focus();
                 return;
             }
             else
@@ -261,6 +288,16 @@ namespace GD.FM.APP.DANHMUC
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textbox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
