@@ -651,6 +651,15 @@ namespace GD.FM.APP.HETHONG
 
                 #region Danh mục
 
+                case "FRM_DMCACBUOCLOGISTIC":
+                    foreach (GD.FM.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMCACBUOCLOGISTIC") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.FM.APP.DANHMUC.FRM_DMCACBUOCLOGISTIC()), mmru.Text);
+                    break;
+
+
                 case "FRM_DMPHONGBAN":
                     foreach (GD.FM.CONTROL.FORM frm in this.MdiChildren)
                     {
