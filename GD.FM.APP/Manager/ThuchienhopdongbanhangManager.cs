@@ -27,5 +27,21 @@ namespace GD.FM.BLL
 		{
 			// Nothing for now.
 		}
-	}
+        public EntityCollection SelectBy_Sohopdong_Mahangphiakhach(string Sohopdong, string Mahangphiakhach)
+        {
+            EntityCollection _ThuchienhopdongbanhangCollection = new EntityCollection(new ThuchienhopdongbanhangEntityFactory());
+            RelationPredicateBucket filter = new RelationPredicateBucket();
+
+            IPredicateExpression _PredicateExpression = new PredicateExpression();
+            _PredicateExpression.AddWithAnd(ThuchienhopdongbanhangFields.Sohopdong == Sohopdong);
+            _PredicateExpression.AddWithAnd(ThuchienhopdongbanhangFields.Mahangphiakhach == Mahangphiakhach);
+            filter.PredicateExpression.Add(_PredicateExpression);
+
+            using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+            {
+                adapter.FetchEntityCollection(_ThuchienhopdongbanhangCollection, filter, 0, null);
+            }
+            return _ThuchienhopdongbanhangCollection;
+        }
+    }
 }

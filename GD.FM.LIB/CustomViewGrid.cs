@@ -330,6 +330,7 @@ namespace GD.FM.LIB
                     || dv[i]["name"].ToString() == "Ngayhoanthanh" || dv[i]["name"].ToString() == "Ngaycuoink"
                     || dv[i]["name"].ToString() == "Ngaytrang" || dv[i]["name"].ToString() == "Ngayin1"
                     || dv[i]["name"].ToString() == "Ngayin2" || dv[i]["name"].ToString() == "Ngayxuat"
+                    || dv[i]["name"].ToString() == "Ngayhopdong"
                     || dv[i]["name"].ToString() == "Ngayhoadon" || dv[i]["name"].ToString() == "Ngayctkt")
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
@@ -404,6 +405,7 @@ namespace GD.FM.LIB
                     || dv[i]["name"].ToString() == "Sanluongtoida" || dv[i]["name"].ToString() == "Tygia"
                     || dv[i]["name"].ToString() == "Sanluong" || dv[i]["name"].ToString() == "Kichthuoctang"
                     || dv[i]["name"].ToString() == "Sokien" || dv[i]["name"].ToString() == "Sothutuxep"
+                    || dv[i]["name"].ToString() == "Thanhtienvnd" || dv[i]["name"].ToString() == "Thanhtienusd"
                     || dv[i]["name"].ToString() == "Tientamung")
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
@@ -635,6 +637,7 @@ namespace GD.FM.LIB
                     || dv[i]["name"].ToString() == "Ngayhoanthanh" || dv[i]["name"].ToString() == "Ngaycuoink"
                     || dv[i]["name"].ToString() == "Ngaytrang" || dv[i]["name"].ToString() == "Ngayin1"
                     || dv[i]["name"].ToString() == "Ngayin2" || dv[i]["name"].ToString() == "Ngayxuat"
+                    || dv[i]["name"].ToString() == "Ngayhopdong"
                     || dv[i]["name"].ToString() == "Ngayhoadon" || dv[i]["name"].ToString() == "Ngayctkt")
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
@@ -709,6 +712,7 @@ namespace GD.FM.LIB
                     || dv[i]["name"].ToString() == "Sanluongtoida" || dv[i]["name"].ToString() == "Tygia"
                     || dv[i]["name"].ToString() == "Sanluong" || dv[i]["name"].ToString() == "Kichthuoctang"
                     || dv[i]["name"].ToString() == "Sokien" || dv[i]["name"].ToString() == "Sothutuxep"
+                    || dv[i]["name"].ToString() == "Thanhtienvnd" || dv[i]["name"].ToString() == "Thanhtienusd"
                     || dv[i]["name"].ToString() == "Tientamung")
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
