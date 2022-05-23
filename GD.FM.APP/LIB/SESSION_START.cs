@@ -240,6 +240,19 @@ namespace GD.FM.APP.LIB
         }
         #endregion
 
+        #region DMCACBUOCLOGISTIC
+        private static DataTable _DT_DMCACBUOCLOGISTIC = null;
+        public static DataTable DT_DMCACBUOCLOGISTIC
+        {
+            get
+            {
+                _DT_DMCACBUOCLOGISTIC = new CacbuoclogisticManager().SelectAllRDT();
+                return _DT_DMCACBUOCLOGISTIC;
+            }
+            set { _DT_DMCACBUOCLOGISTIC = value; }
+        }
+        #endregion
+
         #region DMDONVITINH
         private static DataTable _DT_DMDONVITINH = null;
         public static DataTable DT_DMDONVITINH

@@ -122,6 +122,12 @@
     <Compile Include="DANHMUC\FRM_DMCHUCVU.designer.cs">
       <DependentUpon>FRM_DMCHUCVU.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANHMUC\FRM_DMCACBUOCLOGISTIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMCACBUOCLOGISTIC.designer.cs">
+      <DependentUpon>FRM_DMCACBUOCLOGISTIC.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMHANGHOA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +324,9 @@
     <EmbeddedResource Include="DANHMUC\FRM_DMCHUCVU.resx">
       <DependentUpon>FRM_DMCHUCVU.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMCACBUOCLOGISTIC.resx">
+      <DependentUpon>FRM_DMCACBUOCLOGISTIC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMHANGHOA.resx">
       <DependentUpon>FRM_DMHANGHOA.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,6 +414,7 @@
     <EmbeddedResource Include="RDLC\HOPDONGMUABAN.rdlc" />
     <EmbeddedResource Include="RDLC\HOPDONGTIENGANH.rdlc" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -537,6 +547,7 @@
     <Content Include="IMG\Icon\xDirectoryCopy.xml" />
     <Content Include="IMG\TeamViewer.exe" />
     <Content Include="IMG\waiting.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCACBUOCLOGISTIC.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMCUOCVANCHUYEN.xml" />
     <Content Include="XMLCONFIG\FRM_DMHANGHOA.xml" />
