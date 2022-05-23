@@ -104,6 +104,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BANHANG\FRM_THUCHIENHOPDONGBAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANHANG\FRM_THUCHIENHOPDONGBAN.designer.cs">
+      <DependentUpon>FRM_THUCHIENHOPDONGBAN.cs</DependentUpon>
+    </Compile>
     <Compile Include="BANHANG\FRM_HOPDONGBAN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     <Compile Include="Manager\UsersManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BANHANG\FRM_THUCHIENHOPDONGBAN.resx">
+      <DependentUpon>FRM_THUCHIENHOPDONGBAN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BANHANG\FRM_HOPDONGBAN.resx">
       <DependentUpon>FRM_HOPDONGBAN.cs</DependentUpon>
     </EmbeddedResource>
