@@ -342,5 +342,18 @@ namespace GD.FM.APP.LIB
         }
         #endregion
 
+        #region THHOPDONGBAN
+        private static DataTable _DT_THHOPDONGBAN = null;
+        public static DataTable DT_THHOPDONGBAN
+        {
+            get
+            {
+                _DT_THHOPDONGBAN = new ThuchienhopdongbanhangManager().SelectAllRDT();
+                return _DT_THHOPDONGBAN;
+            }
+            set { _DT_THHOPDONGBAN = value; }
+        }
+        #endregion
+
     }
 }
