@@ -132,7 +132,7 @@
             this.txt_TENRUTGON.Location = new System.Drawing.Point(96, 75);
             this.txt_TENRUTGON.Name = "txt_TENRUTGON";
             this.txt_TENRUTGON.Regular_Expression = null;
-            this.txt_TENRUTGON.Size = new System.Drawing.Size(138, 20);
+            this.txt_TENRUTGON.Size = new System.Drawing.Size(150, 20);
             this.txt_TENRUTGON.TabIndex = 2;
             this.txt_TENRUTGON.TextChanged += new System.EventHandler(this.txt_Makhach_TextChanged);
             // 
@@ -235,7 +235,7 @@
             this.txt_TENHIEU.Location = new System.Drawing.Point(96, 43);
             this.txt_TENHIEU.Name = "txt_TENHIEU";
             this.txt_TENHIEU.Regular_Expression = null;
-            this.txt_TENHIEU.Size = new System.Drawing.Size(138, 20);
+            this.txt_TENHIEU.Size = new System.Drawing.Size(150, 20);
             this.txt_TENHIEU.TabIndex = 1;
             // 
             // label21
