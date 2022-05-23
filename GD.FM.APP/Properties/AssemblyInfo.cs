@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PHẦN MỀM KINH DOANH THƯƠNG MẠI")]
-[assembly: AssemblyDescription("Cập nhật ngày 01/12/2021")]
+[assembly: AssemblyTitle("PHẦN MỀM KINH DOANH HẠT NHỰA")]
+[assembly: AssemblyDescription("Cập nhật ngày 01/06/2022")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Công ty Cổ phần công nghệ Gia Đức")]
 [assembly: AssemblyProduct("GD.FM.APP")]
-[assembly: AssemblyCopyright("Bản quyền thuộc Công ty Cổ phần công nghệ Gia Đức. Copyright ©  2021")]
+[assembly: AssemblyCopyright("Bản quyền thuộc Công ty Cổ phần công nghệ Gia Đức. Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

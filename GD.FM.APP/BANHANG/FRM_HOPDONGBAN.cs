@@ -122,17 +122,12 @@ namespace GD.FM.APP.BANHANG
             GRID_HOPDONGBAN_D.FilterMode = FilterMode.None;
             GRID_HOPDONGBAN_D.GroupByBoxVisible = false;
             //GRID_HOPDONGBAN_D.RootTable.Columns["Chungloai"].EditType = EditType.NoEdit;
-            //GRID_HOPDONGBAN_D.RootTable.Columns["Mauin"].EditType = EditType.NoEdit;
-            //GRID_HOPDONGBAN_D.RootTable.Columns["Macangden"].EditType = EditType.NoEdit;
-            //GRID_HOPDONGBAN_D.RootTable.Columns["Dongia"].EditType = EditType.NoEdit;
-            //GRID_HOPDONGBAN_D.RootTable.Groups.Add(GRID_HOPDONGBAN_D.Tables[0].Columns[HopdongbanhangchitietFields.Mahangphiakhach.Name]);
             FORM_PROCESS();
             GRID_HOPDONGBAN_D.COMBO_MULTICOLUMN(GRID_HOPDONGBAN_D, HopdongbanhangchitietFields.Mahangphiakhach.Name, DanhmuchanghoaFields.Mahangphiakhach.Name, DanhmuchanghoaFields.Mahieu.Name, DanhmuchanghoaFields.Mahieu.Name, DT_DMHANG);
             GRID_HOPDONGBAN_D.CellEdited += GRID_HOPDONGBAN_D_CellEdited;
             GRID_HOPDONGBAN_D.RecordsDeleted += GRID_HOPDONGBAN_D_RecordsDeleted;
             GRID_HOPDONGBAN_D.RecordUpdated += GRID_HOPDONGBAN_D_RecordUpdated;
             GRID_HOPDONGBAN_D.DeletingRecord += GRID_HOPDONGBAN_D_DeletingRecord;
-            GRID_HOPDONGBAN_D.Click += GRID_HOPDONGBAN_D_Click;
             DataView Source_View = new DataView(DT_HOPDONGBAN);
             BS_HOPDONGBAN = new BindingSource();
             BS_HOPDONGBAN.DataSource = Source_View;
@@ -148,45 +143,26 @@ namespace GD.FM.APP.BANHANG
         #region Xử lý Grid Detail
         private void GRID_HOPDONGBAN_D_RecordUpdated(object sender, EventArgs e)
         {
-
+            Tinhtongthanhtien();
         }
         private void GRID_HOPDONGBAN_D_RecordsDeleted(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
+            Tinhtongthanhtien();
         }
         private void GRID_HOPDONGBAN_D_CellEdited(object sender, ColumnActionEventArgs e)
         {
-            //// Binding báo giá từ form báo giá
-            //if (e.Column.DataMember == HopdongbanhangchitietFields.Macangden.Name)
-            //{
-            //    _RowViewSelect = null;
-            //    string strMacangdendc = GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Macangden.Name].Value.ToString();
-            //    string strMahang = GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Mahangphiakhach.Name].Value.ToString();
-            //    DataTable dtBaogiaH = LIB.Procedures.Danhsachbaogia(LIB.SESSION_START.TS_NGAYDAUTHANG.AddMonths(-2), LIB.SESSION_START.TS_NGAYCUOITHANG, "", txt_MAKHACH.Text, strMahang);
-            //    if (string.IsNullOrEmpty(strMacangdendc.Trim()) || dtBaogiaH == null || dtBaogiaH.Rows.Count == 0) return;
-            //    string Str_MASIEUTHI = strMacangdendc.ToUpper();
-            //    _RowViewSelect = checkmaBaogia(Str_MASIEUTHI, dtBaogiaH);
-            //    if (_RowViewSelect == null)
-            //    {
-            //        ListviewJanus _frm_SingerRows_Select =
-            //            new ListviewJanus(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_BAOGIA_H.xml",
-            //                dtBaogiaH, BaogiaHFields.Macangden.Name, Str_MASIEUTHI);
-            //        _frm_SingerRows_Select.ShowDialog();
-            //        if (_frm_SingerRows_Select._RowViewSelect == null) return;
-            //        _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-            //        strMacangdendc = _RowViewSelect[BaogiaHFields.Macangden.Name].ToString();
-            //        GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Macangden.Name].Value = strMacangdendc;
-            //        DataTable dtBaogiaD = LIB.Procedures.Danhsachbaogiachitiet(LIB.SESSION_START.TS_NGAYDAUTHANG.AddMonths(-2), LIB.SESSION_START.TS_NGAYCUOITHANG, strMacangdendc, txt_MAKHACH.Text, strMahang);
-            //        if(dtBaogiaD.Rows.Count>0)
-            //            GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Dongiadieuchinh.Name].Value = Convert.ToDecimal(dtBaogiaD.Rows[0][BaogiaDFields.Dongiatongcovat.Name].ToString());
-            //    }
-            //    else
-            //    {
-            //        DataTable dtBaogiaD = LIB.Procedures.Danhsachbaogiachitiet(LIB.SESSION_START.TS_NGAYDAUTHANG.AddMonths(-2), LIB.SESSION_START.TS_NGAYCUOITHANG, strMacangdendc, txt_MAKHACH.Text, strMahang);
-            //        if (dtBaogiaD.Rows.Count > 0)
-            //            GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Dongiadieuchinh.Name].Value = Convert.ToDecimal(dtBaogiaD.Rows[0][BaogiaDFields.Dongiatongcovat.Name].ToString());
-            //    }
-            //}
+            // Binding thành tiền từ số lượng và đơn giá
+            if (e.Column.DataMember == HopdongbanhangchitietFields.Soluong.Name || e.Column.DataMember == HopdongbanhangchitietFields.Dongiavnd.Name
+                || e.Column.DataMember == HopdongbanhangchitietFields.Dongiausd.Name)
+            {
+
+                decimal soluong = LIB.ConvertString.NumbertoDB(GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Soluong.Name].Value.ToString());
+                decimal dongiavnd = LIB.ConvertString.NumbertoDB(GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Dongiavnd.Name].Value.ToString());
+                decimal dongiausd = LIB.ConvertString.NumbertoDB(GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Dongiausd.Name].Value.ToString());
+
+                GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Thanhtienvnd.Name].Value = soluong * dongiavnd;
+                GRID_HOPDONGBAN_D.CurrentRow.Cells[HopdongbanhangchitietFields.Thanhtienusd.Name].Value = soluong * dongiausd;
+            }
         }
         private void GRID_HOPDONGBAN_D_DeletingRecord(object sender, RowActionCancelEventArgs e)
         {
@@ -194,17 +170,29 @@ namespace GD.FM.APP.BANHANG
             btn_XOADONG_Click(new object(), new EventArgs());
         }
 
-        private void GRID_HOPDONGBAN_D_Click(object sender, EventArgs e)
+        private void Tinhtongthanhtien()
         {
-            //int _Tongsoluong = 0;
-
-            //for (int i = 0; i < DT_HOPDONGBAN_D.Rows.Count; i++)
-            //{
-            //    try { _Tongsoluong += Convert.ToInt32(DT_HOPDONGBAN_D.Rows[i][HopdongbanhangchitietFields.Soluong.Name]); }
-            //    catch { }               
-            //}
-
-            //txt_TONGSOLUONG.Text = _Tongsoluong.ToString();
+            decimal tongvnd = 0, tongusd = 0;
+            try
+            {
+                GRID_HOPDONGBAN_D.UpdateData();
+                GridEXRow[] listGrid = GRID_HOPDONGBAN_D.GetDataRows();
+                //-------Tính tổng thành tiền vnd và usd
+                foreach (GridEXRow _grid in listGrid)
+                {
+                    DataRowView _view = (DataRowView)_grid.DataRow;
+                    if (_view == null) continue;
+                    decimal _cs = 0;
+                    _cs = LIB.ConvertString.NumbertoDB(_view[HopdongbanhangFields.Thanhtienvnd.Name].ToString());
+                    tongvnd += _cs;
+                    _cs = 0;
+                    _cs = LIB.ConvertString.NumbertoDB(_view[HopdongbanhangFields.Thanhtienusd.Name].ToString());
+                    tongusd += _cs;
+                }
+                txt_THANHTIENVND.Text = tongvnd.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"));
+                txt_THANHTIENUSD.Text = tongusd.ToString("#,0.00", new System.Globalization.CultureInfo("vi-VN"));
+            }
+            catch { }
         }
         #endregion
 
@@ -230,23 +218,11 @@ namespace GD.FM.APP.BANHANG
                     txt_MAKHACH_Validating(new object(), new CancelEventArgs());
                     txt_MACANGDEN_Validating(new object(), new CancelEventArgs());
                     SHOWGRID(MAHIEU_PK);
-
-                    #region Load grid
-                    //try
-                    //{
-                    //    DataRow[] drArr = DT_HOPDONGBAN_D.Select(HopdongbanhangFields.Sohopdong.Name + "='" + MAHIEU_PK + "'");
-                    //    if (drArr.Length != 0)
-                    //    {
-                    //        DT_HOPDONGBAN_D_FILL = drArr.CopyToDataTable();
-                    //    }
-                    //    else DT_HOPDONGBAN_D_FILL.Clear();
-                    //    GRID_HOPDONGBAN_D.DataSource = DT_HOPDONGBAN_D_FILL;
-                    //}
-                    //catch (Exception ex) { }
-                    #endregion
                 }
                 else
                     SHOWGRID("");
+
+                Tinhtongthanhtien();
             }
             catch
             { }
@@ -262,10 +238,6 @@ namespace GD.FM.APP.BANHANG
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[HopdongbanhangchitietFields.Id.Name].ToString();
                 }
-                //else
-                //{
-                //    GD.FM.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.FM.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-                //}
             }
             catch
             { }
@@ -294,101 +266,80 @@ namespace GD.FM.APP.BANHANG
         #region Xu ly dong chi tiet
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
-            //DataTable DT_BAOGIA_D = new DataTable();
-            //string strMacangden = txt_MACANGDEN.Text.ToString();
-            //if(string.IsNullOrEmpty(strMacangden))
-            //{
-            //    MessageBox.Show("Yêu cầu nhập số báo giá!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txt_MACANGDEN.Focus();
-            //    return;
-            //}
-            //DT_BAOGIA_D = LIB.Procedures.Danhsachbaogiachon(strMacangden);//.Select(DanhmuchanghoaFields.Makhach.Name + "='"+txt_MAKHACH.Text.Trim()+"'").CopyToDataTable();
-            //DT_BAOGIA_D.Columns.Add("Time");
-            //ListviewJanusC _frm_MultiRows_Select =
-            //    new ListviewJanusC(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_BAOGIA_D_CHON.xml", DT_BAOGIA_D, BaogiaDFields.Macangden.Name, string.Empty);
-            //_frm_MultiRows_Select.ShowDialog();
-            //if (_frm_MultiRows_Select._RowsViewSelect == null) return;
+            DataTable DT_DMHANGHOA_C = new DataTable();
+            DT_DMHANGHOA_C = new DanhmuchanghoaManager().Clone();
+            DT_DMHANGHOA_C.Columns.Add("Time");
+            ListviewJanusC _frm_MultiRows_Select =
+                new ListviewJanusC(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_DMHANGHOA_CHON.xml", DT_DMHANG, DanhmuchanghoaFields.Mahieu.Name, string.Empty);
+            _frm_MultiRows_Select.ShowDialog();
+            if (_frm_MultiRows_Select._RowsViewSelect == null) return;
 
-            //DataTable dt = new DataTable(); dt = DT_BAOGIA_D.Clone();
-            //foreach (DataRowView drv in _frm_MultiRows_Select._RowsViewSelect)
-            //{
-            //    DataRow dr = dt.NewRow();
-            //    dr.ItemArray = drv.Row.ItemArray;
-            //    dt.Rows.Add(dr);
-            //}
-            //DataRow[] arrDr = dt.Select("", "Time");
-            //foreach(DataRow dr in arrDr)
-            //{
-            //    DataRow r_Detail = DT_HOPDONGBAN_D_FILL.NewRow();
-            //    r_Detail[HopdongbanhangchitietFields.Loaihang.Name] = dr[BaogiaDFields.Loaihang.Name].ToString();
-            //    r_Detail[HopdongbanhangchitietFields.Mahangphiakhach.Name] = dr[BaogiaDFields.Mahangphiakhach.Name].ToString();
-            //    //r_Detail[HopdongbanhangchitietFields.Tenhang.Name] = dr[BaogiaDFields.Tenhang.Name].ToString();
-            //    r_Detail[HopdongbanhangchitietFields.Chungloai.Name] = dr[BaogiaDFields.Chungloai.Name].ToString();
-            //    r_Detail[HopdongbanhangchitietFields.Mauin.Name] = dr[DanhmuchanghoaFields.Mauin.Name].ToString();
-            //    r_Detail[HopdongbanhangchitietFields.Loai.Name] = dr[DanhmuchanghoaFields.Loai.Name].ToString();
-            //    try
-            //    {
-            //        if (!string.IsNullOrEmpty(dr[DanhmuchanghoaFields.Ngaymarket.Name].ToString()))
-            //            r_Detail[HopdongbanhangchitietFields.Ghichu.Name] = "Mk " + Convert.ToDateTime(dr[DanhmuchanghoaFields.Ngaymarket.Name].ToString()).ToString("dd/MM/yy");
-            //    }
-            //    catch { }
-            //    try { r_Detail[HopdongbanhangchitietFields.Dongia.Name] = LIB.ConvertString.NumbertoDB(dr[BaogiaDFields.Dongiatongcovat.Name].ToString()); }
-            //    catch { }
-            //    r_Detail[HopdongbanhangchitietFields.Macangden.Name] = dr[BaogiaDFields.Macangden.Name].ToString();
+            DataTable dt = new DataTable(); dt = DT_DMHANGHOA_C.Clone();
+            foreach (DataRowView drv in _frm_MultiRows_Select._RowsViewSelect)
+            {
+                DataRow dr = dt.NewRow();
+                dr.ItemArray = drv.Row.ItemArray;
+                dt.Rows.Add(dr);
+            }
+            DataRow[] arrDr = dt.Select("", "Time");
+            foreach (DataRow dr in arrDr)
+            {
+                DataRow r_Detail = DT_HOPDONGBAN_D_FILL.NewRow();
+                r_Detail[HopdongbanhangchitietFields.Mahangphiakhach.Name] = string.IsNullOrEmpty(dr[DanhmuchanghoaFields.Mahangphiakhach.Name].ToString()) ? dr[DanhmuchanghoaFields.Mahieu.Name].ToString() : dr[DanhmuchanghoaFields.Mahangphiakhach.Name].ToString();
+                r_Detail[HopdongbanhangchitietFields.Codefiller.Name] = dr[DanhmuchanghoaFields.Mahieu.Name].ToString();
 
-            //    DT_HOPDONGBAN_D_FILL.Rows.Add(r_Detail);
-            //}
+                DT_HOPDONGBAN_D_FILL.Rows.Add(r_Detail);
+            }
 
-            //DataView Source_View = new DataView(DT_HOPDONGBAN_D_FILL);
-            //BS_HOPDONGBAN_D = new BindingSource();
-            //BS_HOPDONGBAN_D.DataSource = Source_View;
-            //GRID_HOPDONGBAN_D.DataSource = BS_HOPDONGBAN_D;
-            //BS_HOPDONGBAN_D.Position = DT_HOPDONGBAN_D_FILL.Rows.Count;
+            DataView Source_View = new DataView(DT_HOPDONGBAN_D_FILL);
+            BS_HOPDONGBAN_D = new BindingSource();
+            BS_HOPDONGBAN_D.DataSource = Source_View;
+            GRID_HOPDONGBAN_D.DataSource = BS_HOPDONGBAN_D;
+            BS_HOPDONGBAN_D.Position = DT_HOPDONGBAN_D_FILL.Rows.Count;
         }
         private void btn_XOADONG_Click(object sender, EventArgs e)
         {
-            //DataRowView _view = (DataRowView)GRID_HOPDONGBAN_D.CurrentRow.DataRow;
-            //string _MAHIEU_PK = _view[HopdongbanhangchitietFields.Id.Name].ToString();
-            //string _MAHANG = _view[HopdongbanhangchitietFields.Mauin.Name].ToString();
-            //if (new PhieugiaohangDManager().SelectBySohopdongchitietRDT(Convert.ToInt64(_MAHIEU_PK)).Rows.Count > 0)
-            //{
-            //    MessageBox.Show("Đã sử dụng trong phiếu xuất hàng bán." + '\n' + "Không thể xóa hàng " + _MAHANG + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-            //if (string.IsNullOrEmpty(_MAHIEU_PK) && MessageBox.Show("Xóa dòng: " + _MAHANG, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
-            //       System.Windows.Forms.DialogResult.Yes)
-            //{
-            //    GRID_HOPDONGBAN_D.CurrentRow.Delete();
-            //}
-            //else
-            //{
-            //    HopdongbanhangchitietManager _HopdongbanhangchitietManager = new HopdongbanhangchitietManager();
-            //    HopdongbanhangchitietEntity _HopdongbanhangchitietEntity = new HopdongbanhangchitietEntity();
-            //    try { _HopdongbanhangchitietEntity = _HopdongbanhangchitietManager.SelectOne(Convert.ToInt64(_MAHIEU_PK)); }
-            //    catch { }
-            //    if (_HopdongbanhangchitietEntity != null && MessageBox.Show("Xóa dòng: " + _MAHANG, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
-            //           System.Windows.Forms.DialogResult.Yes)
-            //    {
-            //        try
-            //        {
-            //            _HopdongbanhangchitietManager.Delete(Convert.ToInt64(_MAHIEU_PK));
-            //            DataRow[] drArr = DT_HOPDONGBAN_D_FILL.Select(HopdongbanhangchitietFields.Id.Name + "='" + _MAHIEU_PK + "'");
-            //            DT_HOPDONGBAN_D_FILL.Rows.Remove(drArr[0]);
-            //            //GRID_HOPDONGBAN_D.CurrentRow.Delete();
-            //            //GD.FM.BLL.MenuroleManager.set_Enable_controls(_HopdongbanhangManager.Convert(_HopdongbanhangEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            //        }
-            //        catch
-            //        {
-            //            MessageBox.Show("Không thể xóa dòng " + _MAHANG + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        BS_HOPDONGBAN_D.ResetCurrentItem();
-            //        GRID_HOPDONGBAN_D.DataSource = BS_HOPDONGBAN_D;
-            //    }
-            //    GRID_HOPDONGBAN_D.Enabled = true;
-            //}
+            DataRowView _view = (DataRowView)GRID_HOPDONGBAN_D.CurrentRow.DataRow;
+            string _MAHIEU_PK = _view[HopdongbanhangchitietFields.Id.Name].ToString();
+            string _SOHOPDONG = _view[HopdongbanhangchitietFields.Sohopdong.Name].ToString();
+            string _MAHANG = _view[HopdongbanhangchitietFields.Mahangphiakhach.Name].ToString();
+            if (new ThuchienhopdongbanhangManager().SelectBy_Sohopdong_Mahangphiakhach(_SOHOPDONG, _MAHANG).Count > 0)
+            {
+                MessageBox.Show("Đã thực hiện giao hàng." + '\n' + "Không thể xóa hàng " + _MAHANG + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(_MAHIEU_PK) && MessageBox.Show("Xóa dòng: " + _MAHANG, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                   System.Windows.Forms.DialogResult.Yes)
+            {
+                GRID_HOPDONGBAN_D.CurrentRow.Delete();
+            }
+            else
+            {
+                HopdongbanhangchitietManager _HopdongbanhangchitietManager = new HopdongbanhangchitietManager();
+                HopdongbanhangchitietEntity _HopdongbanhangchitietEntity = new HopdongbanhangchitietEntity();
+                try { _HopdongbanhangchitietEntity = _HopdongbanhangchitietManager.SelectOne(Convert.ToInt64(_MAHIEU_PK)); }
+                catch { }
+                if (_HopdongbanhangchitietEntity != null && MessageBox.Show("Xóa dòng: " + _MAHANG, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                       System.Windows.Forms.DialogResult.Yes)
+                {
+                    try
+                    {
+                        _HopdongbanhangchitietManager.Delete(Convert.ToInt64(_MAHIEU_PK));
+                        DataRow[] drArr = DT_HOPDONGBAN_D_FILL.Select(HopdongbanhangchitietFields.Id.Name + "='" + _MAHIEU_PK + "'");
+                        DT_HOPDONGBAN_D_FILL.Rows.Remove(drArr[0]);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không thể xóa dòng " + _MAHANG + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    BS_HOPDONGBAN_D.ResetCurrentItem();
+                    GRID_HOPDONGBAN_D.DataSource = BS_HOPDONGBAN_D;
+                }
+                GRID_HOPDONGBAN_D.Enabled = true;
+            }
         }
         #endregion
 
@@ -437,7 +388,6 @@ namespace GD.FM.APP.BANHANG
                 try { _HopdongbanhangchitietEntity.Ngaygiao = Convert.ToDateTime(_view[HopdongbanhangchitietFields.Ngaygiao.Name].ToString()); }
                 catch { }
 
-
                 try { _HopdongbanhangchitietEntity.Id = Convert.ToInt64(_view[HopdongbanhangchitietFields.Id.Name].ToString()); }
                 catch { }
 
@@ -458,8 +408,8 @@ namespace GD.FM.APP.BANHANG
                     }
                 }
 
-                //if(!string.IsNullOrEmpty(_HopdongbanhangchitietEntity.Mahang))
-                //    _HopdongbanhangchitietEntityCol.Add(_HopdongbanhangchitietEntity);
+                if (!string.IsNullOrEmpty(_HopdongbanhangchitietEntity.Mahangphiakhach))
+                    _HopdongbanhangchitietEntityCol.Add(_HopdongbanhangchitietEntity);
             }
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
@@ -495,8 +445,6 @@ namespace GD.FM.APP.BANHANG
                 GRID_HOPDONGBAN.CurrentRow.Cells[HopdongbanhangFields.Sohopdong.Name].Value = _HopdongbanhangEntity.Sohopdong;
                 GRID_HOPDONGBAN.CurrentRow.Cells[HopdongbanhangFields.Makhach.Name].Value = _HopdongbanhangEntity.Makhach;
                 GRID_HOPDONGBAN.CurrentRow.Cells[HopdongbanhangFields.Tenkhach.Name].Value = _HopdongbanhangEntity.Tenkhach;
-                //GRID_HOPDONGBAN.CurrentRow.Cells[HopdongbanhangFields.Manhanvien.Name].Value = _HopdongbanhangEntity.Manhanvien;
-                //GRID_HOPDONGBAN.CurrentRow.Cells[HopdongbanhangFields.Hoten.Name].Value = _HopdongbanhangEntity.Hoten;
                 GRID_HOPDONGBAN.CurrentRow.Cells[HopdongbanhangFields.Ngayhopdong.Name].Value = _HopdongbanhangEntity.Ngayhopdong;
                 GRID_HOPDONGBAN.CurrentRow.Cells[HopdongbanhangFields.Macangden.Name].Value = _HopdongbanhangEntity.Macangden;
                 GD.FM.BLL.MenuroleManager.set_Enable_controls(_HopdongbanhangManager.Convert(_HopdongbanhangEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -583,7 +531,7 @@ namespace GD.FM.APP.BANHANG
             HopdongbanhangManager _HopdongbanhangManager = new HopdongbanhangManager();
             HopdongbanhangEntity _HopdongbanhangEntity = new HopdongbanhangEntity();
             _HopdongbanhangEntity = _HopdongbanhangManager.SelectOne(MAHIEU_PK);
-            if (_HopdongbanhangEntity != null && MessageBox.Show("Xóa đơn đặt hàng: " + MAHIEU_PK, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_HopdongbanhangEntity != null && MessageBox.Show("Xóa hợp đồng: " + MAHIEU_PK, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -599,7 +547,7 @@ namespace GD.FM.APP.BANHANG
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa đơn đặt hàng " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa hợp đồng " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             btn_TIMKIEM.Enabled = btn_LAMMOI.Enabled = true;
@@ -694,7 +642,7 @@ namespace GD.FM.APP.BANHANG
         {
             if (string.IsNullOrEmpty(MAHIEU_PK) && _HopdongbanhangManager.SelectOne(txt_MADONDATHANG.Text.Trim()) != null)
             {
-                MessageBox.Show("Mã đơn hàng bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã hợp đồng bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MADONDATHANG.Focus();
                 return;
             }
@@ -741,12 +689,12 @@ namespace GD.FM.APP.BANHANG
                 txt_MAKHACH.Text = _RowViewSelect[DanhmuckhachFields.Mahieu.Name].ToString();
                 txt_TENKHACH.Text = _RowViewSelect[DanhmuckhachFields.Tenhieu.Name].ToString();
 
-                DT_DMHANG = new DanhmuchanghoaManager().SelectByMakhachRDT(txt_MAKHACH.Text);
+                //DT_DMHANG = new DanhmuchanghoaManager().SelectByMakhachRDT(txt_MAKHACH.Text);
             }
             else
             {
                 txt_TENKHACH.Text = _RowViewSelect[DanhmuckhachFields.Tenhieu.Name].ToString();
-                DT_DMHANG = new DanhmuchanghoaManager().SelectByMakhachRDT(txt_MAKHACH.Text);
+                //DT_DMHANG = new DanhmuchanghoaManager().SelectByMakhachRDT(txt_MAKHACH.Text);
             }
         }
         private DataRow checkmaKhach(string masieuthi, DataTable dt)
@@ -821,7 +769,7 @@ namespace GD.FM.APP.BANHANG
             }
         }
 
-        private void FRM_BAOGIA_FormClosing(object sender, FormClosingEventArgs e)
+        private void FRM_HOPDONGBAN_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (btn_LUULAI.Enabled)
             {

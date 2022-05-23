@@ -49,7 +49,7 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("f6525ea3-c95b-4586-a4ab-3e8216b6e3be"), Janus.Windows.UI.Dock.PanelDockStyle.Top, new System.Drawing.Size(1277, 38), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("f6525ea3-c95b-4586-a4ab-3e8216b6e3be"), Janus.Windows.UI.Dock.PanelDockStyle.Top, new System.Drawing.Size(1277, 34), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("f6525ea3-c95b-4586-a4ab-3e8216b6e3be"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
             // 
@@ -63,7 +63,7 @@
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
             this.uiPanel0.Margin = new System.Windows.Forms.Padding(6);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(1277, 54);
+            this.uiPanel0.Size = new System.Drawing.Size(1277, 34);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Menu";
             // 
@@ -74,7 +74,7 @@
             this.uiPanel_MENU.Location = new System.Drawing.Point(1, 1);
             this.uiPanel_MENU.Margin = new System.Windows.Forms.Padding(6);
             this.uiPanel_MENU.Name = "uiPanel_MENU";
-            this.uiPanel_MENU.Size = new System.Drawing.Size(1275, 48);
+            this.uiPanel_MENU.Size = new System.Drawing.Size(1275, 28);
             this.uiPanel_MENU.TabIndex = 0;
             // 
             // uiStatusBar2
@@ -100,7 +100,7 @@
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FRM_MAIN";
-            this.Text = "PHẦN MỀM KINH DOANH THƯƠNG MẠI";
+            this.Text = "PHẦN MỀM KINH DOANH HẠT NHỰA";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_MAIN_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).EndInit();

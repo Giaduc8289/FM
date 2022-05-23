@@ -404,6 +404,7 @@
     <EmbeddedResource Include="RDLC\BAOGIATA.rdlc" />
     <EmbeddedResource Include="RDLC\HOPDONGMUABAN.rdlc" />
     <EmbeddedResource Include="RDLC\HOPDONGTIENGANH.rdlc" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -536,6 +537,7 @@
     <Content Include="IMG\Icon\xDirectoryCopy.xml" />
     <Content Include="IMG\TeamViewer.exe" />
     <Content Include="IMG\waiting.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHANGHOA_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMCUOCVANCHUYEN.xml" />
     <Content Include="XMLCONFIG\FRM_DMHANGHOA.xml" />
