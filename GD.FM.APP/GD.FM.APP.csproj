@@ -404,6 +404,7 @@
     <EmbeddedResource Include="RDLC\BAOGIATA.rdlc" />
     <EmbeddedResource Include="RDLC\HOPDONGMUABAN.rdlc" />
     <EmbeddedResource Include="RDLC\HOPDONGTIENGANH.rdlc" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

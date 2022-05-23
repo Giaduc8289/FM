@@ -38,14 +38,14 @@
   <viewgrid>
     <value>1</value>
     <name>Mahieu</name>
-    <headerText>Code Filler</headerText>
+    <headerText>Mã Filler</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Makhach</name>
     <headerText>Mã khách</headerText>
     <BackColor>0</BackColor>
