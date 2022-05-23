@@ -136,7 +136,7 @@ namespace GD.FM.APP.BANHANG
             ThuchienhopdongbanhangEntity _ThuchienhopdongbanhangEntity = new ThuchienhopdongbanhangEntity();
             _ThuchienhopdongbanhangEntity.Sohopdong = txt_SOHOPDONG.Text.Trim();
             _ThuchienhopdongbanhangEntity.Mahangphiakhach = txt_MAHANGPHIAKHACH.Text.Trim();
-            try { _ThuchienhopdongbanhangEntity.Soluonggiao = Convert.ToDecimal(txt_TENRUTGON.Text.Trim()); }
+            try { _ThuchienhopdongbanhangEntity.Soluonggiao = Convert.ToDecimal(txt_SOLUONGGIAO.Text.Trim()); }
             catch { }
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))

@@ -296,7 +296,7 @@ namespace GD.FM.APP.LIB
         {
             get
             {
-                _DT_DMUNGDUNG = new DanhmucchucvuManager().SelectAllRDT();
+                _DT_DMCHUCVU = new DanhmucchucvuManager().SelectAllRDT();
                 return _DT_DMCHUCVU;
             }
             set { _DT_DMCHUCVU = value; }

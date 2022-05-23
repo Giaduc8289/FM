@@ -258,7 +258,7 @@
             this.txt_MAHIEU.Location = new System.Drawing.Point(96, 13);
             this.txt_MAHIEU.Name = "txt_MAHIEU";
             this.txt_MAHIEU.Regular_Expression = null;
-            this.txt_MAHIEU.Size = new System.Drawing.Size(138, 20);
+            this.txt_MAHIEU.Size = new System.Drawing.Size(150, 20);
             this.txt_MAHIEU.TabIndex = 0;
             // 
             // label22
