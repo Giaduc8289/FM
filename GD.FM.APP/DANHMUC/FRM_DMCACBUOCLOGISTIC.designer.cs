@@ -129,17 +129,17 @@
             this.txt_TENRUTGON.FormNametoShow = "";
             this.txt_TENRUTGON.Is_DateTime = false;
             this.txt_TENRUTGON.IsShowForm = false;
-            this.txt_TENRUTGON.Location = new System.Drawing.Point(96, 112);
+            this.txt_TENRUTGON.Location = new System.Drawing.Point(102, 90);
             this.txt_TENRUTGON.Name = "txt_TENRUTGON";
             this.txt_TENRUTGON.Regular_Expression = null;
-            this.txt_TENRUTGON.Size = new System.Drawing.Size(138, 20);
-            this.txt_TENRUTGON.TabIndex = 122;
+            this.txt_TENRUTGON.Size = new System.Drawing.Size(150, 20);
+            this.txt_TENRUTGON.TabIndex = 2;
             this.txt_TENRUTGON.TextChanged += new System.EventHandler(this.txt_Makhach_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 112);
+            this.label1.Location = new System.Drawing.Point(20, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 121;
@@ -151,10 +151,10 @@
             this.btn_Thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_Thoat.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(421, 298);
+            this.btn_Thoat.Location = new System.Drawing.Point(424, 160);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 9;
+            this.btn_Thoat.TabIndex = 8;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -164,10 +164,10 @@
             this.btn_KHOIPHUC.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_KHOIPHUC.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 298);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(177, 160);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 6;
+            this.btn_KHOIPHUC.TabIndex = 5;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -177,10 +177,10 @@
             this.btn_LUULAI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_LUULAI.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(14, 298);
+            this.btn_LUULAI.Location = new System.Drawing.Point(17, 160);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 4;
+            this.btn_LUULAI.TabIndex = 3;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -190,10 +190,10 @@
             this.btn_XOA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_XOA.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(93, 298);
+            this.btn_XOA.Location = new System.Drawing.Point(96, 160);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 5;
+            this.btn_XOA.TabIndex = 4;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -203,10 +203,10 @@
             this.btn_THEMMOI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_THEMMOI.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(339, 298);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(342, 160);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 8;
+            this.btn_THEMMOI.TabIndex = 7;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -216,10 +216,10 @@
             this.btn_SUA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_SUA.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(258, 298);
+            this.btn_SUA.Location = new System.Drawing.Point(261, 160);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 7;
+            this.btn_SUA.TabIndex = 6;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
@@ -232,16 +232,16 @@
             this.txt_TENHIEU.FormNametoShow = "";
             this.txt_TENHIEU.Is_DateTime = false;
             this.txt_TENHIEU.IsShowForm = false;
-            this.txt_TENHIEU.Location = new System.Drawing.Point(96, 53);
+            this.txt_TENHIEU.Location = new System.Drawing.Point(102, 55);
             this.txt_TENHIEU.Name = "txt_TENHIEU";
             this.txt_TENHIEU.Regular_Expression = null;
-            this.txt_TENHIEU.Size = new System.Drawing.Size(166, 20);
+            this.txt_TENHIEU.Size = new System.Drawing.Size(150, 20);
             this.txt_TENHIEU.TabIndex = 1;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(3, 56);
+            this.label21.Location = new System.Drawing.Point(20, 62);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(53, 13);
             this.label21.TabIndex = 120;
@@ -255,16 +255,16 @@
             this.txt_MAHIEU.FormNametoShow = "";
             this.txt_MAHIEU.Is_DateTime = false;
             this.txt_MAHIEU.IsShowForm = false;
-            this.txt_MAHIEU.Location = new System.Drawing.Point(96, 5);
+            this.txt_MAHIEU.Location = new System.Drawing.Point(102, 24);
             this.txt_MAHIEU.Name = "txt_MAHIEU";
             this.txt_MAHIEU.Regular_Expression = null;
-            this.txt_MAHIEU.Size = new System.Drawing.Size(138, 20);
+            this.txt_MAHIEU.Size = new System.Drawing.Size(150, 20);
             this.txt_MAHIEU.TabIndex = 0;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(11, 8);
+            this.label22.Location = new System.Drawing.Point(20, 27);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 13);
             this.label22.TabIndex = 119;

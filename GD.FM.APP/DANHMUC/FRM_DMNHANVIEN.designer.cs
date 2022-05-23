@@ -150,16 +150,16 @@
             this.txt_EMAIL.FormNametoShow = "";
             this.txt_EMAIL.Is_DateTime = false;
             this.txt_EMAIL.IsShowForm = false;
-            this.txt_EMAIL.Location = new System.Drawing.Point(258, 219);
+            this.txt_EMAIL.Location = new System.Drawing.Point(293, 223);
             this.txt_EMAIL.Name = "txt_EMAIL";
             this.txt_EMAIL.Regular_Expression = null;
-            this.txt_EMAIL.Size = new System.Drawing.Size(155, 20);
+            this.txt_EMAIL.Size = new System.Drawing.Size(174, 20);
             this.txt_EMAIL.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(208, 223);
+            this.label3.Location = new System.Drawing.Point(255, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 240;
@@ -173,10 +173,10 @@
             this.txt_SODIENTHOAI.FormNametoShow = "";
             this.txt_SODIENTHOAI.Is_DateTime = false;
             this.txt_SODIENTHOAI.IsShowForm = false;
-            this.txt_SODIENTHOAI.Location = new System.Drawing.Point(111, 219);
+            this.txt_SODIENTHOAI.Location = new System.Drawing.Point(111, 223);
             this.txt_SODIENTHOAI.Name = "txt_SODIENTHOAI";
             this.txt_SODIENTHOAI.Regular_Expression = null;
-            this.txt_SODIENTHOAI.Size = new System.Drawing.Size(83, 20);
+            this.txt_SODIENTHOAI.Size = new System.Drawing.Size(138, 20);
             this.txt_SODIENTHOAI.TabIndex = 7;
             // 
             // label6
@@ -271,7 +271,7 @@
             this.txt_DIACHI.Location = new System.Drawing.Point(111, 185);
             this.txt_DIACHI.Name = "txt_DIACHI";
             this.txt_DIACHI.Regular_Expression = null;
-            this.txt_DIACHI.Size = new System.Drawing.Size(302, 20);
+            this.txt_DIACHI.Size = new System.Drawing.Size(356, 20);
             this.txt_DIACHI.TabIndex = 6;
             // 
             // label1

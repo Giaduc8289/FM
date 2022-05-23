@@ -24,7 +24,7 @@
   <viewgrid>
     <value>1</value>
     <name>Mahieu</name>
-    <headerText>Mã hiệu</headerText>
+    <headerText>Mã phòng ban</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -33,16 +33,16 @@
   <viewgrid>
     <value>1</value>
     <name>Tenhieu</name>
-    <headerText>Tên hiệu</headerText>
+    <headerText>Tên phòng ban</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Tenrutgon</name>
-    <headerText>Tenrutgon</headerText>
+    <headerText>Tên rút gọn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
