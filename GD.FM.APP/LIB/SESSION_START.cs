@@ -355,5 +355,17 @@ namespace GD.FM.APP.LIB
         }
         #endregion
 
+        #region DULIEUXNK
+        private static DataTable _DT_DULIEUXNK = null;
+        public static DataTable DT_DULIEUXNK
+        {
+            get
+            {
+                _DT_DULIEUXNK = new DulieuxnkManager().SelectAllRDT();
+                return _DT_DULIEUXNK;
+            }
+            set { _DT_DULIEUXNK = value; }
+        }
+        #endregion
     }
 }
