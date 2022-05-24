@@ -330,7 +330,7 @@ namespace GD.FM.LIB
                     || dv[i]["name"].ToString() == "Ngayhoanthanh" || dv[i]["name"].ToString() == "Ngaycuoink"
                     || dv[i]["name"].ToString() == "Ngaytrang" || dv[i]["name"].ToString() == "Ngayin1"
                     || dv[i]["name"].ToString() == "Ngayin2" || dv[i]["name"].ToString() == "Ngayxuat"
-                    || dv[i]["name"].ToString() == "Ngayhopdong"
+                    || dv[i]["name"].ToString() == "Ngayhopdong" || dv[i]["name"].ToString() == "Ngaythongquan"
                     || dv[i]["name"].ToString() == "Ngayhoadon" || dv[i]["name"].ToString() == "Ngayctkt")
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
@@ -637,7 +637,7 @@ namespace GD.FM.LIB
                     || dv[i]["name"].ToString() == "Ngayhoanthanh" || dv[i]["name"].ToString() == "Ngaycuoink"
                     || dv[i]["name"].ToString() == "Ngaytrang" || dv[i]["name"].ToString() == "Ngayin1"
                     || dv[i]["name"].ToString() == "Ngayin2" || dv[i]["name"].ToString() == "Ngayxuat"
-                    || dv[i]["name"].ToString() == "Ngayhopdong"
+                    || dv[i]["name"].ToString() == "Ngayhopdong" || dv[i]["name"].ToString() == "Ngaythongquan"
                     || dv[i]["name"].ToString() == "Ngayhoadon" || dv[i]["name"].ToString() == "Ngayctkt")
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"

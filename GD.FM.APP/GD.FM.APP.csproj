@@ -104,6 +104,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BANHANG\FRM_DULIEUXUATNHAPKHAU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANHANG\FRM_DULIEUXUATNHAPKHAU.designer.cs">
+      <DependentUpon>FRM_DULIEUXUATNHAPKHAU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BANHANG\FRM_NHANDULIEUXNK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANHANG\FRM_NHANDULIEUXNK.Designer.cs">
+      <DependentUpon>FRM_NHANDULIEUXNK.cs</DependentUpon>
+    </Compile>
     <Compile Include="BANHANG\FRM_THUCHIENHOPDONGBAN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     </Compile>
     <Compile Include="BANHANG\FRM_HOPDONGBAN.designer.cs">
       <DependentUpon>FRM_HOPDONGBAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BAOCAO\BANHANG\FRM_PHANTICHDULIEUXNK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\BANHANG\FRM_PHANTICHDULIEUXNK.Designer.cs">
+      <DependentUpon>FRM_PHANTICHDULIEUXNK.cs</DependentUpon>
     </Compile>
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.cs">
       <SubType>Form</SubType>
@@ -322,11 +340,25 @@
     <Compile Include="Manager\UsersManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RDLC\DataFM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataFM.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BANHANG\FRM_DULIEUXUATNHAPKHAU.resx">
+      <DependentUpon>FRM_DULIEUXUATNHAPKHAU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BANHANG\FRM_NHANDULIEUXNK.resx">
+      <DependentUpon>FRM_NHANDULIEUXNK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BANHANG\FRM_THUCHIENHOPDONGBAN.resx">
       <DependentUpon>FRM_THUCHIENHOPDONGBAN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BANHANG\FRM_HOPDONGBAN.resx">
       <DependentUpon>FRM_HOPDONGBAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\BANHANG\FRM_PHANTICHDULIEUXNK.resx">
+      <DependentUpon>FRM_PHANTICHDULIEUXNK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
@@ -419,10 +451,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RDLC\BAOGIA.rdlc" />
-    <EmbeddedResource Include="RDLC\BAOGIATA.rdlc" />
-    <EmbeddedResource Include="RDLC\HOPDONGMUABAN.rdlc" />
-    <EmbeddedResource Include="RDLC\HOPDONGTIENGANH.rdlc" />
+    <EmbeddedResource Include="RDLC\BANHANG\DULIEUXNK.rdlc" />
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
@@ -434,6 +463,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RDLC\DataFM.xsc">
+      <DependentUpon>DataFM.xsd</DependentUpon>
+    </None>
+    <None Include="RDLC\DataFM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataFM.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RDLC\DataFM.xss">
+      <DependentUpon>DataFM.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -575,6 +615,8 @@
     <Content Include="XMLCONFIG\FRM_DMPTVANCHUYEN.xml" />
     <Content Include="XMLCONFIG\FRM_DMQUOCGIA.xml" />
     <Content Include="XMLCONFIG\FRM_DMTYGIA.xml" />
+    <Content Include="XMLCONFIG\FRM_DULIEUXUATNHAPKHAU.xml" />
+    <Content Include="XMLCONFIG\FRM_DULIEUXUATNHAPKHAUCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_HOPDONGBAN_D.xml" />
     <Content Include="XMLCONFIG\FRM_HOPDONGBAN_H.xml" />
     <Content Include="XMLCONFIG\FRM_MENU.xml" />

@@ -785,6 +785,16 @@ namespace GD.FM.APP.HETHONG
                     break;
                 #endregion
 
+                #region Báo cáo
+                case "FRM_PHANTICHDULIEUXNK":
+                    foreach (GD.FM.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_PHANTICHDULIEUXNK") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.FM.APP.BAOCAO.FRM_PHANTICHDULIEUXNK()), mmru.Text);
+                    break;
+                #endregion
+
                 #region Cửa sổ
                 case "WI_LOP":
                     this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);

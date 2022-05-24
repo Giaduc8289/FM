@@ -69,8 +69,8 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(399, 543), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(770, 543), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(191, 670), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(1370, 670), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -81,16 +81,18 @@
             this.uiPanel0.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
+            this.uiPanel0.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(399, 543);
+            this.uiPanel0.Size = new System.Drawing.Size(191, 670);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Danh sách";
             // 
             // uiPanel0Container
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
+            this.uiPanel0Container.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(393, 519);
+            this.uiPanel0Container.Size = new System.Drawing.Size(185, 646);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // uiPanel1
@@ -98,9 +100,10 @@
             this.uiPanel1.CloseButtonVisible = Janus.Windows.UI.InheritableBoolean.False;
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
-            this.uiPanel1.Location = new System.Drawing.Point(402, 3);
+            this.uiPanel1.Location = new System.Drawing.Point(194, 3);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(770, 543);
+            this.uiPanel1.Size = new System.Drawing.Size(1370, 670);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -115,8 +118,9 @@
             this.uiPanel1Container.Controls.Add(this.btn_THEMMOI);
             this.uiPanel1Container.Controls.Add(this.btn_SUA);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
+            this.uiPanel1Container.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(768, 519);
+            this.uiPanel1Container.Size = new System.Drawing.Size(1368, 646);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // btn_NHANDULIEU
@@ -125,9 +129,10 @@
             this.btn_NHANDULIEU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_NHANDULIEU.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_NHANDULIEU.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_NHANDULIEU.Location = new System.Drawing.Point(421, 484);
+            this.btn_NHANDULIEU.Location = new System.Drawing.Point(561, 603);
+            this.btn_NHANDULIEU.Margin = new System.Windows.Forms.Padding(4);
             this.btn_NHANDULIEU.Name = "btn_NHANDULIEU";
-            this.btn_NHANDULIEU.Size = new System.Drawing.Size(75, 23);
+            this.btn_NHANDULIEU.Size = new System.Drawing.Size(100, 28);
             this.btn_NHANDULIEU.TabIndex = 337;
             this.btn_NHANDULIEU.Text = "Nhận &DL";
             this.btn_NHANDULIEU.UseVisualStyleBackColor = true;
@@ -139,10 +144,10 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(14, 16);
-            this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pne_CHITIET.Location = new System.Drawing.Point(19, 20);
+            this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(738, 441);
+            this.pne_CHITIET.Size = new System.Drawing.Size(1328, 550);
             this.pne_CHITIET.TabIndex = 121;
             // 
             // btn_Thoat
@@ -151,9 +156,10 @@
             this.btn_Thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Thoat.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(502, 484);
+            this.btn_Thoat.Location = new System.Drawing.Point(669, 603);
+            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
+            this.btn_Thoat.Size = new System.Drawing.Size(100, 28);
             this.btn_Thoat.TabIndex = 9;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
@@ -166,9 +172,10 @@
             this.btn_KHOIPHUC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_KHOIPHUC.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 484);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(232, 603);
+            this.btn_KHOIPHUC.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
-            this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
+            this.btn_KHOIPHUC.Size = new System.Drawing.Size(100, 28);
             this.btn_KHOIPHUC.TabIndex = 6;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
@@ -181,9 +188,10 @@
             this.btn_LUULAI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_LUULAI.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(14, 484);
+            this.btn_LUULAI.Location = new System.Drawing.Point(19, 603);
+            this.btn_LUULAI.Margin = new System.Windows.Forms.Padding(4);
             this.btn_LUULAI.Name = "btn_LUULAI";
-            this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
+            this.btn_LUULAI.Size = new System.Drawing.Size(100, 28);
             this.btn_LUULAI.TabIndex = 4;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
@@ -196,9 +204,10 @@
             this.btn_XOA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_XOA.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(93, 484);
+            this.btn_XOA.Location = new System.Drawing.Point(124, 603);
+            this.btn_XOA.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XOA.Name = "btn_XOA";
-            this.btn_XOA.Size = new System.Drawing.Size(75, 23);
+            this.btn_XOA.Size = new System.Drawing.Size(100, 28);
             this.btn_XOA.TabIndex = 5;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
@@ -211,9 +220,10 @@
             this.btn_THEMMOI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_THEMMOI.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(339, 484);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(452, 603);
+            this.btn_THEMMOI.Margin = new System.Windows.Forms.Padding(4);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
-            this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
+            this.btn_THEMMOI.Size = new System.Drawing.Size(100, 28);
             this.btn_THEMMOI.TabIndex = 8;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
@@ -226,9 +236,10 @@
             this.btn_SUA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_SUA.BtnShape = GD.FM.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.FM.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(258, 484);
+            this.btn_SUA.Location = new System.Drawing.Point(344, 603);
+            this.btn_SUA.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SUA.Name = "btn_SUA";
-            this.btn_SUA.Size = new System.Drawing.Size(75, 23);
+            this.btn_SUA.Size = new System.Drawing.Size(100, 28);
             this.btn_SUA.TabIndex = 7;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
@@ -244,45 +255,45 @@
             this.pasteToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.ContextMenuStrip.Name = "contextMenuStrip1";
-            this.ContextMenuStrip.Size = new System.Drawing.Size(108, 92);
+            this.ContextMenuStrip.Size = new System.Drawing.Size(123, 100);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.cutToolStripMenuItem.Text = "Cut";
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.pasteToolStripMenuItem.Text = "Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // FRM_DULIEUXUATNHAPKHAU
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 549);
+            this.ClientSize = new System.Drawing.Size(1567, 676);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FRM_DULIEUXUATNHAPKHAU";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DULIEUXUATNHAPKHAU_FormClosing);

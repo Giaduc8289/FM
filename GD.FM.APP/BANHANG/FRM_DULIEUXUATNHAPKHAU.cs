@@ -489,7 +489,7 @@ namespace GD.FM.APP.BANHANG
 
                 //DateTime Ngaydauthang = LIB.SESSION_START.TS_NGAYDAUTHANG;
                 //DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
-                //DT_DULIEUXNK_H = LIB.Procedures.Danhsachnhapkhohoanthien(Ngaydauthang, Ngaycuoithang, "");
+                DT_DULIEUXNK_H = LIB.Procedures.Danhsachdulieuxnk(LIB.SESSION_START.TS_NGAYDAUNAM, LIB.SESSION_START.TS_NGAYCUOINAM);
                 DataView Source_View_H = new DataView(DT_DULIEUXNK_H);
                 BS_DULIEUXNK_H = new BindingSource();
                 BS_DULIEUXNK_H.DataSource = Source_View_H;
@@ -499,69 +499,17 @@ namespace GD.FM.APP.BANHANG
             }
             catch { }
         }
-        private void Nhandulieu(string PathFile, DateTime Ngaykiemke)
-        {
-            
-            //try
-            //{
-            //    //---------Insert dữ liệu từ file Excel
-            //    DataSet dsNhapkho = new DataSet();
-            //    using (var stream = File.Open(PathFile, FileMode.Open, FileAccess.Read))
-            //    {
-            //        IExcelDataReader reader;
-            //        reader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-            //        dsNhapkho = reader.AsDataSet(new ExcelDataSetConfiguration()
-            //        {
-            //            ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
-            //            {
-            //                UseHeaderRow = true
-            //            }
-            //        });
-            //        reader.Close();
-            //    }
-
-            //    EntityCollection _DulieuxnkEntityCol = new EntityCollection();
-            //    foreach (DataRow dr in dsNhapkho.Tables[0].Rows)
-            //    {
-            //        DataRow[] arrDr = DT_DMHANGHOA.Select(DanhmuchanghoaFields.Makho.Name + "='" + dr[1].ToString() + "'");
-            //        if (arrDr.Length > 0)
-            //        {
-            //            DulieuxnkEntity _DulieuxnkEntity = new DulieuxnkEntity();
-            //            _DulieuxnkEntity.Ngaykiemke = Ngaykiemke;
-            //            _DulieuxnkEntity.Makhach = arrDr[0][DanhmuchanghoaFields.Makhach.Name].ToString();
-            //            _DulieuxnkEntity.Tenkhach = arrDr[0][DanhmuchanghoaFields.Tenkhach.Name].ToString();
-            //            _DulieuxnkEntity.Mahang = arrDr[0][DanhmuchanghoaFields.Mahieu.Name].ToString(); 
-            //            _DulieuxnkEntity.Mauin = arrDr[0][DanhmuchanghoaFields.Mauin.Name].ToString(); 
-            //            try { _DulieuxnkEntity.Soluong = Convert.ToInt32(dr[4].ToString()); }
-            //            catch { }
-            //            try { _DulieuxnkEntity.Khoiluong = Convert.ToInt32(dr[5].ToString()); }
-            //            catch { }
-
-            //            _DulieuxnkEntityCol.Add(_DulieuxnkEntity);
-            //        }
-            //    }
-
-            //    if (_DulieuxnkEntityCol.Count > 0)
-            //    {
-            //        foreach (DulieuxnkEntity _nkhtEntity in _DulieuxnkEntityCol)
-            //        {
-            //            _DulieuxnkManager.Insert(_nkhtEntity);
-            //        }
-            //    }
-            //}
-            //catch { }
-        }
         private void Nhandulieu(string PathFile)
         {
             try
             {
                 //---------Insert dữ liệu từ file Excel
-                DataSet dsNhapkho = new DataSet();
+                DataSet dsDulieuxnk = new DataSet();
                 using (var stream = File.Open(PathFile, FileMode.Open, FileAccess.Read))
                 {
                     IExcelDataReader reader;
                     reader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-                    dsNhapkho = reader.AsDataSet(new ExcelDataSetConfiguration()
+                    dsDulieuxnk = reader.AsDataSet(new ExcelDataSetConfiguration()
                     {
                         ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
                         {
@@ -572,28 +520,56 @@ namespace GD.FM.APP.BANHANG
                 }
 
                 EntityCollection _DulieuxnkEntityCol = new EntityCollection();
-                foreach (DataRow dr in dsNhapkho.Tables[0].Rows)
+                foreach (DataRow dr in dsDulieuxnk.Tables[0].Rows)
                 {
-                    //if (string.IsNullOrEmpty( dr[6].ToString()))
-                    //    continue;
-                    //DataRow[] arrDr = DT_DMHANGHOA.Select(DanhmuchanghoaFields.Makho.Name + "='" + dr[6].ToString() + "'");
-                        
-                    //if (arrDr.Length > 0 )
-                    //{
-                    //    DulieuxnkEntity _DulieuxnkEntity = new DulieuxnkEntity();
-                    //    try { _DulieuxnkEntity.Ngaykiemke = Convert.ToDateTime(dr[0].ToString()); }
-                    //    catch { }
-                    //    _DulieuxnkEntity.Makhach = arrDr[0][DanhmuchanghoaFields.Makhach.Name].ToString();
-                    //    _DulieuxnkEntity.Tenkhach = arrDr[0][DanhmuchanghoaFields.Tenkhach.Name].ToString();
-                    //    _DulieuxnkEntity.Mahang = arrDr[0][DanhmuchanghoaFields.Mahieu.Name].ToString();
-                    //    _DulieuxnkEntity.Mauin = arrDr[0][DanhmuchanghoaFields.Mauin.Name].ToString();
-                    //    try { _DulieuxnkEntity.Soluong = Convert.ToInt32(dr[9].ToString()); }
-                    //    catch { }
-                    //    try { _DulieuxnkEntity.Khoiluong = Convert.ToInt32(dr[10].ToString()); }
-                    //    catch { }
+                    if (string.IsNullOrEmpty(dr[9].ToString()))
+                        continue;
 
-                    //    _DulieuxnkEntityCol.Add(_DulieuxnkEntity);
-                    //}
+                    DulieuxnkEntity _DulieuxnkEntity = new DulieuxnkEntity();
+                    try { _DulieuxnkEntity.Nam = Convert.ToInt32(dr[0].ToString()); }
+                    catch { }
+                    try { _DulieuxnkEntity.Thang = Convert.ToInt32(dr[1].ToString()); }
+                    catch { }
+                    try { _DulieuxnkEntity.Ngaythongquan = Convert.ToDateTime(dr[2].ToString()); }
+                    catch { }
+                    _DulieuxnkEntity.Masothuexuat = dr[3].ToString();
+                    _DulieuxnkEntity.Tencongtyxuat = dr[4].ToString();
+                    _DulieuxnkEntity.Diachicongtyxuat = dr[5].ToString();
+                    _DulieuxnkEntity.Dienthoaicongtyxuat = dr[6].ToString();
+                    _DulieuxnkEntity.Tencongtynhap = dr[7].ToString();
+                    _DulieuxnkEntity.Diachicongtynhap = dr[8].ToString();
+                    _DulieuxnkEntity.Hscode = dr[9].ToString();
+                    _DulieuxnkEntity.Motahanghoa = dr[10].ToString();
+                    try { _DulieuxnkEntity.Thuexuat = Convert.ToDecimal(dr[11].ToString()); }
+                    catch { }
+                    _DulieuxnkEntity.Xuatxu = dr[12].ToString();
+                    _DulieuxnkEntity.Madonvi = dr[13].ToString();
+                    try { _DulieuxnkEntity.Sotan = Convert.ToDecimal(dr[14].ToString()); }
+                    catch { }
+                    try { _DulieuxnkEntity.Giausd = Convert.ToDecimal(dr[15].ToString()); }
+                    catch { }
+                    try { _DulieuxnkEntity.Soluong = Convert.ToDecimal(dr[16].ToString()); }
+                    catch { }
+                    try { _DulieuxnkEntity.Dongianguyente = Convert.ToDecimal(dr[17].ToString()); }
+                    catch { }
+                    try { _DulieuxnkEntity.Dongiausd = Convert.ToDecimal(dr[18].ToString()); }
+                    catch { }
+                    try { _DulieuxnkEntity.Trigiausd = Convert.ToDecimal(dr[19].ToString()); }
+                    catch { }
+                    try { _DulieuxnkEntity.Tygiavnd = Convert.ToDecimal(dr[20].ToString()); }
+                    catch { }
+                    _DulieuxnkEntity.Madongtien = dr[21].ToString();
+                    _DulieuxnkEntity.Dieukiengia = dr[22].ToString();
+                    _DulieuxnkEntity.Phuongthucthanhtoan = dr[23].ToString();
+                    _DulieuxnkEntity.Chicuchaiquan = dr[24].ToString();
+                    _DulieuxnkEntity.Loaihinhxuatkhau = dr[25].ToString();
+                    _DulieuxnkEntity.Tennuocxuatkhau = dr[26].ToString();
+                    _DulieuxnkEntity.Tennuocnhapkhau = dr[27].ToString();
+                    _DulieuxnkEntity.Diadiemxephang = dr[28].ToString();
+                    _DulieuxnkEntity.Diadiemnhanhangcuoicung = dr[29].ToString();
+                    _DulieuxnkEntity.Sotokhai = dr[30].ToString();
+
+                    _DulieuxnkEntityCol.Add(_DulieuxnkEntity);
                 }
 
                 if (_DulieuxnkEntityCol.Count > 0)

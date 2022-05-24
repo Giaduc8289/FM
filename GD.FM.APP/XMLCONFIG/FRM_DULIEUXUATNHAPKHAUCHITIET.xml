@@ -21,8 +21,9 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
+  
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Id</name>
     <headerText>Id</headerText>
     <BackColor>0</BackColor>
@@ -33,43 +34,43 @@
   <viewgrid>
     <value>1</value>
     <name>Nam</name>
-    <headerText>Nam</headerText>
+    <headerText>Năm</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>35</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Thang</name>
-    <headerText>Thang</headerText>
+    <headerText>Tháng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>45</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Ngaythongquan</name>
-    <headerText>Ngaythongquan</headerText>
+    <headerText>Ngày thông quan</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>95</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Masothuexuat</name>
-    <headerText>Masothuexuat</headerText>
+    <headerText>MST CT xuất</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Tencongtyxuat</name>
-    <headerText>Tencongtyxuat</headerText>
+    <headerText>Tên CT xuất</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -78,7 +79,7 @@
   <viewgrid>
     <value>1</value>
     <name>Diachicongtyxuat</name>
-    <headerText>Diachicongtyxuat</headerText>
+    <headerText>Địa chỉ CT xuất</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -87,7 +88,7 @@
   <viewgrid>
     <value>1</value>
     <name>Dienthoaicongtyxuat</name>
-    <headerText>Dienthoaicongtyxuat</headerText>
+    <headerText>SĐT CT xuất</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -96,7 +97,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tencongtynhap</name>
-    <headerText>Tencongtynhap</headerText>
+    <headerText>Tên CT nhập</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -105,7 +106,7 @@
   <viewgrid>
     <value>1</value>
     <name>Diachicongtynhap</name>
-    <headerText>Diachicongtynhap</headerText>
+    <headerText>Địa chỉ CT nhập</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -114,7 +115,7 @@
   <viewgrid>
     <value>1</value>
     <name>Hscode</name>
-    <headerText>Hscode</headerText>
+    <headerText>Hs Code</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -123,7 +124,7 @@
   <viewgrid>
     <value>1</value>
     <name>Motahanghoa</name>
-    <headerText>Motahanghoa</headerText>
+    <headerText>Mô tả HH</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -132,7 +133,7 @@
   <viewgrid>
     <value>1</value>
     <name>Thuexuat</name>
-    <headerText>Thuexuat</headerText>
+    <headerText>Thuế xuất</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -141,7 +142,7 @@
   <viewgrid>
     <value>1</value>
     <name>Xuatxu</name>
-    <headerText>Xuatxu</headerText>
+    <headerText>Xuất xứ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -150,7 +151,7 @@
   <viewgrid>
     <value>1</value>
     <name>Madonvi</name>
-    <headerText>Madonvi</headerText>
+    <headerText>Mã đơn vị</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -159,7 +160,7 @@
   <viewgrid>
     <value>1</value>
     <name>Sotan</name>
-    <headerText>Sotan</headerText>
+    <headerText>Số tấn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -168,7 +169,7 @@
   <viewgrid>
     <value>1</value>
     <name>Giausd</name>
-    <headerText>Giausd</headerText>
+    <headerText>Giá USD</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -177,7 +178,7 @@
   <viewgrid>
     <value>1</value>
     <name>Soluong</name>
-    <headerText>Soluong</headerText>
+    <headerText>Số lượng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -186,7 +187,7 @@
   <viewgrid>
     <value>1</value>
     <name>Dongianguyente</name>
-    <headerText>Dongianguyente</headerText>
+    <headerText>Đơn giá nguyên tệ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -195,7 +196,7 @@
   <viewgrid>
     <value>1</value>
     <name>Dongiausd</name>
-    <headerText>Dongiausd</headerText>
+    <headerText>Đơn giá USD</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -204,7 +205,7 @@
   <viewgrid>
     <value>1</value>
     <name>Trigiausd</name>
-    <headerText>Trigiausd</headerText>
+    <headerText>Trị giá USD</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -213,7 +214,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tygiavnd</name>
-    <headerText>Tygiavnd</headerText>
+    <headerText>Tỷ giá VNĐ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -222,7 +223,7 @@
   <viewgrid>
     <value>1</value>
     <name>Madongtien</name>
-    <headerText>Madongtien</headerText>
+    <headerText>Mã đồng tiền</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -231,7 +232,7 @@
   <viewgrid>
     <value>1</value>
     <name>Dieukiengia</name>
-    <headerText>Dieukiengia</headerText>
+    <headerText>Điều kiện giá</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -240,7 +241,7 @@
   <viewgrid>
     <value>1</value>
     <name>Phuongthucthanhtoan</name>
-    <headerText>Phuongthucthanhtoan</headerText>
+    <headerText>PT thanh toán</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -249,7 +250,7 @@
   <viewgrid>
     <value>1</value>
     <name>Chicuchaiquan</name>
-    <headerText>Chicuchaiquan</headerText>
+    <headerText>Chi cục HQ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -258,7 +259,7 @@
   <viewgrid>
     <value>1</value>
     <name>Loaihinhxuatkhau</name>
-    <headerText>Loaihinhxuatkhau</headerText>
+    <headerText>Loại hình XK</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -267,7 +268,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tennuocxuatkhau</name>
-    <headerText>Tennuocxuatkhau</headerText>
+    <headerText>Tên nước XK</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -276,7 +277,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tennuocnhapkhau</name>
-    <headerText>Tennuocnhapkhau</headerText>
+    <headerText>Tên nước NK</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -285,7 +286,7 @@
   <viewgrid>
     <value>1</value>
     <name>Diadiemxephang</name>
-    <headerText>Diadiemxephang</headerText>
+    <headerText>Địa điểm xếp hàng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -294,7 +295,7 @@
   <viewgrid>
     <value>1</value>
     <name>Diadiemnhanhangcuoicung</name>
-    <headerText>Diadiemnhanhangcuoicung</headerText>
+    <headerText>Địa điểm nhận hàng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -303,7 +304,7 @@
   <viewgrid>
     <value>1</value>
     <name>Sotokhai</name>
-    <headerText>Sotokhai</headerText>
+    <headerText>Số tờ khai</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
