@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 21 May 2022 09:22:27
+// Code is generated on: 24 Tháng Năm 2022 9:06:25 SA
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -70,9 +70,6 @@ namespace GD.FM.DAL.Linq
 				case GD.FM.DAL.EntityType.DanhmucchucvuEntity:
 					toReturn = this.Danhmucchucvu;
 					break;
-				case GD.FM.DAL.EntityType.DanhmuchanghoaEntity:
-					toReturn = this.Danhmuchanghoa;
-					break;
 				case GD.FM.DAL.EntityType.DanhmuckhachEntity:
 					toReturn = this.Danhmuckhach;
 					break;
@@ -85,11 +82,17 @@ namespace GD.FM.DAL.Linq
 				case GD.FM.DAL.EntityType.DanhmucungdungEntity:
 					toReturn = this.Danhmucungdung;
 					break;
+				case GD.FM.DAL.EntityType.DanhmuchanghoaEntity:
+					toReturn = this.Danhmuchanghoa;
+					break;
 				case GD.FM.DAL.EntityType.DmcapmaEntity:
 					toReturn = this.Dmcapma;
 					break;
 				case GD.FM.DAL.EntityType.DonvitinhEntity:
 					toReturn = this.Donvitinh;
+					break;
+				case GD.FM.DAL.EntityType.DulieuxnkEntity:
+					toReturn = this.Dulieuxnk;
 					break;
 				case GD.FM.DAL.EntityType.FormcoEntity:
 					toReturn = this.Formco;
@@ -124,17 +127,17 @@ namespace GD.FM.DAL.Linq
 				case GD.FM.DAL.EntityType.RolesEntity:
 					toReturn = this.Roles;
 					break;
+				case GD.FM.DAL.EntityType.TygiaEntity:
+					toReturn = this.Tygia;
+					break;
 				case GD.FM.DAL.EntityType.ThamsoEntity:
 					toReturn = this.Thamso;
-					break;
-				case GD.FM.DAL.EntityType.ThuchienhopdongbanhangEntity:
-					toReturn = this.Thuchienhopdongbanhang;
 					break;
 				case GD.FM.DAL.EntityType.ThuchienlogisticEntity:
 					toReturn = this.Thuchienlogistic;
 					break;
-				case GD.FM.DAL.EntityType.TygiaEntity:
-					toReturn = this.Tygia;
+				case GD.FM.DAL.EntityType.ThuchienhopdongbanhangEntity:
+					toReturn = this.Thuchienhopdongbanhang;
 					break;
 				case GD.FM.DAL.EntityType.UsersEntity:
 					toReturn = this.Users;
@@ -164,12 +167,6 @@ namespace GD.FM.DAL.Linq
 			get { return new DataSource2<DanhmucchucvuEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
-		/// <summary>returns the datasource to use in a Linq query when targeting DanhmuchanghoaEntity instances in the database.</summary>
-		public DataSource2<DanhmuchanghoaEntity> Danhmuchanghoa
-		{
-			get { return new DataSource2<DanhmuchanghoaEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
-		}
-		
 		/// <summary>returns the datasource to use in a Linq query when targeting DanhmuckhachEntity instances in the database.</summary>
 		public DataSource2<DanhmuckhachEntity> Danhmuckhach
 		{
@@ -194,6 +191,12 @@ namespace GD.FM.DAL.Linq
 			get { return new DataSource2<DanhmucungdungEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
+		/// <summary>returns the datasource to use in a Linq query when targeting DanhmuchanghoaEntity instances in the database.</summary>
+		public DataSource2<DanhmuchanghoaEntity> Danhmuchanghoa
+		{
+			get { return new DataSource2<DanhmuchanghoaEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
 		/// <summary>returns the datasource to use in a Linq query when targeting DmcapmaEntity instances in the database.</summary>
 		public DataSource2<DmcapmaEntity> Dmcapma
 		{
@@ -204,6 +207,12 @@ namespace GD.FM.DAL.Linq
 		public DataSource2<DonvitinhEntity> Donvitinh
 		{
 			get { return new DataSource2<DonvitinhEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting DulieuxnkEntity instances in the database.</summary>
+		public DataSource2<DulieuxnkEntity> Dulieuxnk
+		{
+			get { return new DataSource2<DulieuxnkEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting FormcoEntity instances in the database.</summary>
@@ -272,16 +281,16 @@ namespace GD.FM.DAL.Linq
 			get { return new DataSource2<RolesEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
+		/// <summary>returns the datasource to use in a Linq query when targeting TygiaEntity instances in the database.</summary>
+		public DataSource2<TygiaEntity> Tygia
+		{
+			get { return new DataSource2<TygiaEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
 		/// <summary>returns the datasource to use in a Linq query when targeting ThamsoEntity instances in the database.</summary>
 		public DataSource2<ThamsoEntity> Thamso
 		{
 			get { return new DataSource2<ThamsoEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
-		}
-		
-		/// <summary>returns the datasource to use in a Linq query when targeting ThuchienhopdongbanhangEntity instances in the database.</summary>
-		public DataSource2<ThuchienhopdongbanhangEntity> Thuchienhopdongbanhang
-		{
-			get { return new DataSource2<ThuchienhopdongbanhangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting ThuchienlogisticEntity instances in the database.</summary>
@@ -290,10 +299,10 @@ namespace GD.FM.DAL.Linq
 			get { return new DataSource2<ThuchienlogisticEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
-		/// <summary>returns the datasource to use in a Linq query when targeting TygiaEntity instances in the database.</summary>
-		public DataSource2<TygiaEntity> Tygia
+		/// <summary>returns the datasource to use in a Linq query when targeting ThuchienhopdongbanhangEntity instances in the database.</summary>
+		public DataSource2<ThuchienhopdongbanhangEntity> Thuchienhopdongbanhang
 		{
-			get { return new DataSource2<TygiaEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+			get { return new DataSource2<ThuchienhopdongbanhangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting UsersEntity instances in the database.</summary>

@@ -117,6 +117,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\CacbuoclogisticEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DanhmucchucvuEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DanhmucungdungEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DulieuxnkEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\HopdongbanhangchitietEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\HopdongbanhangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\PhongbanEntity.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\CacbuoclogisticRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DanhmucchucvuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DanhmucungdungRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DulieuxnkRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\HopdongbanhangchitietRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\HopdongbanhangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuRelations.cs">

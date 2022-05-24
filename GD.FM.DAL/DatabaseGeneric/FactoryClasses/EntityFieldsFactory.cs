@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: 21 May 2022 09:22:27
+// Code is generated on: 24 Tháng Năm 2022 9:06:26 SA
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -41,9 +41,6 @@ namespace GD.FM.DAL.FactoryClasses
 				case GD.FM.DAL.EntityType.DanhmucchucvuEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DanhmucchucvuEntity");
 					break;
-				case GD.FM.DAL.EntityType.DanhmuchanghoaEntity:
-					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DanhmuchanghoaEntity");
-					break;
 				case GD.FM.DAL.EntityType.DanhmuckhachEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DanhmuckhachEntity");
 					break;
@@ -56,11 +53,17 @@ namespace GD.FM.DAL.FactoryClasses
 				case GD.FM.DAL.EntityType.DanhmucungdungEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DanhmucungdungEntity");
 					break;
+				case GD.FM.DAL.EntityType.DanhmuchanghoaEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DanhmuchanghoaEntity");
+					break;
 				case GD.FM.DAL.EntityType.DmcapmaEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmcapmaEntity");
 					break;
 				case GD.FM.DAL.EntityType.DonvitinhEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DonvitinhEntity");
+					break;
+				case GD.FM.DAL.EntityType.DulieuxnkEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DulieuxnkEntity");
 					break;
 				case GD.FM.DAL.EntityType.FormcoEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "FormcoEntity");
@@ -95,17 +98,17 @@ namespace GD.FM.DAL.FactoryClasses
 				case GD.FM.DAL.EntityType.RolesEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "RolesEntity");
 					break;
+				case GD.FM.DAL.EntityType.TygiaEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "TygiaEntity");
+					break;
 				case GD.FM.DAL.EntityType.ThamsoEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThamsoEntity");
-					break;
-				case GD.FM.DAL.EntityType.ThuchienhopdongbanhangEntity:
-					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThuchienhopdongbanhangEntity");
 					break;
 				case GD.FM.DAL.EntityType.ThuchienlogisticEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThuchienlogisticEntity");
 					break;
-				case GD.FM.DAL.EntityType.TygiaEntity:
-					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "TygiaEntity");
+				case GD.FM.DAL.EntityType.ThuchienhopdongbanhangEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThuchienhopdongbanhangEntity");
 					break;
 				case GD.FM.DAL.EntityType.UsersEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "UsersEntity");

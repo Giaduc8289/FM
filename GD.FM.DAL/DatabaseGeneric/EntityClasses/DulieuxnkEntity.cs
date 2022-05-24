@@ -26,15 +26,17 @@ namespace GD.FM.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
+	
 
 	/// <summary>
-	/// Entity class which represents the entity 'Danhmuckhach'.<br/><br/>
+	/// Entity class which represents the entity 'Dulieuxnk'.<br/><br/>
 	/// 
 	/// </summary>
 	[Serializable]
-	public partial class DanhmuckhachEntity : CommonEntityBase, ISerializable
+	public partial class DulieuxnkEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END	
+		// __LLBLGENPRO_USER_CODE_REGION_END
+			
 	{
 		#region Class Member Declarations
 
@@ -44,6 +46,7 @@ namespace GD.FM.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
+		
 		#endregion
 
 		#region Statics
@@ -61,13 +64,13 @@ namespace GD.FM.DAL.EntityClasses
 		#endregion
 		
 		/// <summary> Static CTor for setting up custom property hashtables. Is executed before the first instance of this entity class or derived classes is constructed. </summary>
-		static DanhmuckhachEntity()
+		static DulieuxnkEntity()
 		{
 			SetupCustomPropertyHashtables();
 		}
 
 		/// <summary> CTor</summary>
-		public DanhmuckhachEntity():base("DanhmuckhachEntity")
+		public DulieuxnkEntity():base("DulieuxnkEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 		}
@@ -75,43 +78,43 @@ namespace GD.FM.DAL.EntityClasses
 		/// <summary> CTor</summary>
 		/// <remarks>For framework usage.</remarks>
 		/// <param name="fields">Fields object to set as the fields for this entity.</param>
-		public DanhmuckhachEntity(IEntityFields2 fields):base("DanhmuckhachEntity")
+		public DulieuxnkEntity(IEntityFields2 fields):base("DulieuxnkEntity")
 		{
 			InitClassEmpty(null, fields);
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="validator">The custom validator object for this DanhmuckhachEntity</param>
-		public DanhmuckhachEntity(IValidator validator):base("DanhmuckhachEntity")
+		/// <param name="validator">The custom validator object for this DulieuxnkEntity</param>
+		public DulieuxnkEntity(IValidator validator):base("DulieuxnkEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 		}
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="mahieu">PK value for Danhmuckhach which data should be fetched into this Danhmuckhach object</param>
+		/// <param name="id">PK value for Dulieuxnk which data should be fetched into this Dulieuxnk object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DanhmuckhachEntity(System.String mahieu):base("DanhmuckhachEntity")
+		public DulieuxnkEntity(System.Int64 id):base("DulieuxnkEntity")
 		{
 			InitClassEmpty(null, CreateFields());
-			this.Mahieu = mahieu;
+			this.Id = id;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="mahieu">PK value for Danhmuckhach which data should be fetched into this Danhmuckhach object</param>
-		/// <param name="validator">The custom validator object for this DanhmuckhachEntity</param>
+		/// <param name="id">PK value for Dulieuxnk which data should be fetched into this Dulieuxnk object</param>
+		/// <param name="validator">The custom validator object for this DulieuxnkEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DanhmuckhachEntity(System.String mahieu, IValidator validator):base("DanhmuckhachEntity")
+		public DulieuxnkEntity(System.Int64 id, IValidator validator):base("DulieuxnkEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
-			this.Mahieu = mahieu;
+			this.Id = id;
 		}
 
 		/// <summary> Protected CTor for deserialization</summary>
 		/// <param name="info"></param>
 		/// <param name="context"></param>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		protected DanhmuckhachEntity(SerializationInfo info, StreamingContext context) : base(info, context)
+		protected DulieuxnkEntity(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
@@ -124,6 +127,7 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 		}
 
 		
@@ -131,7 +135,7 @@ namespace GD.FM.DAL.EntityClasses
 		/// <param name="fieldIndex">The fieldindex.</param>
 		protected override void PerformDesyncSetupFKFieldChange(int fieldIndex)
 		{
-			switch((DanhmuckhachFieldIndex)fieldIndex)
+			switch((DulieuxnkFieldIndex)fieldIndex)
 			{
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
@@ -169,7 +173,7 @@ namespace GD.FM.DAL.EntityClasses
 		/// <returns>RelationCollection with relation object(s) which represent the relation the field is maped on</returns>
 		public override RelationCollection GetRelationsForFieldOfType(string fieldName)
 		{
-			return DanhmuckhachEntity.GetRelationsForField(fieldName);
+			return DulieuxnkEntity.GetRelationsForField(fieldName);
 		}
 
 		/// <summary>Gets the relation objects which represent the relation the fieldName specified is mapped on. </summary>
@@ -292,6 +296,7 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 			base.GetObjectData(info, context);
 		}
 
@@ -299,7 +304,7 @@ namespace GD.FM.DAL.EntityClasses
 		/// Should not be used for testing if the current value is NULL, use <see cref="TestCurrentFieldValueForNull"/> for that.</summary>
 		/// <param name="fieldIndex">Index of the field to test if that field was NULL in the persistent storage</param>
 		/// <returns>true if the field with the passed in index was NULL in the persistent storage, false otherwise</returns>
-		public bool TestOriginalFieldValueForNull(DanhmuckhachFieldIndex fieldIndex)
+		public bool TestOriginalFieldValueForNull(DulieuxnkFieldIndex fieldIndex)
 		{
 			return base.Fields[(int)fieldIndex].IsNull;
 		}
@@ -308,7 +313,7 @@ namespace GD.FM.DAL.EntityClasses
 		/// Should not be used for testing if the original value (read from the db) is NULL</summary>
 		/// <param name="fieldIndex">Index of the field to test if its currentvalue is null/undefined</param>
 		/// <returns>true if the field's value isn't defined yet, false otherwise</returns>
-		public bool TestCurrentFieldValueForNull(DanhmuckhachFieldIndex fieldIndex)
+		public bool TestCurrentFieldValueForNull(DulieuxnkFieldIndex fieldIndex)
 		{
 			return base.CheckIfCurrentFieldValueIsNull((int)fieldIndex);
 		}
@@ -318,7 +323,7 @@ namespace GD.FM.DAL.EntityClasses
 		/// <returns>A list of all the EntityRelation objects the type of this instance has. Hierarchy relations are excluded.</returns>
 		public override List<IEntityRelation> GetAllRelations()
 		{
-			return new DanhmuckhachRelations().GetAllRelations();
+			return new DulieuxnkRelations().GetAllRelations();
 		}
 		
 
@@ -330,7 +335,7 @@ namespace GD.FM.DAL.EntityClasses
 		/// <summary>Creates entity fields object for this entity. Used in constructor to setup this entity in a polymorphic scenario.</summary>
 		protected virtual IEntityFields2 CreateFields()
 		{
-			return EntityFieldsFactory.CreateEntityFieldsObject(GD.FM.DAL.EntityType.DanhmuckhachEntity);
+			return EntityFieldsFactory.CreateEntityFieldsObject(GD.FM.DAL.EntityType.DulieuxnkEntity);
 		}
 
 		/// <summary>
@@ -345,7 +350,7 @@ namespace GD.FM.DAL.EntityClasses
 		/// <summary>Creates a new instance of the factory related to this entity</summary>
 		protected override IEntityFactory2 CreateEntityFactory()
 		{
-			return EntityFactoryCache2.GetEntityFactory(typeof(DanhmuckhachEntityFactory));
+			return EntityFactoryCache2.GetEntityFactory(typeof(DulieuxnkEntityFactory));
 		}
 #if !CF
 		/// <summary>Adds the member collections to the collections queue (base first)</summary>
@@ -420,6 +425,7 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 			OnInitClassMembersComplete();
 		}
 
@@ -433,83 +439,107 @@ namespace GD.FM.DAL.EntityClasses
 			Dictionary<string, string> fieldHashtable = null;
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Mahieu", fieldHashtable);
+			_fieldsCustomProperties.Add("Id", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tenhieu", fieldHashtable);
+			_fieldsCustomProperties.Add("Nam", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tenrutgon", fieldHashtable);
+			_fieldsCustomProperties.Add("Thang", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Diachi", fieldHashtable);
+			_fieldsCustomProperties.Add("Ngaythongquan", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Sodienthoai", fieldHashtable);
+			_fieldsCustomProperties.Add("Masothuexuat", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Sofax", fieldHashtable);
+			_fieldsCustomProperties.Add("Tencongtyxuat", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Masothue", fieldHashtable);
+			_fieldsCustomProperties.Add("Diachicongtyxuat", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Taikhoannganhang", fieldHashtable);
+			_fieldsCustomProperties.Add("Dienthoaicongtyxuat", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tennganhang", fieldHashtable);
+			_fieldsCustomProperties.Add("Tencongtynhap", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Email", fieldHashtable);
+			_fieldsCustomProperties.Add("Diachicongtynhap", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Noidia", fieldHashtable);
+			_fieldsCustomProperties.Add("Hscode", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Truyenthong", fieldHashtable);
+			_fieldsCustomProperties.Add("Motahanghoa", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Nguoilienhehoten", fieldHashtable);
+			_fieldsCustomProperties.Add("Thuexuat", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Nguoilienhechucvu", fieldHashtable);
+			_fieldsCustomProperties.Add("Xuatxu", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Nguoilienhesodienthoai", fieldHashtable);
+			_fieldsCustomProperties.Add("Madonvi", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Nguoilienhethongtinbosung", fieldHashtable);
+			_fieldsCustomProperties.Add("Sotan", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
+			_fieldsCustomProperties.Add("Giausd", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Nguoitao", fieldHashtable);
+			_fieldsCustomProperties.Add("Soluong", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Ngaysua", fieldHashtable);
+			_fieldsCustomProperties.Add("Dongianguyente", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			_fieldsCustomProperties.Add("Dongiausd", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Manhanvien", fieldHashtable);
+			_fieldsCustomProperties.Add("Trigiausd", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tennhanvien", fieldHashtable);
+			_fieldsCustomProperties.Add("Tygiavnd", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Macode", fieldHashtable);
+			_fieldsCustomProperties.Add("Madongtien", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Mafiller", fieldHashtable);
+			_fieldsCustomProperties.Add("Dieukiengia", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Phuongthucthanhtoan", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Chicuchaiquan", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Loaihinhxuatkhau", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tennuocxuatkhau", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tennuocnhapkhau", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Diadiemxephang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Diadiemnhanhangcuoicung", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sotokhai", fieldHashtable);
 		}
 		#endregion
 
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
-		/// <param name="validator">The validator object for this DanhmuckhachEntity</param>
+		/// <param name="validator">The validator object for this DulieuxnkEntity</param>
 		/// <param name="fields">Fields of this entity</param>
 		protected virtual void InitClassEmpty(IValidator validator, IEntityFields2 fields)
 		{
@@ -522,15 +552,16 @@ namespace GD.FM.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 
 			OnInitialized();
 		}
 
 		#region Class Property Declarations
 		/// <summary> The relations object holding all relations of this entity with other entity classes.</summary>
-		public  static DanhmuckhachRelations Relations
+		public  static DulieuxnkRelations Relations
 		{
-			get	{ return new DanhmuckhachRelations(); }
+			get	{ return new DulieuxnkRelations(); }
 		}
 		
 		/// <summary> The custom properties for this entity type.</summary>
@@ -549,7 +580,7 @@ namespace GD.FM.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, string> CustomPropertiesOfType
 		{
-			get { return DanhmuckhachEntity.CustomProperties;}
+			get { return DulieuxnkEntity.CustomProperties;}
 		}
 
 		/// <summary> The custom properties for the fields of this entity type. The returned Hashtable contains per fieldname a hashtable of name-value
@@ -565,271 +596,359 @@ namespace GD.FM.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, Dictionary<string, string>> FieldsCustomPropertiesOfType
 		{
-			get { return DanhmuckhachEntity.FieldsCustomProperties;}
+			get { return DulieuxnkEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Mahieu property of the Entity Danhmuckhach<br/><br/>
+		/// <summary> The Id property of the Entity Dulieuxnk<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Mahieu"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
-		public virtual System.String Mahieu
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Id"<br/>
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
+		public virtual System.Int64 Id
 		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Mahieu, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Mahieu, value); }
+			get { return (System.Int64)GetValue((int)DulieuxnkFieldIndex.Id, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Id, value); }
 		}
 
-		/// <summary> The Tenhieu property of the Entity Danhmuckhach<br/><br/>
+		/// <summary> The Nam property of the Entity Dulieuxnk<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Tenhieu"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Tenhieu
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Tenhieu, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Tenhieu, value); }
-		}
-
-		/// <summary> The Tenrutgon property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Tenrutgon"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Nam"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tenrutgon
+		public virtual Nullable<System.Int32> Nam
 		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Tenrutgon, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Tenrutgon, value); }
+			get { return (Nullable<System.Int32>)GetValue((int)DulieuxnkFieldIndex.Nam, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Nam, value); }
 		}
 
-		/// <summary> The Diachi property of the Entity Danhmuckhach<br/><br/>
+		/// <summary> The Thang property of the Entity Dulieuxnk<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Diachi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Thang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Diachi
+		public virtual Nullable<System.Int32> Thang
 		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Diachi, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Diachi, value); }
+			get { return (Nullable<System.Int32>)GetValue((int)DulieuxnkFieldIndex.Thang, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Thang, value); }
 		}
 
-		/// <summary> The Sodienthoai property of the Entity Danhmuckhach<br/><br/>
+		/// <summary> The Ngaythongquan property of the Entity Dulieuxnk<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Sodienthoai"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Ngaythongquan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Sodienthoai
+		public virtual Nullable<System.DateTime> Ngaythongquan
 		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Sodienthoai, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Sodienthoai, value); }
+			get { return (Nullable<System.DateTime>)GetValue((int)DulieuxnkFieldIndex.Ngaythongquan, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Ngaythongquan, value); }
 		}
 
-		/// <summary> The Sofax property of the Entity Danhmuckhach<br/><br/>
+		/// <summary> The Masothuexuat property of the Entity Dulieuxnk<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Sofax"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Sofax
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Sofax, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Sofax, value); }
-		}
-
-		/// <summary> The Masothue property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Masothue"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Masothue
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Masothue, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Masothue, value); }
-		}
-
-		/// <summary> The Taikhoannganhang property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Taikhoannganhang"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Taikhoannganhang
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Taikhoannganhang, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Taikhoannganhang, value); }
-		}
-
-		/// <summary> The Tennganhang property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Tennganhang"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tennganhang
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Tennganhang, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Tennganhang, value); }
-		}
-
-		/// <summary> The Email property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Email"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Email
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Email, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Email, value); }
-		}
-
-		/// <summary> The Noidia property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Noidia"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Bit, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Boolean> Noidia
-		{
-			get { return (Nullable<System.Boolean>)GetValue((int)DanhmuckhachFieldIndex.Noidia, false); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Noidia, value); }
-		}
-
-		/// <summary> The Truyenthong property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Truyenthong"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Bit, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Boolean> Truyenthong
-		{
-			get { return (Nullable<System.Boolean>)GetValue((int)DanhmuckhachFieldIndex.Truyenthong, false); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Truyenthong, value); }
-		}
-
-		/// <summary> The Nguoilienhehoten property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Nguoilienhehoten"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Nguoilienhehoten
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Nguoilienhehoten, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Nguoilienhehoten, value); }
-		}
-
-		/// <summary> The Nguoilienhechucvu property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Nguoilienhechucvu"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Nguoilienhechucvu
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Nguoilienhechucvu, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Nguoilienhechucvu, value); }
-		}
-
-		/// <summary> The Nguoilienhesodienthoai property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Nguoilienhesodienthoai"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Nguoilienhesodienthoai
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Nguoilienhesodienthoai, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Nguoilienhesodienthoai, value); }
-		}
-
-		/// <summary> The Nguoilienhethongtinbosung property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Nguoilienhethongtinbosung"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Nguoilienhethongtinbosung
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Nguoilienhethongtinbosung, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Nguoilienhethongtinbosung, value); }
-		}
-
-		/// <summary> The Ngaytao property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Ngaytao"<br/>
-		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Ngaytao
-		{
-			get { return (Nullable<System.DateTime>)GetValue((int)DanhmuckhachFieldIndex.Ngaytao, false); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Ngaytao, value); }
-		}
-
-		/// <summary> The Nguoitao property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Nguoitao"<br/>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Masothuexuat"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Nguoitao
+		public virtual System.String Masothuexuat
 		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Nguoitao, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Nguoitao, value); }
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Masothuexuat, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Masothuexuat, value); }
 		}
 
-		/// <summary> The Ngaysua property of the Entity Danhmuckhach<br/><br/>
+		/// <summary> The Tencongtyxuat property of the Entity Dulieuxnk<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Ngaysua"<br/>
-		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Ngaysua
-		{
-			get { return (Nullable<System.DateTime>)GetValue((int)DanhmuckhachFieldIndex.Ngaysua, false); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Ngaysua, value); }
-		}
-
-		/// <summary> The Nguoisua property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Nguoisua"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Nguoisua
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Nguoisua, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Nguoisua, value); }
-		}
-
-		/// <summary> The Manhanvien property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Manhanvien"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Manhanvien
-		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Manhanvien, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Manhanvien, value); }
-		}
-
-		/// <summary> The Tennhanvien property of the Entity Danhmuckhach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Tennhanvien"<br/>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Tencongtyxuat"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tennhanvien
+		public virtual System.String Tencongtyxuat
 		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Tennhanvien, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Tennhanvien, value); }
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Tencongtyxuat, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Tencongtyxuat, value); }
 		}
 
-		/// <summary> The Macode property of the Entity Danhmuckhach<br/><br/>
+		/// <summary> The Diachicongtyxuat property of the Entity Dulieuxnk<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Macode"<br/>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Diachicongtyxuat"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Diachicongtyxuat
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Diachicongtyxuat, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Diachicongtyxuat, value); }
+		}
+
+		/// <summary> The Dienthoaicongtyxuat property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Dienthoaicongtyxuat"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Dienthoaicongtyxuat
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Dienthoaicongtyxuat, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Dienthoaicongtyxuat, value); }
+		}
+
+		/// <summary> The Tencongtynhap property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Tencongtynhap"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tencongtynhap
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Tencongtynhap, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Tencongtynhap, value); }
+		}
+
+		/// <summary> The Diachicongtynhap property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Diachicongtynhap"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Diachicongtynhap
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Diachicongtynhap, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Diachicongtynhap, value); }
+		}
+
+		/// <summary> The Hscode property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Hscode"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Hscode
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Hscode, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Hscode, value); }
+		}
+
+		/// <summary> The Motahanghoa property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Motahanghoa"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Macode
+		public virtual System.String Motahanghoa
 		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Macode, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Macode, value); }
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Motahanghoa, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Motahanghoa, value); }
 		}
 
-		/// <summary> The Mafiller property of the Entity Danhmuckhach<br/><br/>
+		/// <summary> The Thuexuat property of the Entity Dulieuxnk<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Danhmuckhach"."Mafiller"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Thuexuat"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Mafiller
+		public virtual Nullable<System.Decimal> Thuexuat
 		{
-			get { return (System.String)GetValue((int)DanhmuckhachFieldIndex.Mafiller, true); }
-			set	{ SetValue((int)DanhmuckhachFieldIndex.Mafiller, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)DulieuxnkFieldIndex.Thuexuat, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Thuexuat, value); }
+		}
+
+		/// <summary> The Xuatxu property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Xuatxu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Xuatxu
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Xuatxu, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Xuatxu, value); }
+		}
+
+		/// <summary> The Madonvi property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Madonvi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Madonvi
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Madonvi, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Madonvi, value); }
+		}
+
+		/// <summary> The Sotan property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Sotan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sotan
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DulieuxnkFieldIndex.Sotan, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Sotan, value); }
+		}
+
+		/// <summary> The Giausd property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Giausd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Giausd
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DulieuxnkFieldIndex.Giausd, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Giausd, value); }
+		}
+
+		/// <summary> The Soluong property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Soluong"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Soluong
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DulieuxnkFieldIndex.Soluong, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Soluong, value); }
+		}
+
+		/// <summary> The Dongianguyente property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Dongianguyente"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dongianguyente
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DulieuxnkFieldIndex.Dongianguyente, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Dongianguyente, value); }
+		}
+
+		/// <summary> The Dongiausd property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Dongiausd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dongiausd
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DulieuxnkFieldIndex.Dongiausd, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Dongiausd, value); }
+		}
+
+		/// <summary> The Trigiausd property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Trigiausd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Trigiausd
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DulieuxnkFieldIndex.Trigiausd, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Trigiausd, value); }
+		}
+
+		/// <summary> The Tygiavnd property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Tygiavnd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tygiavnd
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DulieuxnkFieldIndex.Tygiavnd, false); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Tygiavnd, value); }
+		}
+
+		/// <summary> The Madongtien property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Madongtien"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Madongtien
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Madongtien, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Madongtien, value); }
+		}
+
+		/// <summary> The Dieukiengia property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Dieukiengia"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Dieukiengia
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Dieukiengia, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Dieukiengia, value); }
+		}
+
+		/// <summary> The Phuongthucthanhtoan property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Phuongthucthanhtoan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Phuongthucthanhtoan
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Phuongthucthanhtoan, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Phuongthucthanhtoan, value); }
+		}
+
+		/// <summary> The Chicuchaiquan property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Chicuchaiquan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Chicuchaiquan
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Chicuchaiquan, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Chicuchaiquan, value); }
+		}
+
+		/// <summary> The Loaihinhxuatkhau property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Loaihinhxuatkhau"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Loaihinhxuatkhau
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Loaihinhxuatkhau, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Loaihinhxuatkhau, value); }
+		}
+
+		/// <summary> The Tennuocxuatkhau property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Tennuocxuatkhau"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tennuocxuatkhau
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Tennuocxuatkhau, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Tennuocxuatkhau, value); }
+		}
+
+		/// <summary> The Tennuocnhapkhau property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Tennuocnhapkhau"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tennuocnhapkhau
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Tennuocnhapkhau, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Tennuocnhapkhau, value); }
+		}
+
+		/// <summary> The Diadiemxephang property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Diadiemxephang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Diadiemxephang
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Diadiemxephang, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Diadiemxephang, value); }
+		}
+
+		/// <summary> The Diadiemnhanhangcuoicung property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Diadiemnhanhangcuoicung"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Diadiemnhanhangcuoicung
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Diadiemnhanhangcuoicung, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Diadiemnhanhangcuoicung, value); }
+		}
+
+		/// <summary> The Sotokhai property of the Entity Dulieuxnk<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dulieuxnk"."Sotokhai"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Sotokhai
+		{
+			get { return (System.String)GetValue((int)DulieuxnkFieldIndex.Sotokhai, true); }
+			set	{ SetValue((int)DulieuxnkFieldIndex.Sotokhai, value); }
 		}
 
 
@@ -853,7 +972,7 @@ namespace GD.FM.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override int LLBLGenProEntityTypeValue 
 		{ 
-			get { return (int)GD.FM.DAL.EntityType.DanhmuckhachEntity; }
+			get { return (int)GD.FM.DAL.EntityType.DulieuxnkEntity; }
 		}
 		#endregion
 
@@ -862,6 +981,7 @@ namespace GD.FM.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
+		
 		#endregion
 
 		#region Included code

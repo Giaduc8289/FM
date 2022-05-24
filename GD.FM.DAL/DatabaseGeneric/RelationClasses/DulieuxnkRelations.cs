@@ -17,15 +17,15 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.FM.DAL.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: Formco. </summary>
-	public partial class FormcoRelations
+	/// <summary>Implements the static Relations variant for the entity: Dulieuxnk. </summary>
+	public partial class DulieuxnkRelations
 	{
 		/// <summary>CTor</summary>
-		public FormcoRelations()
+		public DulieuxnkRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the FormcoEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the DulieuxnkEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{

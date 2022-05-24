@@ -769,6 +769,13 @@ namespace GD.FM.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.FM.APP.BANHANG.FRM_HOPDONGBAN()), mmru.Text);
                     break;
+                case "FRM_THUCHIENHOPDONGBAN":
+                    foreach (GD.FM.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_THUCHIENHOPDONGBAN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.FM.APP.BANHANG.FRM_THUCHIENHOPDONGBAN()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Cửa sổ

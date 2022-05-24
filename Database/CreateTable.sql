@@ -143,6 +143,41 @@ constraint Thuchienhopdongbanhang_PK primary key (Id)) ON [PRIMARY]
 
 -----Xuất khẩu---------------------------------------------------------
 -----------------------------------------------------------------------
+CREATE TABLE Dulieuxnk(
+Id				BIGINT Identity Not null,
+Nam				INT,
+Thang			INT,
+Ngaythongquan	DATE,
+Masothuexuat		NVARCHAR(50),
+Tencongtyxuat		NVARCHAR(250),
+Diachicongtyxuat	NVARCHAR(250),
+Dienthoaicongtyxuat	NVARCHAR(50),
+Tencongtynhap			NVARCHAR(250),
+Diachicongtynhap		NVARCHAR(250),
+Hscode				NVARCHAR(50),
+Motahanghoa			NVARCHAR(MAX),
+Thuexuat			DECIMAL(20,2),
+Xuatxu			NVARCHAR(50),
+Madonvi			NVARCHAR(50),
+Sotan			DECIMAL(20,2),
+Giausd			DECIMAL(20,2),
+Soluong			DECIMAL(20,2),
+Dongianguyente	DECIMAL(20,2),
+Dongiausd		DECIMAL(20,2),
+Trigiausd		DECIMAL(20,2),
+Tygiavnd		DECIMAL(20,2),
+Madongtien		NVARCHAR(50),
+Dieukiengia		NVARCHAR(50),
+Phuongthucthanhtoan		NVARCHAR(50),
+Chicuchaiquan			NVARCHAR(250),
+Loaihinhxuatkhau		NVARCHAR(250),
+Tennuocxuatkhau			NVARCHAR(50),
+Tennuocnhapkhau			NVARCHAR(50),
+Diadiemxephang			NVARCHAR(250),
+Diadiemnhanhangcuoicung	NVARCHAR(250),
+Sotokhai				NVARCHAR(50),
+constraint Dulieuxnk_PK primary key (Id)) ON [PRIMARY]
+
 CREATE TABLE Phuongthucthanhtoan(
 Mahieu		Nvarchar(50) Not null,
 Tenhieu		Nvarchar(250),

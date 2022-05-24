@@ -27,9 +27,12 @@ namespace GD.FM.APP.BANHANG
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
         private DataTable DT_THHOPDONGBAN = new DataTable();
         private BindingSource BS_THHOPDONGBAN = new BindingSource();
-        private DataRow r_Insert = null;
+        private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.FM.CONTROL.JGridEX GRID_THHOPDONGBAN = new GD.FM.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
+
+        private DataTable DT_HOPDONGBAN = new DataTable(), DT_HOPDONGBAN_D = new DataTable();
+
         private void TEXTBOX_Only_Control(bool _isbool, GD.FM.CONTROL.TEXTBOX _Textbox)
         {
             GD.FM.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -51,6 +54,9 @@ namespace GD.FM.APP.BANHANG
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_THUCHIENHOPDONGBAN");
                         DT_THHOPDONGBAN = LIB.SESSION_START.DT_THHOPDONGBAN;
+
+                        DT_HOPDONGBAN = LIB.Procedures.Danhsachhopdongbanhang(LIB.SESSION_START.TS_NGAYDAUNAM, LIB.SESSION_START.TS_NGAYCUOINAM, string.Empty, string.Empty, string.Empty, string.Empty);
+                        DT_HOPDONGBAN_D = LIB.Procedures.Danhsachhopdongbanhangchitiet(LIB.SESSION_START.TS_NGAYDAUNAM, LIB.SESSION_START.TS_NGAYCUOINAM, string.Empty, string.Empty, string.Empty, string.Empty);
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -125,7 +131,8 @@ namespace GD.FM.APP.BANHANG
                     txt_THANHTOANVND.Text = _Rowview.Row[ThuchienhopdongbanhangFields.Thanhtoanvnd.Name].ToString();
                     txt_THANHTOANUSD.Text = _Rowview.Row[ThuchienhopdongbanhangFields.Thanhtoanusd.Name].ToString();
 
-
+                    txt_SOHOPDONG_Validating(new object(), new CancelEventArgs());
+                    txt_MAHANGPHIAKHACH_Validating(new object(), new CancelEventArgs());
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_THHOPDONGBAN_CurrentChanged"); }
@@ -137,6 +144,14 @@ namespace GD.FM.APP.BANHANG
             _ThuchienhopdongbanhangEntity.Sohopdong = txt_SOHOPDONG.Text.Trim();
             _ThuchienhopdongbanhangEntity.Mahangphiakhach = txt_MAHANGPHIAKHACH.Text.Trim();
             try { _ThuchienhopdongbanhangEntity.Soluonggiao = Convert.ToDecimal(txt_SOLUONGGIAO.Text.Trim()); }
+            catch { }
+            try { _ThuchienhopdongbanhangEntity.Thanhtienusd = Convert.ToDecimal(txt_THANHTIENUSD.Text.Trim()); }
+            catch { }
+            try { _ThuchienhopdongbanhangEntity.Thanhtienvnd = Convert.ToDecimal(txt_THANHTIENVND.Text.Trim()); }
+            catch { }
+            try { _ThuchienhopdongbanhangEntity.Thanhtoanusd = Convert.ToDecimal(txt_THANHTOANUSD.Text.Trim()); }
+            catch { }
+            try { _ThuchienhopdongbanhangEntity.Thanhtoanvnd = Convert.ToDecimal(txt_THANHTOANVND.Text.Trim()); }
             catch { }
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
@@ -263,12 +278,78 @@ namespace GD.FM.APP.BANHANG
         #region Validate
         private void txt_SOHOPDONG_Validating(object sender, CancelEventArgs e)
         {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_SOHOPDONG.Text.Trim()) || DT_HOPDONGBAN == null || DT_HOPDONGBAN.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_SOHOPDONG.Text.Trim().ToUpper();
+            _RowViewSelect = checkSohopdong(Str_MASIEUTHI, DT_HOPDONGBAN);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_HOPDONGBAN_H.xml",
+                        DT_HOPDONGBAN, HopdongbanhangFields.Sohopdong.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_SOHOPDONG.Text = _RowViewSelect[HopdongbanhangFields.Sohopdong.Name].ToString();
+                txt_NGAYHOPDONG.Text = _RowViewSelect[HopdongbanhangFields.Ngayhopdong.Name].ToString();
+                txt_MAKHACH.Text = _RowViewSelect[HopdongbanhangFields.Makhach.Name].ToString();
+                txt_TENKHACH.Text = _RowViewSelect[HopdongbanhangFields.Tenkhach.Name].ToString();
 
+                DT_HOPDONGBAN_D = new HopdongbanhangchitietManager().SelectBySohopdongRDT(txt_SOHOPDONG.Text);
+            }
+            else
+            {
+                txt_NGAYHOPDONG.Text = _RowViewSelect[HopdongbanhangFields.Ngayhopdong.Name].ToString();
+                txt_MAKHACH.Text = _RowViewSelect[HopdongbanhangFields.Makhach.Name].ToString();
+                txt_TENKHACH.Text = _RowViewSelect[HopdongbanhangFields.Tenkhach.Name].ToString();
+
+                DT_HOPDONGBAN_D = new HopdongbanhangchitietManager().SelectBySohopdongRDT(txt_SOHOPDONG.Text);
+            }
+        }
+        private DataRow checkSohopdong(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(HopdongbanhangFields.Sohopdong.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
         }
 
-        private void txt_MAHANGPHIAKHACH_TextChanged(object sender, EventArgs e)
+        private void txt_MAHANGPHIAKHACH_Validating(object sender, CancelEventArgs e)
         {
-
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MAHANGPHIAKHACH.Text.Trim()) || DT_HOPDONGBAN_D == null || DT_HOPDONGBAN_D.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MAHANGPHIAKHACH.Text.Trim().ToUpper();
+            _RowViewSelect = checkMahangphiakhach(Str_MASIEUTHI, DT_HOPDONGBAN_D);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.FM_PATH + @"\XMLCONFIG\FRM_HOPDONGBAN_D.xml",
+                        DT_HOPDONGBAN_D, HopdongbanhangchitietFields.Mahangphiakhach.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MAHANGPHIAKHACH.Text = _RowViewSelect[HopdongbanhangchitietFields.Mahangphiakhach.Name].ToString();
+                txt_CODEFILLER.Text = _RowViewSelect[HopdongbanhangchitietFields.Codefiller.Name].ToString();
+                txt_DONGIAVND.Text = _RowViewSelect[HopdongbanhangchitietFields.Dongiavnd.Name].ToString();
+                txt_DONGIAUSD.Text = _RowViewSelect[HopdongbanhangchitietFields.Dongiausd.Name].ToString();
+                txt_SOLUONGDAT.Text = _RowViewSelect[HopdongbanhangchitietFields.Soluong.Name].ToString();
+            }
+            else
+            {
+                txt_CODEFILLER.Text = _RowViewSelect[HopdongbanhangchitietFields.Codefiller.Name].ToString();
+                txt_DONGIAVND.Text = _RowViewSelect[HopdongbanhangchitietFields.Dongiavnd.Name].ToString();
+                txt_DONGIAUSD.Text = _RowViewSelect[HopdongbanhangchitietFields.Dongiausd.Name].ToString();
+                txt_SOLUONGDAT.Text = _RowViewSelect[HopdongbanhangchitietFields.Soluong.Name].ToString();
+            }
+        }
+        private DataRow checkMahangphiakhach(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(HopdongbanhangchitietFields.Mahangphiakhach.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
         }
         #endregion
 

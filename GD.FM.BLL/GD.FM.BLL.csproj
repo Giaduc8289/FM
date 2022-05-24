@@ -105,6 +105,7 @@
     <Compile Include="ManagerBase\CacbuoclogisticManagerBase.cs" />
     <Compile Include="ManagerBase\DanhmucchucvuManagerBase.cs" />
     <Compile Include="ManagerBase\DanhmucungdungManagerBase.cs" />
+    <Compile Include="ManagerBase\DulieuxnkManagerBase.cs" />
     <Compile Include="ManagerBase\HopdongbanhangchitietManagerBase.cs" />
     <Compile Include="ManagerBase\HopdongbanhangManagerBase.cs" />
     <Compile Include="ManagerBase\MenuManagerBase.cs">

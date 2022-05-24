@@ -303,6 +303,7 @@
     <Compile Include="Manager\DanhmucungdungManager.cs" />
     <Compile Include="Manager\DmcapmaManager.cs" />
     <Compile Include="Manager\DonvitinhManager.cs" />
+    <Compile Include="Manager\DulieuxnkManager.cs" />
     <Compile Include="Manager\FormcoManager.cs" />
     <Compile Include="Manager\HopdongbanhangchitietManager.cs" />
     <Compile Include="Manager\HopdongbanhangManager.cs" />
@@ -578,6 +579,7 @@
     <Content Include="XMLCONFIG\FRM_HOPDONGBAN_H.xml" />
     <Content Include="XMLCONFIG\FRM_MENU.xml" />
     <Content Include="XMLCONFIG\FRM_ROLES.xml" />
+    <Content Include="XMLCONFIG\FRM_THUCHIENHOPDONGBAN.xml" />
     <Content Include="XMLCONFIG\FRM_UNGDUNGSP.xml" />
     <Content Include="XMLCONFIG\FRM_USERS.xml" />
   </ItemGroup>
