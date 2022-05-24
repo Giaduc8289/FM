@@ -130,7 +130,6 @@ namespace GD.FM.APP.BANHANG
                     txt_NGAYGIAO.Text = _Rowview.Row[ThuchienhopdongbanhangFields.Ngaygiao.Name].ToString();
                     txt_THANHTOANVND.Text = _Rowview.Row[ThuchienhopdongbanhangFields.Thanhtoanvnd.Name].ToString();
                     txt_THANHTOANUSD.Text = _Rowview.Row[ThuchienhopdongbanhangFields.Thanhtoanusd.Name].ToString();
-
                     txt_SOHOPDONG_Validating(new object(), new CancelEventArgs());
                     txt_MAHANGPHIAKHACH_Validating(new object(), new CancelEventArgs());
                 }
@@ -141,8 +140,13 @@ namespace GD.FM.APP.BANHANG
         private string Save_Data(string _str_DMCHUONG_PK)
         {
             ThuchienhopdongbanhangEntity _ThuchienhopdongbanhangEntity = new ThuchienhopdongbanhangEntity();
+           
             _ThuchienhopdongbanhangEntity.Sohopdong = txt_SOHOPDONG.Text.Trim();
             _ThuchienhopdongbanhangEntity.Mahangphiakhach = txt_MAHANGPHIAKHACH.Text.Trim();
+            try { _ThuchienhopdongbanhangEntity.Ngayhopdong = Convert.ToDateTime(txt_NGAYHOPDONG.Text.Trim()); }
+            catch { }
+            try { _ThuchienhopdongbanhangEntity.Ngaygiao = Convert.ToDateTime(txt_NGAYGIAO.Text.Trim()); }
+            catch { }
             try { _ThuchienhopdongbanhangEntity.Soluonggiao = Convert.ToDecimal(txt_SOLUONGGIAO.Text.Trim()); }
             catch { }
             try { _ThuchienhopdongbanhangEntity.Thanhtienusd = Convert.ToDecimal(txt_THANHTIENUSD.Text.Trim()); }
@@ -167,7 +171,9 @@ namespace GD.FM.APP.BANHANG
                 _ThuchienhopdongbanhangEntity.Ngaysua = DateTime.Now;
                 _ThuchienhopdongbanhangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _ThuchienhopdongbanhangManager.Update(_ThuchienhopdongbanhangEntity);
+                GRID_THHOPDONGBAN.CurrentRow.Cells[ThuchienhopdongbanhangFields.Ngayhopdong.Name].Value = _ThuchienhopdongbanhangEntity.Ngayhopdong;
                 GRID_THHOPDONGBAN.CurrentRow.Cells[ThuchienhopdongbanhangFields.Sohopdong.Name].Value = _ThuchienhopdongbanhangEntity.Sohopdong;
+                GRID_THHOPDONGBAN.CurrentRow.Cells[ThuchienhopdongbanhangFields.Ngaygiao.Name].Value = _ThuchienhopdongbanhangEntity.Ngaygiao;
                 GRID_THHOPDONGBAN.CurrentRow.Cells[ThuchienhopdongbanhangFields.Mahangphiakhach.Name].Value = _ThuchienhopdongbanhangEntity.Mahangphiakhach;
                 GRID_THHOPDONGBAN.CurrentRow.Cells[ThuchienhopdongbanhangFields.Soluonggiao.Name].Value = _ThuchienhopdongbanhangEntity.Soluonggiao;
                 GD.FM.BLL.MenuroleManager.set_Enable_controls(_ThuchienhopdongbanhangManager.Convert(_ThuchienhopdongbanhangEntity), GD.FM.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -313,6 +319,21 @@ namespace GD.FM.APP.BANHANG
                 return dt.Select(HopdongbanhangFields.Sohopdong.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_SOHOPDONG_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiPanel1Container_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void txt_MAHANGPHIAKHACH_Validating(object sender, CancelEventArgs e)
