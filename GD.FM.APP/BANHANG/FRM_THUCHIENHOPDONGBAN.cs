@@ -226,7 +226,7 @@ namespace GD.FM.APP.BANHANG
             ThuchienhopdongbanhangManager _ThuchienhopdongbanhangManager = new ThuchienhopdongbanhangManager();
             ThuchienhopdongbanhangEntity _ThuchienhopdongbanhangEntity = new ThuchienhopdongbanhangEntity();
             _ThuchienhopdongbanhangEntity = _ThuchienhopdongbanhangManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
-            if (_ThuchienhopdongbanhangEntity != null && MessageBox.Show("Xóa đơn vị tính: " + MAHIEU_PK + " - " + txt_MAHANGPHIAKHACH.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_ThuchienhopdongbanhangEntity != null && MessageBox.Show("Xóa thực hiện hợp đồng: " + MAHIEU_PK + " - " + txt_MAHANGPHIAKHACH.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -239,7 +239,7 @@ namespace GD.FM.APP.BANHANG
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa đơn vị tính " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa thực hiện hợp đồng " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_THHOPDONGBAN.Enabled = true;
@@ -248,13 +248,13 @@ namespace GD.FM.APP.BANHANG
         {
             if (txt_SOHOPDONG.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập mã đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập số hợp đồng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_SOHOPDONG.Focus();
                 return;
             }
             else if (txt_MAHANGPHIAKHACH.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập mã Customer!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHANGPHIAKHACH.Focus();
                 return;
             }

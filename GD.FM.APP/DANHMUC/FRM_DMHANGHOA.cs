@@ -221,7 +221,7 @@ namespace GD.FM.APP.DANHMUC
             DanhmuchanghoaManager _DanhmuchanghoaManager = new DanhmuchanghoaManager();
             DanhmuchanghoaEntity _DanhmuchanghoaEntity = new DanhmuchanghoaEntity();
             _DanhmuchanghoaEntity = _DanhmuchanghoaManager.SelectOne(MAHIEU_PK);
-            if (_DanhmuchanghoaEntity != null && MessageBox.Show("Xóa đơn vị tính: " + MAHIEU_PK + " - " + txt_MAKHACH.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_DanhmuchanghoaEntity != null && MessageBox.Show("Xóa hàng hóa: " + MAHIEU_PK + " - " + txt_MAKHACH.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -234,7 +234,7 @@ namespace GD.FM.APP.DANHMUC
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa đơn vị tính " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa hàng hóa " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_DMHANGHOA.Enabled = true;
@@ -243,19 +243,19 @@ namespace GD.FM.APP.DANHMUC
         {
             if (string.IsNullOrEmpty(MAHIEU_PK) && _DanhmuchanghoaManager.SelectOne(txt_MAHIEU.Text.Trim()) != null)
             {
-                MessageBox.Show("Mã đơn vị tính bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã hàng hóa bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHIEU.Focus();
                 return;
             }
             else if (txt_MAHIEU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập mã đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập mã hàng hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHIEU.Focus();
                 return;
             }
             else if (txt_MAKHACH.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập tên hàng hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAKHACH.Focus();
                 return;
             }

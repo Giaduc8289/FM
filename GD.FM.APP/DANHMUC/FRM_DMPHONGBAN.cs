@@ -197,7 +197,7 @@ namespace GD.FM.APP.DANHMUC
             PhongbanManager _PhongbanManager = new PhongbanManager();
             PhongbanEntity _PhongbanEntity = new PhongbanEntity();
             _PhongbanEntity = _PhongbanManager.SelectOne(MAHIEU_PK);
-            if (_PhongbanEntity != null && MessageBox.Show("Xóa đơn vị tính: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_PhongbanEntity != null && MessageBox.Show("Xóa phòng ban: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -210,7 +210,7 @@ namespace GD.FM.APP.DANHMUC
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa đơn vị tính " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa phòng ban " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_DMPHONGBAN.Enabled = true;
@@ -219,19 +219,19 @@ namespace GD.FM.APP.DANHMUC
         {
             if (string.IsNullOrEmpty(MAHIEU_PK) && _PhongbanManager.SelectOne(txt_MAHIEU.Text.Trim()) != null)
             {
-                MessageBox.Show("Mã đơn vị tính bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã phòng ban bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHIEU.Focus();
                 return;
             }
             else if (txt_MAHIEU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập mã đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập mã phòng ban!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHIEU.Focus();
                 return;
             }
             else if (txt_TENHIEU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập tên phòng ban!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_TENHIEU.Focus();
                 return;
             }

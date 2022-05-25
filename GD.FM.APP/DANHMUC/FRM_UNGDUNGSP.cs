@@ -197,7 +197,7 @@ namespace GD.FM.APP.DANHMUC
             DanhmucungdungManager _DanhmucungdungManager = new DanhmucungdungManager();
             DanhmucungdungEntity _DanhmucungdungEntity = new DanhmucungdungEntity();
             _DanhmucungdungEntity = _DanhmucungdungManager.SelectOne(MAHIEU_PK);
-            if (_DanhmucungdungEntity != null && MessageBox.Show("Xóa đơn vị tính: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_DanhmucungdungEntity != null && MessageBox.Show("Xóa ứng dụng sản phẩm: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -210,7 +210,7 @@ namespace GD.FM.APP.DANHMUC
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa đơn vị tính " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa ứng dụng sản phẩm " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_DMUNGDUNG.Enabled = true;
@@ -219,19 +219,19 @@ namespace GD.FM.APP.DANHMUC
         {
             if (string.IsNullOrEmpty(MAHIEU_PK) && _DanhmucungdungManager.SelectOne(txt_MAHIEU.Text.Trim()) != null)
             {
-                MessageBox.Show("Mã đơn vị tính bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã ứng dụng sản phẩm bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHIEU.Focus();
                 return;
             }
             else if (txt_MAHIEU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập mã đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập mã ứng dụng sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHIEU.Focus();
                 return;
             }
             else if (txt_TENHIEU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên đơn vị tính!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập tên ứng dụng sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_TENHIEU.Focus();
                 return;
             }
