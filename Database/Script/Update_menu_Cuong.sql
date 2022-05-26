@@ -1,0 +1,5 @@
+update Menu set Icon='contract.ico' where MenuId='BH_HOPDONGBAN'
+update Menu set Icon='nhanvien.ico' where MenuId='BH_KHACHHANG'
+update Menu set Icon='thuchienhopdong.ico' where MenuId='BH_THHOPDONGBAN'
+update Menu set Icon='nhanvien1.ico' where MenuId='DM_PHONGBAN'
+update Menu set Icon='Customer2.ico' where MenuId='DM_CHUCVU'
