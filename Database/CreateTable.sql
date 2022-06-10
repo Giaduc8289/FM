@@ -84,6 +84,9 @@ Makhach			Nvarchar(50),
 Tenkhach		Nvarchar(250),
 Macangden			Nvarchar(50),
 Tencangden			Nvarchar(250),
+Diadiemgiao			Nvarchar(250),
+Phuongthucthanhtoan		Nvarchar(50),
+Thoihanthanhtoan		Int,
 Thanhtienvnd	Decimal(20,2),
 Thanhtienusd	Decimal(20,2),
 Ngaytao			DATETIME,
@@ -91,6 +94,10 @@ Nguoitao		NVARCHAR(50),
 Ngaysua			DATETIME,
 Nguoisua		NVARCHAR(50),
 constraint Hopdongbanhang_PK primary key (Sohopdong)) ON [PRIMARY]
+
+alter table Hopdongbanhang add Phuongthucthanhtoan		Nvarchar(50),
+Thoihanthanhtoan		Int,
+Diadiemgiao			Nvarchar(250),
 
 Create Table Hopdongbanhangchitiet(
 Id		Bigint Identity Not null,
@@ -107,6 +114,8 @@ Ngaygiao		Date,
 Dongiavnd		Decimal(20,2),
 Tygia			Decimal(20,2),
 Dongiausd		Decimal(20,4),
+Dongiavndcovat		Decimal(20,2),
+Dongiausdcovat		Decimal(20,4),
 Thanhtienvnd	Decimal(20,2),
 Thanhtienusd	Decimal(20,2),
 Ngaytao			DATETIME,
@@ -114,6 +123,9 @@ Nguoitao		NVARCHAR(50),
 Ngaysua			DATETIME,
 Nguoisua		NVARCHAR(50),
 constraint Hopdongbanhangchitiet_PK primary key (Id)) ON [PRIMARY]
+
+alter table Hopdongbanhangchitiet add Dongiavndcovat		Decimal(20,2),
+Dongiausdcovat		Decimal(20,4),
 
 
 CREATE TABLE Thuchienhopdongbanhang(
@@ -133,11 +145,34 @@ Thanhtienvnd	Decimal(20,2),
 Thanhtienusd	Decimal(20,2),
 Thanhtoanvnd	Decimal(20,2),
 Thanhtoanusd	Decimal(20,2),
+Ngaynhantien		Date,
+Lakhoantratruoc		Bit,
+Ngayguichungtugoc	Date,
 Ngaytao			DATETIME,
 Nguoitao		NVARCHAR(50),
 Ngaysua			DATETIME,
 Nguoisua		NVARCHAR(50),
 constraint Thuchienhopdongbanhang_PK primary key (Id)) ON [PRIMARY]
+
+alter table Thuchienhopdong add Ngaynhantien		Date,
+Lakhoantratruoc		Bit,
+Ngayguichungtugoc	Date,
+
+
+CREATE TABLE Congnokhachhang(
+Id			Bigint Identity Not null,
+Makhach			Nvarchar(50),
+Tenkhach		Nvarchar(250),
+Sohopdong		Nvarchar(50),
+Ngayhopdong		Date,
+Congnovnd		Decimal(20,2),
+Congnousd		Decimal(20,2),
+Ngaydenhantt	Date,
+Ngaytao			DATETIME,
+Nguoitao		NVARCHAR(50),
+Ngaysua			DATETIME,
+Nguoisua		NVARCHAR(50),
+constraint Congnokhachhang_PK primary key (Id)) ON [PRIMARY]
 
 
 
