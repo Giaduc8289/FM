@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <menuitem id="report_postpaid_discount"
+              action="sale.action_order_report_all"
+              name="Discount report"
+              parent="sale.menu_sale_report"
+              sequence="2"/>
+
+</odoo>
