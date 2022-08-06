@@ -9,6 +9,7 @@
     "category": "Hidden",
     "depends": ["sale", 'coupon', "sale_coupon", "product"],
     "data": [
+        "views/product_views.xml",
         'views/sale_view.xml',
     ],
     "installable": True,
