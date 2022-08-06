@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="action_report_sale_order_turnover" model="ir.actions.report">
+            <field name="name">Report Sale Turnover</field>
+            <field name="model">sale.report.turnover.wizard</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">sale_inheritance.report_sale_turnover_document</field>
+            <field name="report_file">sale_inheritance.report_sale_turnover_document</field>
+            <field name="print_report_name">Báo cáo doanh thu</field>
+            <field name="binding_model_id" ref="model_report_sale_inheritance_report_sale_turnover_document"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+
+
+    <record id="report_sale_turnover_view" model="ir.ui.view">
+        <field name="name">sale.report.turnover.wizard.form</field>
+        <field name="model">sale.report.turnover.wizard</field>
+        <field name="arch" type="xml">
+            <form create="false">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date_start" widget="date"/>
+                            <!--                            <field name="khachhang" widget="many2one"/>-->
+                            <!--                            <field name="group_products" widget="many2one"/>-->
+                            <!--                            <field name="vung" widget="many2one"/>-->
+                        </group>
+                        <group>
+                            <field name="date_end" widget="date"/>
+                            <!--                            <field name="nhanvienkinhdoanh" widget="many2one"/>-->
+                            <!--                            <field name="sanpham" widget="many2one"/>-->
+                            <!--                            <field name="tinhtrang"/>-->
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="get_report" type="object" string="Filter" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="report_sale_report_turnover_action_form" model="ir.actions.act_window">
+        <field name="name">Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.report.turnover.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="report_sale_turnover_view"/>
+    </record>
+</odoo>
+
+
+

@@ -9,7 +9,10 @@
     "category": "Hidden",
     "depends": ["sale", 'coupon', "sale_coupon", "product"],
     "data": [
+        'security/ir.model.access.csv',
         'views/sale_view.xml',
+        'wizard/turnover_report.xml',
+        'wizard/turnover_report_document.xml'
     ],
     "installable": True,
     # "maintainers": ["anhnth.mta@gmail.com"]
