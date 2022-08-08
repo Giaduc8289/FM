@@ -140,7 +140,7 @@ msgstr "Tạo ưu đãi tiêu chuẩn với các sản phẩm mặc định"
 #. module: sale_management
 #: model_terms:ir.actions.act_window,help:sale_management.sale_order_template_action
 msgid "Create your quotation template"
-msgstr "Tạo mẫu đơn khởi tạo"
+msgstr "Tạo mẫu báo giá"
 
 #. module: sale_management
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__create_uid
@@ -183,7 +183,7 @@ msgid ""
 "Design your quotation templates using building blocks<br/>\n"
 "                            <em attrs=\"{'invisible': [('module_sale_quotation_builder','=',False)]}\">Warning: this option will install the Website app.</em>"
 msgstr ""
-"Thiết kế mẫu đơn khởi tạo bằng cách sử dụng khối dựng<br/>\n"
+"Thiết kế mẫu báo giá bằng cách sử dụng khối dựng<br/>\n"
 "                            <em attrs=\"{'invisible': [('module_sale_quotation_builder','=',False)]}\">Cảnh báo: tùy chọn này sẽ cài đặt ứng dụng Website.</em>"
 
 #. module: sale_management
@@ -234,7 +234,7 @@ msgid ""
 "Forbidden product, unit price, quantity, and UoM on non-accountable sale "
 "quote line"
 msgstr ""
-"Sản phẩm cấm, đơn giá, số lượng và đơn vị đo cho dòng đơn khởi tạo bán hàng không"
+"Sản phẩm cấm, đơn giá, số lượng và đơn vị đo cho dòng báo giá bán hàng không"
 " lập tài khoản"
 
 #. module: sale_management
@@ -245,7 +245,7 @@ msgstr "Đặt trình tự khi hiển thị danh sách sản phẩm tùy chọn.
 #. module: sale_management
 #: model:ir.model.fields,help:sale_management.field_sale_order_template_line__sequence
 msgid "Gives the sequence order when displaying a list of sale quote lines."
-msgstr "Đặt thứ tự khi hiển thị danh sách dòng đơn khởi tạo bán hàng. "
+msgstr "Đặt thứ tự khi hiển thị danh sách dòng báo giá bán hàng. "
 
 #. module: sale_management
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__id
@@ -260,7 +260,7 @@ msgstr "ID"
 msgid ""
 "If unchecked, it will allow you to hide the quotation template without "
 "removing it."
-msgstr "Nếu không chọn, bạn sẽ có thể ẩn mẫu đơn khởi tạo mà không cần xóa mẫu. "
+msgstr "Nếu không chọn, bạn sẽ có thể ẩn mẫu báo giá mà không cần xóa mẫu. "
 
 #. module: sale_management
 #: model:ir.model.fields,field_description:sale_management.field_digest_digest__kpi_all_sale_total_value
@@ -306,7 +306,7 @@ msgstr "Dòng"
 #: model:ir.model.constraint,message:sale_management.constraint_sale_order_template_line_accountable_product_id_required
 msgid "Missing required product and UoM on accountable sale quote line."
 msgstr ""
-"Thiếu sản phẩm và đơn vị đo bắt buộc trên dòng đơn khởi tạo bán hàng có thể lập "
+"Thiếu sản phẩm và đơn vị đo bắt buộc trên dòng báo giá bán hàng có thể lập "
 "tài khoản. "
 
 #. module: sale_management
@@ -318,7 +318,7 @@ msgstr "Ghi chú"
 #. module: sale_management
 #: model:ir.model.fields,help:sale_management.field_sale_order_template__number_of_days
 msgid "Number of days for the validity date computation of the quotation"
-msgstr "Số ngày để tính toán ngày xác nhận của đơn khởi tạo"
+msgstr "Số ngày để tính toán ngày xác nhận của báo giá"
 
 #. module: sale_management
 #: model:sale.order.template.option,name:sale_management.sale_order_template_option_1
@@ -356,7 +356,7 @@ msgstr "Tùy chọn"
 #. module: sale_management
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__is_present
 msgid "Present on Quotation"
-msgstr "Hiện trên đơn khởi tạo"
+msgstr "Hiện trên báo giá"
 
 #. module: sale_management
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__product_id
@@ -381,12 +381,12 @@ msgstr "Số lượng:"
 #. module: sale_management
 #: model:ir.model.fields,field_description:sale_management.field_res_config_settings__module_sale_quotation_builder
 msgid "Quotation Builder"
-msgstr "Trình khởi tạo đơn"
+msgstr "Trình tạo báo giá"
 
 #. module: sale_management
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template__number_of_days
 msgid "Quotation Duration"
-msgstr "Thời hạn đơn khởi tạo"
+msgstr "Thời hạn báo giá"
 
 #. module: sale_management
 #: model:ir.model,name:sale_management.model_sale_order_template
@@ -395,28 +395,28 @@ msgstr "Thời hạn đơn khởi tạo"
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_form
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_tree
 msgid "Quotation Template"
-msgstr "Mẫu đơn khởi tạo"
+msgstr "Mẫu báo giá"
 
 #. module: sale_management
 #: model:ir.model,name:sale_management.model_sale_order_template_line
 msgid "Quotation Template Line"
-msgstr "Dòng mẫu đơn khởi tạo"
+msgstr "Dòng mẫu báo giá"
 
 #. module: sale_management
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_form
 msgid "Quotation Template Lines"
-msgstr "Dòng mẫu đơn khởi tạo"
+msgstr "Dòng mẫu báo giá"
 
 #. module: sale_management
 #: model:ir.model,name:sale_management.model_sale_order_template_option
 msgid "Quotation Template Option"
-msgstr "Tùy chọn mẫu đơn khởi tạo"
+msgstr "Tùy chọn mẫu báo giá"
 
 #. module: sale_management
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template_line__sale_order_template_id
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template_option__sale_order_template_id
 msgid "Quotation Template Reference"
-msgstr "Tham chiếu mẫu đơn khởi tạo"
+msgstr "Tham chiếu mẫu báo giá"
 
 #. module: sale_management
 #: model:ir.actions.act_window,name:sale_management.sale_order_template_action
@@ -425,12 +425,12 @@ msgstr "Tham chiếu mẫu đơn khởi tạo"
 #: model:res.groups,name:sale_management.group_sale_order_template
 #: model_terms:ir.ui.view,arch_db:sale_management.res_config_settings_view_form
 msgid "Quotation Templates"
-msgstr "Mẫu đơn khởi tạo"
+msgstr "Mẫu báo giá"
 
 #. module: sale_management
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_form
 msgid "Quotation expires after"
-msgstr "Đơn khởi tạo hết hạn sau"
+msgstr "Báo giá hết hạn sau"
 
 #. module: sale_management
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_portal_content_inherit_sale_management
@@ -486,12 +486,12 @@ msgstr "Tham chiếu đơn bán hàng"
 #. module: sale_management
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_form_quote
 msgid "Sales Quotation Template Lines"
-msgstr "Dòng mẫu đơn khởi tạo bán hàng"
+msgstr "Dòng mẫu báo giá bán hàng"
 
 #. module: sale_management
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_search
 msgid "Search Quotation Template"
-msgstr "Tìm mẫu đơn khởi tạo"
+msgstr "Tìm mẫu báo giá"
 
 #. module: sale_management
 #: model:ir.model.fields.selection,name:sale_management.selection__sale_order_template_line__display_type__line_section
@@ -545,7 +545,7 @@ msgid ""
 "Terms set here will show up instead if you select this quotation template."
 msgstr ""
 "Quản trị viên có thể đặt Điều khoản & Điều kiện mặc định trong Cài đặt bán "
-"hàng. Điều khoản đặt ở đây sẽ hiển thị thay thế nếu bạn chọn mẫu đơn khởi tạo "
+"hàng. Điều khoản đặt ở đây sẽ hiển thị thay thế nếu bạn chọn mẫu báo giá "
 "này. "
 
 #. module: sale_management
@@ -562,7 +562,7 @@ msgid ""
 "in the quotation."
 msgstr ""
 "Trường này sẽ được đánh dấu nếu sản phẩm dòng tùy chọn đã xuất hiện trong "
-"đơn khởi tạo. "
+"báo giá. "
 
 #. module: sale_management
 #: model:digest.tip,name:sale_management.digest_tip_sale1_management_0
@@ -611,8 +611,8 @@ msgid ""
 "                Send these quotes by email and let your customers sign online.\n"
 "                Use cross-selling and discounts to push and boost your sales."
 msgstr ""
-"Dùng mẫu để khởi tạo đơn chuyên nghiệp, đẹp mắt chỉ trong vài phút.\n"
-"                Gửi đơn khởi tạo qua email và cho phép khách hàng ký trực tuyến. \n"
+"Dùng mẫu để tạo báo giá chuyên nghiệp, đẹp mắt chỉ trong vài phút.\n"
+"                Gửi báo giá qua email và cho phép khách hàng ký trực tuyến. \n"
 "                Dùng bán chéo và chiết khấu để thúc đẩy và gia tăng doanh số. "
 
 #. module: sale_management
@@ -628,7 +628,7 @@ msgid ""
 "You cannot change the type of a sale quote line. Instead you should delete "
 "the current line and create a new line of the proper type."
 msgstr ""
-"Bạn không thể thay đổi loại của dòng đơn khởi tạo. Thay vào đó, bạn nên "
+"Bạn không thể thay đổi loại của dòng báo giá đơn hàng. Thay vào đó, bạn nên "
 "xóa dòng hiện tại và tạo dòng mới với loại phù hợp. "
 
 #. module: sale_management
@@ -638,8 +638,8 @@ msgid ""
 "Your quotation contains products from company %(product_company)s whereas your quotation belongs to company %(quote_company)s. \n"
 " Please change the company of your quotation or remove the products from other companies (%(bad_products)s)."
 msgstr ""
-"Đơn khởi tạo của bạn chứa các sản phẩm từ công ty %(product_company)s trong khi đơn khởi tạo của bạn thuộc về công ty %(quote_company)s. \n"
-" Vui lòng thay đổi công ty trong đơn khởi tạo của bạn hoặc xóa sản phẩm từ các công ty khác (%(bad_products)s)."
+"Báo giá của bạn chứa các sản phẩm từ công ty %(product_company)s trong khi báo giá của bạn thuộc về công ty %(quote_company)s. \n"
+" Vui lòng thay đổi công ty trong báo giá của bạn hoặc xóa sản phẩm từ các công ty khác (%(bad_products)s)."
 
 #. module: sale_management
 #: code:addons/sale_management/models/sale_order_template.py:0
