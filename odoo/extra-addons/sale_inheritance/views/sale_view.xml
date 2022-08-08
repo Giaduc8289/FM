@@ -12,4 +12,11 @@
               parent="sale.menu_sale_report"
               sequence="3"/>
 
+    <menuitem id="info_product_internal"
+          action="info_product_internal_action_sell"
+          name="Internal products"
+          parent="sale.product_menu_catalog"
+          groups="sales_team.group_sale_salesman"
+          sequence="6"/>
+
 </odoo>
