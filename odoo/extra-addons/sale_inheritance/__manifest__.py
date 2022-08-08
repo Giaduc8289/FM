@@ -10,6 +10,7 @@
     "depends": ["sale", 'coupon', "sale_coupon", "product"],
     "data": [
         'security/ir.model.access.csv',
+        "views/product_views.xml",
         'views/sale_view.xml',
         'wizard/turnover_report.xml',
         'wizard/turnover_report_document.xml'
