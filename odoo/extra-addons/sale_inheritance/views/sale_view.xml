@@ -3,8 +3,13 @@
 <odoo>
     <menuitem id="report_sale_turnover"
               action="report_sale_report_turnover_action_form"
-              name="Turnover report"
+              name="Báo cáo doanh thu"
               parent="sale.menu_sale_report"
               sequence="2"/>
+    <menuitem id="report_purchase_backorder_menu"
+              action="report_sale_backorder_action_form"
+              name="Báo cáo thực hiện hợp đồng"
+              parent="sale.menu_sale_report"
+              sequence="3"/>
 
 </odoo>

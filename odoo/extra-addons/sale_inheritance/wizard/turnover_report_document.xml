@@ -26,10 +26,10 @@
                         </t>
                         <br/>
                     </center>
-                        <t t-if="nhacungcap">
-                            <span class="text-center bold"><strong>Supplier: <t t-esc="tenkhach"/></strong></span>
-                            <br/>
-                        </t>
+<!--                        <t t-if="nhacungcap">-->
+<!--                            <span class="text-center bold"><strong>Supplier: <t t-esc="tenkhach"/></strong></span>-->
+<!--                            <br/>-->
+<!--                        </t>-->
                     </span>
                     <br/>
                     <div>

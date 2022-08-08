@@ -12,7 +12,9 @@
         'security/ir.model.access.csv',
         'views/sale_view.xml',
         'wizard/turnover_report.xml',
-        'wizard/turnover_report_document.xml'
+        'wizard/turnover_report_document.xml',
+        'wizard/sale_backorder.xml',
+        'wizard/sale_backorder_document.xml',
     ],
     "installable": True,
     # "maintainers": ["anhnth.mta@gmail.com"]
