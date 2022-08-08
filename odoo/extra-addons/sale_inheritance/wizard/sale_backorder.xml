@@ -6,7 +6,7 @@
         <field name="name">report.sale.wizard.form</field>
         <field name="model">sale.backorder.wizard</field>
         <field name="arch" type="xml">
-            <form string="Sale Backorder Report" create="false">
+            <form string="Sale Backorder Report" >
                 <sheet>
                     <group>
                         <group>
@@ -26,6 +26,7 @@
             </form>
         </field>
     </record>
+
     <record id="report_sale_backorder_action_form" model="ir.actions.act_window">
         <field name="name">Report</field>
         <field name="type">ir.actions.act_window</field>
@@ -33,8 +34,6 @@
         <field name="view_mode">form</field>
         <field name="view_id" ref="report_sale_backorder_view"/>
     </record>
-
-
 
     <record id="sale_inheritance.action_backorder_sale" model="ir.actions.report">
         <field name="name">Contract performance report</field>
@@ -47,4 +46,5 @@
                ref="sale_inheritance.model_report_sale_inheritance_report_sale_backorder_document"/>
         <field name="binding_type">report</field>
     </record>
+
 </odoo>

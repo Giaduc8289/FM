@@ -11,11 +11,11 @@
     "data": [
         'security/ir.model.access.csv',
         "views/product_views.xml",
-        'views/sale_view.xml',
-        'wizard/turnover_report.xml',
         'wizard/turnover_report_document.xml',
-        'wizard/sale_backorder.xml',
+        'wizard/turnover_report.xml',
         'wizard/sale_backorder_document.xml',
+        'wizard/sale_backorder.xml',
+        'views/sale_view.xml',
     ],
     "installable": True,
     # "maintainers": ["anhnth.mta@gmail.com"]
