@@ -1,16 +1,15 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html)
 
 {
-    "name": "Sales inheritance",
+    "name": "Base inheritance",
     "version": "15.0",
     # "author": "anhnth.mta@gmail.com",
-    "sequence": "8",
+    "sequence": "10",
     "license": "LGPL-3",
     "category": "Hidden",
-    "depends": ["sale", 'coupon', "sale_coupon", "product"],
+    "depends": ["base", "product", ],
     "data": [
-        "views/product_internal_views.xml",
-        'views/sale_view.xml',
+        "views/res_partner_views.xml",
     ],
     "installable": True,
     # "maintainers": ["anhnth.mta@gmail.com"]
