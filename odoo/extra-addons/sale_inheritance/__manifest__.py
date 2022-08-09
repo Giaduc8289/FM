@@ -10,11 +10,12 @@
     "depends": ["sale", 'coupon', "sale_coupon", "product"],
     "data": [
         'security/ir.model.access.csv',
-        "views/product_views.xml",
         'wizard/turnover_report_document.xml',
         'wizard/turnover_report.xml',
         'wizard/sale_backorder_document.xml',
         'wizard/sale_backorder.xml',
+        "views/product_internal_views.xml",
+        "views/product_views.xml",
         'views/sale_view.xml',
     ],
     "installable": True,
