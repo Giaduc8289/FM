@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="report_sale_backorder_view" model="ir.ui.view">
+        <field name="name">report.sale.wizard.form</field>
+        <field name="model">sale.backorder.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Sale Backorder Report" >
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date_start" widget="date"/>
+<!--                            <field name="nhacungcap" widget="many2one"/>-->
+                        </group>
+                        <group>
+                            <field name="date_end" widget="date"/>
+<!--                            <field name="hopdong" widget="many2one"/>-->
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="get_report" type="object" string="Get Report" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="report_sale_backorder_action_form" model="ir.actions.act_window">
+        <field name="name">Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.backorder.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="report_sale_backorder_view"/>
+    </record>
+
+    <record id="sale_inheritance.action_backorder_sale" model="ir.actions.report">
+        <field name="name">Contract performance report</field>
+        <field name="model">sale.backorder.wizard</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">sale_inheritance.report_sale_backorder_document</field>
+        <field name="report_file">sale_inheritance.report_sale_backorder_document</field>
+        <field name="print_report_name">Contract performance report</field>
+        <field name="binding_model_id"
+               ref="sale_inheritance.model_report_sale_inheritance_report_sale_backorder_document"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

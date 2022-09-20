@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <template id="report_sale_backorder_document">
+        <t t-call="web.html_container">
+            <t t-call="web.report_layout">
+                <!--                <link rel="stylesheet" href="/base_inheritance/static/src/css/style.css"/>-->
+                <meta charset="utf-8"/>
+                <div class="page" style="padding : 0;margin : 0;font-family : Arial;">
+                    <div class="oe_structure"/>
+                    <br/>
+                    <h2 class="text-center bold"
+                        style="width:100%; text-align:center;font-weight: 550;font-size: 40px;text-transform: uppercase;"><center>
+                        BÁO CÁO THỰC HIỆN HỢP ĐỒNG</center></h2>
+                    <br/>
+                    <span class="text-center bold"><center>
+                        <t t-if="date_start">
+                            <span class="text-center bold"><strong>From date: <t t-esc="date_start"/></strong></span>
+                        </t>
+                        <t t-if="date_start and date_end">
+                            <span class="text-center bold"><strong> - </strong></span>
+                        </t>
+                        <t t-if="date_end">
+                            <span class="text-center bold"><strong>To date: <t t-esc="date_end"/></strong></span>
+                        </t>
+                        <br/>
+                    </center>
+                        <t t-if="khachhang">
+                            <span class="text-center bold"><strong>Supplier: <t t-esc="tenkhach"/></strong></span>
+                            <br/>
+                        </t>
+                    </span>
+                    <br/>
+                    <div>
+                        <table class="table-bordered"
+                               style="border-collapse: collapse; width : 100%; border : border-box;">
+                            <thead>
+                                <tr>
+                                    <th rowspan="3" class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        STT</th>
+                                    <th colspan="4" class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Thông tin khách hàng</th>
+                                    <th colspan="2" class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Mã sản phẩm</th>
+                                    <th colspan="7" class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Thông tin khối lượng hợp đồng</th>
+                                    <th colspan="2" class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Thông tin thực hiện hợp đồng</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Mã khách</th>
+                                    <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Số hợp đồng/ PO</th>
+                                    <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Ngày hợp đồng</th>
+                                    <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Tên khách hàng</th>
+                                    <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Mã Customer</th>
+                                    <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Code Filler</th>
+                                   <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Số Lượng</th>
+                                   <th class="text-center" colspan="3"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Đơn giá/kg</th>
+                                   <th class="text-center" colspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Thành tiền</th>
+                                   <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Tổng</th>
+                                   <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Ngày giao</th>
+                                    <th class="text-center" rowspan="2"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Số lượng</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        VND</th>
+                                    <th class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        Tỷ giá</th>
+                                    <th class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        USD</th>
+                                    <th class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        VND</th>
+                                    <th class="text-center"
+                                        style="background-color: #4cb1a7; color: #ffffff; border: 1px solid black; padding : 8px;border: 1px solid black;border: 1px solid black;">
+                                        USD</th>
+                                </tr>
+                            </thead>
+                            <tbody class="sale_tbody">
+                                <tr style="background-color:yellow">
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-center">
+                                        <strong><span>1</span></strong>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                        <strong><span t-field="docs[0].khachhang"/></strong>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                        <strong><span t-field="docs[0].sale_name"/></strong>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                        <strong><span t-field="docs[0].date_order"/></strong>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                        <strong><span t-field="docs[0].khachhang"/></strong>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                        <strong><span t-field="docs[0].amount_total"/></strong>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-center">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                        <span t-field="docs[0].product_tmpl_id"/>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                        <span t-field="docs[0].total_product_qty"/>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                        <span t-field="docs[0].price_unit"/>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                        <span t-field="docs[0].date_done"/>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                        <span t-field="docs[0].product_qty"/>
+                                    </td>
+                                </tr>
+                                <t t-set="i" t-value="1"/>
+                                <t t-foreach="docs" t-as="l">
+                                    <t t-set="i" t-value="i+1"/>
+                                </t>
+                                <t t-set="a" t-value="2"/>
+                                <t t-set="danhan" t-value="docs[0].product_qty"/>
+                                <t t-foreach='range(1,i-1)' t-as="o">
+                                    <tr t-if="docs[o].product_tmpl_id!=docs[o-1].product_tmpl_id or docs[o].sale_name!=docs[o-1].sale_name">
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td olspan="2" style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                            <strong><center>Tổng cộng</center></strong>
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-right">
+                                            <strong><span t-field="docs[o-1].total_product_qty"/></strong>
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-right">
+                                            <strong><span t-field="docs[o-1].qty_delivered"/></strong>
+                                        </td>
+                                    </tr>
+                                    <t t-if="docs[o].sale_name!=docs[o-1].sale_name">
+                                        <tr style="background-color:yellow">
+                                            <td class="text-center" style="padding : 8px;border: 1px solid black;">
+                                                <strong><span t-esc="a"/></strong>
+                                                <t t-set="a" t-value="a+1"/>
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                                <strong><span t-field="docs[o].khachhang"/></strong>
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                                <strong><span
+                                                        t-field="docs[o].sale_name"/></strong>
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-right">
+                                                <strong><span t-field="docs[o].amount_total"/></strong>
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                        </tr>
+                                    </t>
+                                    <tr>
+                                        <!--- So thu tu                                        -->
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+
+                                        <!---ten khach hang-->
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <!---ma hop dong-->
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                         <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                         <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <!---mat hang-->
+                                        <t t-if="docs[o].product_tmpl_id!=docs[o-1].product_tmpl_id or docs[o].sale_name!=docs[o-1].sale_name ">
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                                <span t-field="docs[o].product_tmpl_id"/>
+                                            </td>
+                                            <t t-set="danhan" t-value="0"/>
+                                        </t>
+                                        <t t-if="not docs[o].product_tmpl_id!=docs[o-1].product_tmpl_id and not docs[o].sale_name!=docs[o-1].sale_name">
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                        </t>
+                                         <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <!---khoi luong hang theo hop dong-->
+                                        <t t-if="(docs[o].product_tmpl_id!=docs[o-1].product_tmpl_id or docs[o].sale_name!=docs[o-1].sale_name)">
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-right">
+                                                <span t-field="docs[o].total_product_qty"/>
+                                            </td>
+                                        </t>
+                                        <t t-if="not docs[o].product_tmpl_id!=docs[o-1].product_tmpl_id and not docs[o].sale_name!=docs[o-1].sale_name">
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-right">
+                                            </td>
+                                        </t>
+                                        <!---don gia theo hop dong-->
+                                        <t t-if="(docs[o].product_tmpl_id!=docs[o-1].product_tmpl_id or docs[o].sale_name!=docs[o-1].sale_name)">
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-right">
+                                                <span t-field="docs[o].price_unit"/>
+                                            </td>
+                                        </t>
+                                        <t t-if="not docs[o].product_tmpl_id!=docs[o-1].product_tmpl_id and not docs[o].sale_name!=docs[o-1].sale_name">
+                                            <td style="padding : 8px;border: 1px solid black;"
+                                                class="text-left">
+                                            </td>
+                                        </t>
+                                         <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                         <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                         <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                         <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                         <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-left">
+                                        </td>
+                                        <!---ngay nhan hang-->
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-right">
+                                            <span t-field="docs[o].date_done"/>
+                                        </td>
+                                        <!---khoi luong hang nhan-->
+                                        <td style="padding : 8px;border: 1px solid black;"
+                                            class="text-right">
+                                            <span t-field="docs[o].product_qty"/>
+                                        </td>
+                                        <t t-set="danhan" t-value="danhan + docs[o].product_qty"/>
+                                    </tr>
+                                </t>
+                                <tr>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td olspan="2" style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                        <strong><center>Tổng cộng</center></strong>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                        <strong><span t-field="docs[i-2].total_product_qty"/></strong>
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-left">
+                                    </td>
+                                    <td style="padding : 8px;border: 1px solid black;"
+                                        class="text-right">
+                                        <strong><span t-field="docs[i-2].qty_delivered"/></strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>
