@@ -57,6 +57,7 @@ https://www.youtube.com/watch?v=mtGMbc4Csm0
 -git push
 -quyền, ảnh hưởng mạng, config git
 hoangdat2390@gmail.com
+git rm -r . --cached
 
 posgresql:
 -create extension dblink

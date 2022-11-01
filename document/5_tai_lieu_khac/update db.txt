@@ -93,6 +93,9 @@ https://apps.odoo.com/apps/modules/browse?search=cybrosys
 quality
 https://www.cybrosys.com/odoo/odoo-books/odoo-book-v15/quality/
 https://minhng.info/
+--Hướng dẫn sử dụng
+https://erponline.vn/vi/docs/13.0/c/huong-dan-nguoi-dung-odoo-cac-ung-dung-san-xuat-15
+https://erpone.vn/en/knowledge/odoo-documentation-17
 
 --Update tự động
 Sửa db trong file odoo.conf thành db của máy chủ và thực hiện update
